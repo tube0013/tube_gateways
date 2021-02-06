@@ -19,7 +19,7 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 
     Add the ZHA Integration via the Add Integrations option:
         
-    ![HA Add zha integration](https://github.com/tube0013/tube_gateways/raw/main/images/add_integration.png | width = 200) 
+    ![HA Add zha integration](https://github.com/tube0013/tube_gateways/raw/main/images/add_integration.png | width=200) 
         
         
         
