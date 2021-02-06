@@ -65,8 +65,8 @@ EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 
 ## Zigbee Module Firmware Updates:
 
-**CC2652p based Gateways:**
-Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here: 
+**CC2652p based Gateways:**  
+Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
