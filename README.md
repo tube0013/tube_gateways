@@ -34,11 +34,11 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 
     For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638
 
-    **CC2652p Based example:**
+    CC2652p Based example:
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_connection.png" width="300">
 
-    **EFR32 Based example:**
+    EFR32 Based example:
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
    
@@ -52,4 +52,57 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
       port: 'tcp://tube_zb_gw_cc2652p2.local:6638'
 
     ```
+
+## ESPHome
+
+The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant.
+
+To access the ESPHome Web Interface on the gateway connect to it in your Browser:
+
+CC2652p based gateways: `http://tube_zb_gw_cc2652p2.local`
+EFR32 based gateways: `http://tube_zb_gw_efr32.local`
+
+
+## Zigbee Module Firmware Updates:
+
+**CC2652p based Gateways:**
+Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here: 
+https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
+
+Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
+
+    1. Prep the Module for firmware update:
+
+    Click the button to intiate the bootloader mode for the module:
+
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
+    
+    Watch the Debug output and when pompted go to step 2.
+
+     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="300">
+
+
+    2. Run the cc2538-bsl programmer:
+    ```
+    cc2538-bsl.py -p socket://tube_zb_gw_cc2652p2.local:6638  -evw ../CC1352P2_CC2652P_launchpad_20210120.hex
+Opening port socket://tube_zb_gw_cc2652p2.local:6638, baud 500000
+Reading data from ../CC1352P2_CC2652P_launchpad_20210120.hex
+Your firmware looks like an Intel Hex file
+Connecting to target...
+CC1350 PG2.0 (7x7mm): 352KB Flash, 20KB SRAM, CCFG.BL_CONFIG at 0x00057FD8
+Primary IEEE Address: 00:12:4B:00:21:B4:97:D8
+    Performing mass erase
+Erasing all main bank flash sectors
+    Erase done
+Writing 360448 bytes starting at address 0x00000000
+Write 104 bytes at 0x00057F980
+    Write done
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0xdb4192ef)
+    ```
+
+
+
+
+
 
