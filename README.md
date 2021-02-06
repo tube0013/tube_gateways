@@ -29,8 +29,8 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radio_type.png" width="400">
 
-    **For CC2652p based gateways select ZNP**
-    **For EFR32 based gateways select EZSP**
+    *For CC2652p based gateways select ZNP*
+    *For EFR32 based gateways select EZSP*
 
     For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638
 
@@ -42,3 +42,14 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
    
+
+    **For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:**
+
+    in the Zigbee2MQTT `configuration.yaml` 
+
+    ```
+    serial:
+      port: 'tcp://tube_zb_gw_cc2652p2.local:6638'
+
+    ```
+
