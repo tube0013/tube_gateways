@@ -71,20 +71,20 @@ https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0
 
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
 
-    1. Prep the Module for firmware update:
+1. Prep the Module for firmware update:
 
-    Click the button to intiate the bootloader mode for the module:
+Click the button to intiate the bootloader mode for the module:
 
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
     
-    Watch the Debug output and when pompted go to step 2.
+Watch the Debug output and when pompted go to step 2.
 
-     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="300">
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="300">
 
 
-    2. Run the cc2538-bsl programmer:
-    ```
-    cc2538-bsl.py -p socket://tube_zb_gw_cc2652p2.local:6638  -evw ../CC1352P2_CC2652P_launchpad_20210120.hex
+2. Run the cc2538-bsl programmer:
+```
+cc2538-bsl.py -p socket://tube_zb_gw_cc2652p2.local:6638  -evw ../CC1352P2_CC2652P_launchpad_20210120.hex
 Opening port socket://tube_zb_gw_cc2652p2.local:6638, baud 500000
 Reading data from ../CC1352P2_CC2652P_launchpad_20210120.hex
 Your firmware looks like an Intel Hex file
@@ -99,7 +99,7 @@ Write 104 bytes at 0x00057F980
     Write done
 Verifying by comparing CRC32 calculations.
     Verified (match: 0xdb4192ef)
-    ```
+```
 
 
 
