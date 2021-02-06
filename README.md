@@ -15,10 +15,11 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
     
 4. Configure your software to access the device.
 
-    -**For HomeAssistant's Built in ZHA implementation:**
-        1. Add the ZHA Integration via the Add Integrations option.
+    **For HomeAssistant's Built in ZHA implementation:**
+
+    Add the ZHA Integration via the Add Integrations option:
         
-    ![HA Add zha integration](https://github.com/tube0013/tube_gateways/raw/main/images/add_integration.png)
+    ![HA Add zha integration](https://github.com/tube0013/tube_gateways/raw/main/images/add_integration.png | width = 200) 
         
         
         
