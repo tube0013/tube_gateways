@@ -79,7 +79,7 @@ Click the button to intiate the bootloader mode for the module:
     
 Watch the Debug output and when pompted go to step 2.
 
-<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="300">
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="500">
 
 
 2. Run the cc2538-bsl programmer:
