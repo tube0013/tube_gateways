@@ -7,7 +7,7 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 1. Connect the gateway to a ethernet cable which has access you your local network.
 2. Power on the gateway with a micro usb cable and power supply.
 3. Determine the device's ip address
-    If your local network supports .local mdns addresses, the devices can be reached that way:
+    If your local network supports .local mdns addresses, the devices can be reached that way:  
     -for CC2652p based gatways: tube_zb_gw_cc2652p2.local  
     -for EFR32 based gateways: tube_zb_gw_efr32.local
    
