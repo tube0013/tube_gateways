@@ -8,7 +8,7 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 2. Power on the gateway with a micro usb cable and power supply.
 3. Determine the device's ip address
     If your local network supports .local mdns addresses, the devices can be reached that way:
-    -for CC2652p based gatways: tube_zb_gw_cc2652p2.local
+    -for CC2652p based gatways: tube_zb_gw_cc2652p2.local  
     -for EFR32 based gateways: tube_zb_gw_efr32.local
    
     **If using an IP Address besure it is reserved in your router so it does not change**
@@ -55,7 +55,7 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
 
 ## ESPHome
 
-The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant.
+The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant as accidential toggling could rest the zigbee modules.**
 
 To access the ESPHome Web Interface on the gateway connect to it in your Browser:
 
