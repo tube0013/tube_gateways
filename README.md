@@ -10,9 +10,9 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
     If your local network supports .local mdns addresses, the devices can be reached that way:  
     -for CC2652p based gatways: tube_zb_gw_cc2652p2.local  
     -for EFR32 based gateways: tube_zb_gw_efr32.local
-   
+
     **If using an IP Address besure it is reserved in your router so it does not change**
-    
+
 4. Configure your software to access the device.
 
     **For HomeAssistant's Built in ZHA implementation:**
@@ -41,11 +41,11 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
     EFR32 Based example:
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
-   
+
 
     **For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:**
 
-    in the Zigbee2MQTT `configuration.yaml` 
+    in the Zigbee2MQTT `configuration.yaml`
 
     ```
     serial:
@@ -76,7 +76,7 @@ Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-
 Click the button to intiate the bootloader mode for the module:
 
 <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
-    
+
 Watch the Debug output and when pompted go to step 2.
 
 <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="500">
@@ -101,8 +101,5 @@ Verifying by comparing CRC32 calculations.
     Verified (match: 0xdb4192ef)
 ```
 
-
-
-
-
-
+**EFR32 based Gateways**
+https://www.youtube.com/watch?v=zKrISuWEzL4tube-
