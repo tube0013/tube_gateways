@@ -1,5 +1,8 @@
 # Specific Configuration for the Tube EFR32 Pro Gateway
-Because the Pro gateway uses some higher firmware settings it is recommended set them in the configuration.yaml so bellows will utilize them:
+Because the Pro gateway uses some higher firmware settings it is recommended set them in the configuration.yaml so bellows will utilize them.
+
+
+Add these lines to your configuration.yaml file:
 
 ```
 zha:
