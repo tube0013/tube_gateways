@@ -1,0 +1,60 @@
+esphome:
+  name: tube_zb_gw_efr32
+  platform: ESP32
+  board: esp-wrover-kit
+  
+  includes:
+    - stream_server.h
+    - stream_server.cpp
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO0_IN
+  phy_addr: 1
+  power_pin: GPIO16
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+
+ota:
+
+web_server:
+  port: 80
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO17
+  tx_pin: GPIO5
+  baud_rate: 115200
+
+custom_component:
+  - lambda: |-
+      auto stream_server = new StreamServerComponent(id(uart_bus));
+      return {stream_server};
+      
+switch:
+  - platform: gpio
+    pin: 33
+    id: zRSTrelay
+#    name: RST          # Commented to hide switch
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: "Zigbee RST"
+    turn_on_action:
+      - switch.turn_on: zRSTrelay
+      - delay: 10ms
+      - switch.turn_off: zRSTrelay
+      
+  - platform: gpio
+    pin: 32
+    name: "Pull Bootloader pin (PA02) to Low"
+    inverted: yes
+    restore_mode: ALWAYS_OFF
