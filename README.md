@@ -37,7 +37,7 @@ Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any
     *For CC2652p based gateways select ZNP*  
     *For EFR32 based gateways select EZSP*
 
-    For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638
+    For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638 and Port Speed of 115200.
 
     CC2652p Based example:
 
