@@ -8,9 +8,9 @@ Information and Documentation on Tube's Zigbee Gateways
 Tube's Zigbee Gateways are serial over ethernet zigbee gateways for use with any project that can access a remote serial device. The gateway is made up of a WT32-ETH01 module which is an ESP32 with ethernet and either a CC2652p Zigbee Module or an EFR32 based Zigbee module.
 
 ## Getting up and Running
-*For EFR32 Pro Gateway see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32_Pro
+*For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
 1. Connect the gateway to a ethernet cable which has access you your local network.
-2. Power on the gateway with a micro usb cable and power supply.
+2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 3. Determine the device's ip address
     If your local network supports .local mdns addresses, the devices can be reached that way:  
     -for CC2652p based gateways: tube_zb_gw_cc2652p2.local  
