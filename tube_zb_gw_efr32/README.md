@@ -19,7 +19,7 @@ zha:
       CONFIG_NEIGHBOR_TABLE_SIZE: 26
 ```
 
-# Using the onboard headers/jumpers to select the serial output.
+# Using the onboard headers/jumpers to select the serial output
 
 The 2 groups of four headers control the connection of the serial.
 
