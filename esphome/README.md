@@ -50,9 +50,9 @@ Save the yaml
 
 In the web interface select the 3 dots to bring up the options for the device and select compile. when complete it will have a link to download the .bin file.
 
- <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome2.png" width="100">
+ <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome2.png" width="200">
 
 
 Save the bin file and use the gateway's web interface to upload and reflash the gateway.
 
- <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_ota.png" width="200">
+ <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_ota.png" width="300">
