@@ -21,7 +21,7 @@ Download the .yaml and .h and .cpp files to your esphome folder.
 
 Edit the yaml for your corresponding gateway.
 
-in the Ethernet section add the IP section following it:
+in the ethernet section add the manual_ip: section following like below:
 
 ```
 esphome:
