@@ -17,6 +17,8 @@ Download the .yaml and .h and .cpp files to your esphome folder.
 
 ## To add a static IP:
 
+    **Warning: An Error in the ip configuration could cause the gw to not connect and required a serial flash with an Serial to USB converter**
+
 Edit the yaml for your corresponding gateway.
 
 in the Ethernet section add the IP section following it:
