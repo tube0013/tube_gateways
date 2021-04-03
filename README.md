@@ -74,6 +74,8 @@ EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
+**Be Sure to backup your device before updgrading as the update will erase the zigbee module completely** https://github.com/zigpy/zigpy-znp/blob/dev/TOOLS.md#backup-and-restore
+
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
 
 1. Prep the Module for firmware update:
