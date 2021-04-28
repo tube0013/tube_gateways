@@ -4,7 +4,7 @@ Information and documentation on Tube's Zigbee Gateways. Pre-assembed hardware d
 
 Tube's Zigbee Gateways are serial over Ethernet zigbee gateways for use with any project that can access and interface with a remote Serial to IP bridge/proxy server device. 
 
-This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/), [OpenHAB (Zigbee Binding)](https://www.openhab.org/addons/bindings/zigbee/), [IoBroker](https://github.com/ioBroker/ioBroker.zigbee), and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
+This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
 
 The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee module.
 
