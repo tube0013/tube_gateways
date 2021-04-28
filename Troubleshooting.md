@@ -33,26 +33,26 @@ Once all that is connected up, power on by plugging in the micro usb or by using
 
 Fire up the flasher and select the correct port and point it to the downloaded FW bin:
 
-  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_1.jpg width="400">
+  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_1.jpg" width="400">
 
 
 Hit flash, and you should see something like this:
 
-  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_2.jpg width="400">
+  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_2.jpg" width="400">
 
 
 after about a minute or so:
 
-  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_3.jpg width="400">
+  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_3.jpg" width="400">
 
 pull the power, and move the jumper back to the 3.3v_Bridge. you can leave the cables connected to do a test boot with serial logging if you want. Just plug it back in, and hit the show logs button in the flasher:
 
 you should see something like this if not connected to ethernet, or maybe on it’s first try of connecting:
 
-  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_4.jpg width="400">
+  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_4.jpg" width="400">
 
 
 if connected to network, should see something like this:
 
-  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_5.jpg width="400">
+  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_5.jpg" width="400">
 
