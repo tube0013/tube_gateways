@@ -1,7 +1,7 @@
 **Troubleshooting**
 
 
-Instructions of reflashing the ESP32 when it is not connecting to ethernet and the leds on the esp32 ethernet jack will be solid green an not blinking:
+Instructions of reflashing the ESP32 when it is not connecting to ethernet and the leds on the esp32 ethernet jack will be solid green and not blinking:
 
 You will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
 
