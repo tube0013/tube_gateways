@@ -17,7 +17,8 @@ ethernet:
 
 # Enable logging
 logger:
-
+  level: DEBUG
+  
 # Enable Home Assistant API
 api:
   reboot_timeout: 0s
@@ -27,16 +28,6 @@ ota:
 web_server:
   port: 80
 
-uart:
-  id: uart_bus
-  rx_pin: GPIO5
-  tx_pin: GPIO17
-  baud_rate: 115200
-
-custom_component:
-  - lambda: |-
-      auto stream_server = new StreamServerComponent(id(uart_bus));
-      return {stream_server};
 
 script:
   - id: fw_update_mode
@@ -53,6 +44,9 @@ script:
       - logger.log: "cc-bsl usage: cc-bsl.py -p socket://ip-of-gw:6638 -evw firmware.hex"
       
 switch:
+  - platform: restart
+    name: "Restart the Gateway"
+
   - platform: gpio
     pin: 33
     id: zRST_gpio
@@ -79,3 +73,16 @@ switch:
       - script.execute: fw_update_mode
     turn_off_action:
       - switch.toggle: zRST
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO5
+  tx_pin: GPIO17
+  baud_rate: 115200
+
+
+custom_component:
+  - lambda: |-
+      auto stream_server = new StreamServerComponent(id(uart_bus));
+      return {stream_server};
+

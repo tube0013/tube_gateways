@@ -40,6 +40,9 @@ custom_component:
       return {stream_server};
       
 switch:
+  - platform: restart
+    name: "Restart the Gateway"
+
   - platform: gpio
     pin: 33
     id: zRSTrelay
