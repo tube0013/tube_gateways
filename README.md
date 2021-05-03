@@ -74,6 +74,8 @@ As an alternative to the default ESPHome firmware, Tube's Zigbee Gateways featur
 
 To use this you flash the ESP32 chip with "tasmota32-zbbridge" firmware from the Tasmota project, which is ESP32 firmware variant of "tasmota-zbbridge" (that was initially designed to run ITead Sonoff ZBBridge hardware based on the older ESP8266/ESP8285 chips).
 
+Note! Zigbee2Tasmota (Z2T) currenly only support Tube's Zigbee Gateways with Silicon Labs EFR32 via the EZSP v8 API/CLI and they are only tested with EmberZNet 6.7.9 firmware, however Texas Instruments based variants should also work if you will just be using your Tube's Zigbee Gateway with the serial-to-IP functionaliy with example Home Assistant ZHA or Zigbee2MQTT.
+
 - https://tasmota.github.io/docs/Zigbee/
 - https://github.com/arendst/Tasmota
 
