@@ -68,6 +68,14 @@ To access the ESPHome Web Interface on the gateway connect to it in your Browser
 CC2652p based gateways: `http://tube_zb_gw_cc2652p2.local`
 EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 
+## Tasmota
+
+As an alternative to the default ESPHome firmware, Tube's Zigbee Gateways featuring ESP32 and running compatible Zigbee Coordinator firmware also support Zigbee2Tasmota (Z2T) version of Tasmota32 (Tasmota for ESP32). While not as user-friendly as ESPHome firmware, the main benifit with Zigbee2Tasmota is can be used as a stand-alone Zigbee to MQTT bridge/gateway/hub.
+
+To use this you flash the ESP32 chip with "tasmota32-zbbridge" firmware from the Tasmota project, which is ESP32 firmware variant of "tasmota-zbbridge" (that was initially designed to run ITead Sonoff ZBBridge hardware based on the older ESP8266/ESP8285 chips).
+
+- https://tasmota.github.io/docs/Zigbee/
+- https://github.com/arendst/Tasmota
 
 ## Zigbee Module Firmware Updates:
 
