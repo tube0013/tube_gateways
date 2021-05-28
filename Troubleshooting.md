@@ -55,7 +55,14 @@ if connected to network, should see something like this:
 
   <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_5.jpg" width="400">
 
-### Knowing which devices are supported
+### Troubleshooting Zigbee coordinator connection issues
+
+#### Zigbee gateway device disconnections
+
+If you have stability with Zigbee gateway device disconnections try disabling speed auto-negotiation for the network-port on your network-switch/router, forcing that port to use 100Mb full-duplex as the network speed for the gateway.
+
+
+### Knowing which Zigbee devices are supported
 
 Due to how Zigbee implementation works there should not really be any need of compatibility lists of supported devices for the simple reason that practically all devices Zigbee Home Automation that are fully compliant with the standards and specifications as set by the [Zigbee Alliance](https://zigbeealliance.org) should technically be compatible with with each Zigbee network implementations/application that already supports that other devices of the same type that uses the same features and functions. 
 
@@ -63,7 +70,7 @@ The fact remains, however, that some hardware manufacturers do not always fully 
 
 Tip to new users is that, while there is no official list of supported devices, some users take comfort that blakadder maintains an unofficial Zigbee Device Compatibility Repository which anyone can submit compatibility reports to, it can be found at [zigbee.blakadder.com](https://zigbee.blakadder.com) and currently contains independent compatibility lists and device pairing tips for several home automation gateway/bridge/hub softwares, including but not limited to open source Zigbee implementations such as; Home Assistant ZHA, Tasmota, Zigbee2MQTT, and ZiGate.
 
-#### Best practices for avoiding pairing difficulties
+#### Best practices for avoiding Zigbee pairing difficulties
 
 -	If possible try to pair your Zigbee devices in their intended final location, (and not pair it next to the Zigbee coordinator and then need to move it after). 
     -	Pairing a Zigbee device next to the Zigbee coordinator and then moving it later can result in a dropped/lost connections or other issues.
@@ -89,7 +96,7 @@ Low signal quality and enviroment noise can lead to transmission errors or other
 6. If your Zigbee coordinator adapter has a removable antenna (e.g., with an SMA-connector) then you have the option of using a high-gain antenna. Note that antennas with higher gain have directionality: You might have better reception on the same floor, but reception across floors might suffer. In addition, you also have the option to use an antenna extension-cable if needed (usually using just a USB extension cable for your Zigbee coordinator adapter is the better alternative). This should really only be needed if you are trying to cover a long distance, like to another building or very dense/thick walls, ceilings and floors.
 7. If you have not already, buy more powerful Zigbee radio hardware with better radio range, preferably with an external antenna. If you are not only experimenting but want a permanently stable and healthy Zigbee network with potentially many devices then you should consider upgrading to a more powerful Zigbee coordinator USB adapter. Generally, those with an external antenna will have better range, therefore you will also want to avoid buying an internal adapter unless it has an external antenna. Note: Because Zigbee is based on mesh networking technology just buying a  more powerful Zigbee radio hardware adapter does not replace the need to add and use Zigbee routers between devices far away and the next closest router as suggested in point #1 above.
 
-#### Using router devices
+#### Using Zigbee router devices
 
 Zigbee uses mesh networking technology as standard by design and adding devices capable of acting as Zigbee router (sometimes also known as Zigbee signal repeaters or extenders) is very important because they increasing the total number of Zigbee devices that your Zigbee coordinator can control in its network as well as having an integral role in extending the overall range and coverage of your Zigbee network mesh. Fact is that without haveing at least a couple good Zigbee router devices available you will normally not have a stable Zigbee network.
 
