@@ -2,11 +2,13 @@
 
 Information and documentation on Tube's Zigbee Gateways. Pre-assembed hardware devices can be purchased from https://www.tubeszb.com
 
-Tube's Zigbee Gateways are serial over Ethernet zigbee gateways for use with any project that can access and interface with a remote Serial to IP bridge/proxy server device. 
+The gateway hardware itself is made up of a WT32-ETH01 or Olimex ESP32-POE-ISO (which are ESP32 based boards with Ethernet) in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee serial module.
 
-This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
+Tube's Zigbee Gateways are primarly design to work as Zigbee serial module to Ethernet server as that make them compatible any application/project that can access and interface with a remote Serial to IP bridge/proxy server device as long as they support the Zigbee stack flashed on the Zigbee serial module firmware.
 
-The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee module.
+These Zigbee gateways/coordinators can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/), [Jeedom (Zigbee Plugin)](https://doc.jeedom.com/en_US/plugins/automation%20protocol/zigbee/), [openHAB (Zigbee Binding)](https://www.openhab.org/addons/bindings/zigbee/), and [Zigbee2MQTT](https://www.zigbee2mqtt.io/). 
+
+Note! The [openHAB Zigbee Binding](https://www.openhab.org/addons/bindings/zigbee/) does not yet have suppprt for by the Z-Stack 3 Zigbee stack firmware used on the Texas Instruments CC2652 based gateways/coordinators, (more details on ).
 
 ## Getting up and Running
 *For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
@@ -70,11 +72,13 @@ EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 
 ## Tasmota
 
-As an alternative to the default ESPHome firmware, Tube's Zigbee Gateways featuring ESP32 and running compatible Zigbee Coordinator firmware also support Zigbee2Tasmota (Z2T) version of Tasmota32 (Tasmota for ESP32). While not as user-friendly as ESPHome firmware, the main benifit with Zigbee2Tasmota is can be used as a stand-alone Zigbee to MQTT bridge/gateway/hub.
+As an alternative to the default ESPHome firmware, Tube's Zigbee Gateways featuring ESP32 and running compatible Zigbee Coordinator firmware also support Zigbee2Tasmota (Z2T) version of Tasmota32 (Tasmota for ESP32). Zigbee2Tasmota (Z2T) can either be used as a simple serial-to-IP server the same way as ESPHome firmware or you can use its own native Zigbee implementation as a stand-alone Zigbee to MQTT bridge/gateway/hub. 
+
+While not as user-friendly as ESPHome firmware used together with external implementations like Home Assistant's ZHA or Zigbee2MQTT, the real benifit with Zigbee2Tasmota (Z2T) is can be used as a stand-alone Zigbee to MQTT bridge/gateway/hub which is not dependent on any other Zigbee implementations.
 
 To use this you flash the ESP32 chip with "tasmota32-zbbridge" firmware from the Tasmota project, which is ESP32 firmware variant of "tasmota-zbbridge" (that was initially designed to run ITead Sonoff ZBBridge hardware based on the older ESP8266/ESP8285 chips).
 
-Note! Zigbee2Tasmota (Z2T) currenly only support Tube's Zigbee Gateways with Silicon Labs EFR32 via the EZSP v8 API/CLI and they are only tested with EmberZNet 6.7.9 firmware, however Texas Instruments based variants should also work if you will just be using your Tube's Zigbee Gateway with the serial-to-IP functionaliy with example Home Assistant ZHA or Zigbee2MQTT.
+Note! Zigbee2Tasmota (Z2T own native Zigbee gateway implementation does not yet have support for  Z-Stack 3 Zigbee stack firmware used on the Texas Instruments CC2652 based gateways, as such Zigbee2Tasmota (Z2T) currenly only support Tube's Zigbee Gateways with Silicon Labs EFR32 via the EZSP v8 API/CLI and they are only tested with EmberZNet 6.7.9 firmware, however while not tested, the Texas Instruments based variants with Z-Stck 3 should in theory still work if you will only be using your Tube's Zigbee Gateway with the serial-to-IP functionaliy with external implementations that supports Z-Stack 3, like example Home Assistant ZHA, Jeedom Zigbee Plugin, and Zigbee2MQTT.
 
 - https://tasmota.github.io/docs/Zigbee/
 - https://github.com/arendst/Tasmota
