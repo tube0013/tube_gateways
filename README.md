@@ -10,6 +10,9 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
 
 ## Getting up and Running
 *For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
+
+*Auto Discovery for EFR32 Gatways is currently broken in HA, Please ignore the discovered device and set up manually*
+
 1. Connect the gateway to a ethernet cable which has access you your local network.
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 3. Determine the device's ip address
@@ -38,7 +41,7 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
     *For CC2652p based gateways select ZNP*  
     *For EFR32 based gateways select EZSP*
 
-    For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638 and Port Speed of 115200.
+    For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638 and Port Speed of 115200 and Software Flow Control.
 
     CC2652p Based example:
 

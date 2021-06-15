@@ -19,6 +19,24 @@ zha:
       CONFIG_NEIGHBOR_TABLE_SIZE: 26
 ```
 
+**For EFR32 Series 2 Gateways with Firmware based on the 6.9.2 SDK please use the following config**
+
+```
+zha:
+  zigpy_config:
+    source_routing: true
+    ezsp_config:
+      CONFIG_APS_UNICAST_MESSAGE_COUNT: 64
+      CONFIG_MAX_END_DEVICE_CHILDREN: 32
+      CONFIG_SOURCE_ROUTE_TABLE_SIZE: 200
+      CONFIG_ROUTE_TABLE_SIZE: 16
+      CONFIG_ADDRESS_TABLE_SIZE: 32
+      CONFIG_PACKET_BUFFER_COUNT: 250
+      CONFIG_BINDING_TABLE_SIZE: 32
+      CONFIG_NEIGHBOR_TABLE_SIZE: 26
+```
+
+
 **Note if using HA lower than 2021.03.x you will need to use lower values as bellows was not able to use the higher values until the release bundled with 2021.03.**
 
 Use these lines if using HA < 2021.03
