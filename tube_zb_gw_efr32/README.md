@@ -1,8 +1,8 @@
 # Specific Configuration for the Tube EFR32 Gateways
-Because the EFR32 gateways uses some higher firmware settings it is recommended set them in the configuration.yaml so bellows will utilize them.
+Because the EFR32 gateways uses some firrmware settings different than the bellows defaults it is recommended set them in the configuration.yaml so bellows will utilize them.
 
-
-Add these lines to your configuration.yaml file:
+## For EFR32 Pro and Series 2 Gateways with 6.9.1 based firmware (shippied before June 2021)
+**Add these lines to your configuration.yaml file:**
 
 ```
 zha:
@@ -19,7 +19,8 @@ zha:
       CONFIG_NEIGHBOR_TABLE_SIZE: 26
 ```
 
-**For EFR32 Series 2 Gateways with Firmware based on the 6.9.2 SDK please use the following config**
+## For EFR32 Series 2 Gateways with Firmware based on the 6.9.2 SDK please use the following config
+**Add these lines to your configuration.yaml file:**
 
 ```
 zha:
