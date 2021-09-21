@@ -17,7 +17,7 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 3. Determine the device's ip address
     If your local network supports .local mdns addresses, the devices can be reached that way: 
-     
+
     -for CC2652p based microUSB powered coordinators: tube_zb_gw_cc2652p2.local 
 
     -for CC2652p based PoE coordinators: tube_zb_gw_cc2652p2_poe.local
@@ -63,6 +63,14 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
     ```
     serial:
       port: 'tcp://tube_zb_gw_cc2652p2.local:6638'
+
+    ```
+
+    Note the docker containers from Zigbee2MQTT do not seem to work well with mdns, so best to use the ip address of the coordinator here:
+
+    ```
+    serial:
+      port: 'tcp://IPADDRESS:6638'
 
     ```
 
