@@ -17,10 +17,11 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 3. Determine the device's ip address
     If your local network supports .local mdns addresses, the devices can be reached that way:  
-    -for CC2652p based gateways: tube_zb_gw_cc2652p2.local  
-    -for EFR32 based gateways: tube_zb_gw_efr32.local
+    -for CC2652p based microUSB powered coordinators: tube_zb_gw_cc2652p2.local 
+    -for CC2652p based PoE coordinators: tube_zb_gw_cc2652p2_poe.local
+    -for EFR32 based coordinators: tube_zb_gw_efr32.local
 
-    **If using an IP Address besure it is reserved in your router so it does not change**
+    **Using a Reserved or static IP Address is strongly advised. Reserve the address in the router or use a static [ESPHome](https://github.com/tube0013/tube_gateways/tree/main/esphome#to-add-a-static-ip) build with static ip**
 
 4. Configure your software to access the device.
 
