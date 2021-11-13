@@ -6,7 +6,7 @@ This is the seconf version of the TubesZB CC2652 Ethernet Coordinator. It can be
 
 ## Jumper Discriptions:
 
-### Zigbee connection over Ethernet (Serial over TCP):**
+### Zigbee connection over Ethernet (Serial over TCP):
 
 Jumpers positioned on the 2 header pins closes to the Female headers for the WT032-E01 ESP32 module:
 
@@ -14,7 +14,7 @@ Jumpers positioned on the 2 header pins closes to the Female headers for the WT0
 
 ---
 
-### Zigbee connection via USB:**
+### Zigbee connection via USB:
 
 Jumpers positions on the middle 2 header pins:
 
@@ -24,6 +24,14 @@ Jumpers positions on the middle 2 header pins:
 
 ### ESP32 Flashing Mode - ESP32 serial connection via USB:
 
-Jumpers positons on the 2 headers pins furthest from the female headers.
+Jumpers positons on the 2 headers pins furthest from the female headers:
 
 <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ESP32_2_USB.JPG" width="300">
+
+---
+
+### Zigbee over Ethernet with ESP32 Debug access:
+
+2 pairs of jumpers side by side:
+
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2VS_ZB_2_ETH_and_ESP32_2_USB.JPG" width="300">
