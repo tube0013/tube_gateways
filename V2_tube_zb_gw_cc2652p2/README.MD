@@ -30,7 +30,7 @@ Jumpers positons on the 2 headers pins furthest from the female headers:
 
 ---
 
-### Zigbee over Ethernet with ESP32 Debug access:
+### Zigbee over Ethernet with ESP32 Debug over USB access:
 
 2 pairs of jumpers side by side:
 
