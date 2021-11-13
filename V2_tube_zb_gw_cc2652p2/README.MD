@@ -34,4 +34,4 @@ Jumpers positons on the 2 headers pins furthest from the female headers:
 
 2 pairs of jumpers side by side:
 
-<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2VS_ZB_2_ETH_and_ESP32_2_USB.JPG" width="300">
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ZB_2_ETH_and_ESP32_2_USB.JPG" width="300">
