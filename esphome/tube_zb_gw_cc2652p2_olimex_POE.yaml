@@ -9,8 +9,6 @@ esphome:
 
 external_components:
   - source: github://oxan/esphome-stream-server
-  - source: github://tube0013/tube_gateways/esphome/components/tubemdns
-
 
 ethernet:
   type: LAN8720
@@ -98,14 +96,3 @@ uart:
 stream_server:
   uart_id: uart_bus
   port: 6638
-
-
-tubemdns:
-  - service: tubes_zb_gw
-    protocol: tcp
-    port: 6638
-    txt:
-      version: 1.0
-      radio_type: znp
-      baud_rate: 115200
-      data_flow_control: software
