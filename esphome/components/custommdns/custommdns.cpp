@@ -1,13 +1,13 @@
 
 #include "esphome/core/log.h"
-#include "zeroconf.h"
+#include "custommnds.h"
 
 namespace esphome {
-namespace zeroconf {
+namespace custommnds {
 
-static const char *TAG = "zeroconf";
+static const char *TAG = "custommnds";
 
-void Zeroconf::setup() {
+void Custommnds::setup() {
     MDNS.addService(this->service_.name, this->service_.protocol, this->service_.port);
 
     for(Txt txt : this->txts_){
@@ -15,13 +15,13 @@ void Zeroconf::setup() {
     }
 }
 
-void Zeroconf::dump_config(){
+void Custommnds::dump_config(){
     ESP_LOGCONFIG(TAG, "_%s._%s :",  this->service_.name, this->service_.protocol);
     ESP_LOGCONFIG(TAG, "\tport = [%d]", this->service_.port);
     ESP_LOGCONFIG(TAG, "\ttxt = [%s]", txts_to_string().c_str());
 }
 
-std::string Zeroconf::txts_to_string(){
+std::string Custommnds::txts_to_string(){
 
     if(this->txts_.size() ==0){
         return "";
@@ -38,5 +38,5 @@ std::string Zeroconf::txts_to_string(){
     return txtstr;
 }
 
-}  // namespace zeroconf
+}  // namespace custommnds
 }  // namespace esphome
