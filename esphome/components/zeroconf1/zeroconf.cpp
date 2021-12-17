@@ -1,20 +1,11 @@
-#include "zeroconf.h"
-#include "esphome/core/defines.h"
-#include "esphome/core/version.h"
-#include "esphome/core/application.h"
-#include "esphome/core/log.h"
 
-#ifdef USE_API
-#include "esphome/components/api/api_server.h"
-#endif
-#ifdef USE_DASHBOARD_IMPORT
-#include "esphome/components/dashboard_import/dashboard_import.h"
-#endif
+#include "esphome/core/log.h"
+#include "zeroconf.h"
 
 namespace esphome {
 namespace zeroconf {
 
-static const char *const TAG = "zeroconf";
+static const char *TAG = "zeroconf";
 
 void Zeroconf::setup() {
     MDNS.addService(this->service_.name, this->service_.protocol, this->service_.port);

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <vector>
+#include <list>
 #include "esphome/core/component.h"
 
 #ifdef ARDUINO_ARCH_ESP32
@@ -25,7 +25,6 @@ struct Txt {
     const char *value;
 };
 
-
 class Zeroconf : public Component {
     public:
       void setup() override;
@@ -42,5 +41,5 @@ class Zeroconf : public Component {
       std::string txts_to_string();
 };
 
-}  // namespace mdns
+}  // namespace zeroconf
 }  // namespace esphome
