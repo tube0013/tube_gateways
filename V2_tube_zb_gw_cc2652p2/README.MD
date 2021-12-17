@@ -1,6 +1,6 @@
 # CC2652P2 based Zigbee to Ethernet/USB Serial Coordinator
 
-This is the second version of the TubesZB CC2652 Ethernet Coordinator. It takes the place of both the Original CC2652 Ethernet Coordninator and the Original TubesZB USB Coordinator as it can be bought/made with or without ethernet. For the USB only variation ethernet can be added at a later time. Addin it is show in this short YouTube video: https://youtu.be/qbWw0O2dzP0
+This is the second version of the TubesZB CC2652 Ethernet Coordinator. It takes the place of both the Original CC2652 Ethernet Coordninator and the Original TubesZB USB Coordinator as it can be bought/made with or without ethernet. For the USB only variation ethernet can be added at a later time. Adding it is shown in this short YouTube video: https://youtu.be/qbWw0O2dzP0
 
 ***
 
