@@ -12,7 +12,7 @@
 #endif
 
 namespace esphome {
-namespace zeroconf {
+namespace custommnds {
 
 struct Service {
     const char *name;
@@ -25,7 +25,7 @@ struct Txt {
     const char *value;
 };
 
-class Zeroconf : public Component {
+class Custommnds : public Component {
     public:
       void setup() override;
       void dump_config() override;
@@ -41,5 +41,5 @@ class Zeroconf : public Component {
       std::string txts_to_string();
 };
 
-}  // namespace zeroconf
+}  // namespace custommnds
 }  // namespace esphome

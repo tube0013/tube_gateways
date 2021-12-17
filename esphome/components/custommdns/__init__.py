@@ -7,8 +7,8 @@ MULTI_CONF = True
 
 CONF_TXT = 'txt'
 
-ns = cg.esphome_ns.namespace('zeroconf')
-class_ = ns.class_('Zeroconf', cg.Component)
+ns = cg.esphome_ns.namespace('custommnds')
+class_ = ns.class_('Custommnds', cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(class_),
