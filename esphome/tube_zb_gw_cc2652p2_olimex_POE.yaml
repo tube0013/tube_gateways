@@ -1,10 +1,15 @@
 esphome:
   name: tube-zb-gw-cc2652p2-poe
+  project:
+    name: tubeszb.cc2642p2_poe
+    version: "1.1"
   platform: ESP32
   board: esp-wrover-kit
 
+
 external_components:
   - source: github://oxan/esphome-stream-server
+  
 
 ethernet:
   type: LAN8720
@@ -31,7 +36,7 @@ api:
 ota:
 
 dashboard_import:
-  package_import_url: 
+  package_import_url: github://tube0013/tube_gateways/esphome/tube_zb_gw_cc2652p2_olimex_POE.yaml
 
 web_server:
   port: 80
