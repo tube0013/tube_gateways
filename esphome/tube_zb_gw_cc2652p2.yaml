@@ -1,11 +1,13 @@
 esphome:
-  name: tube_zb_gw_cc2652p2
+  name: tube-zb-gw-cc2652p2
+  project:
+    name: tubeszb.cc2642p2_v1
+    version: "1.1"
   platform: ESP32
   board: esp-wrover-kit
 
-  includes:
-    - stream_server.h
-    - stream_server.cpp
+external_components:
+  - source: github://oxan/esphome-stream-server
 
 ethernet:
   type: LAN8720
@@ -14,6 +16,12 @@ ethernet:
   clk_mode: GPIO0_IN
   phy_addr: 1
   power_pin: GPIO16
+
+    # Optional manual IP
+  #manual_ip:
+    #static_ip: 
+    #gateway: 
+    #subnet: 255.255.255.0  
 
 # Enable logging
 logger:
@@ -25,9 +33,11 @@ api:
 
 ota:
 
+dashboard_import:
+  package_import_url: github://tube0013/tube_gateways/esphome/tube_zb_gw_cc2652p2.yaml
+
 web_server:
   port: 80
-
 
 script:
   - id: fw_update_mode
@@ -80,9 +90,7 @@ uart:
   tx_pin: GPIO17
   baud_rate: 115200
 
-
-custom_component:
-  - lambda: |-
-      auto stream_server = new StreamServerComponent(id(uart_bus));
-      return {stream_server};
+stream_server:
+  uart_id: uart_bus
+  port: 6638
 
