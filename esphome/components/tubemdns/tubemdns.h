@@ -12,7 +12,7 @@
 #endif
 
 namespace esphome {
-namespace custommnds {
+namespace tubemdns {
 
 struct Service {
     const char *name;
@@ -25,7 +25,7 @@ struct Txt {
     const char *value;
 };
 
-class Custommnds : public Component {
+class Tubemdns : public Component {
     public:
       void setup() override;
       void dump_config() override;
@@ -41,5 +41,5 @@ class Custommnds : public Component {
       std::string txts_to_string();
 };
 
-}  // namespace custommnds
+}  // namespace tubemdns
 }  // namespace esphome

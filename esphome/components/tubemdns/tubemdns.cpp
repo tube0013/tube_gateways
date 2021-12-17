@@ -1,13 +1,13 @@
 
 #include "esphome/core/log.h"
-#include "custommnds.h"
+#include "tubemdns.h"
 
 namespace esphome {
-namespace custommnds {
+namespace tubemdns {
 
-static const char *TAG = "custommnds";
+static const char *TAG = "tubemdns";
 
-void Custommnds::setup() {
+void Tubemdns::setup() {
     MDNS.addService(this->service_.name, this->service_.protocol, this->service_.port);
 
     for(Txt txt : this->txts_){
@@ -15,13 +15,13 @@ void Custommnds::setup() {
     }
 }
 
-void Custommnds::dump_config(){
+void Tubemdns::dump_config(){
     ESP_LOGCONFIG(TAG, "_%s._%s :",  this->service_.name, this->service_.protocol);
     ESP_LOGCONFIG(TAG, "\tport = [%d]", this->service_.port);
     ESP_LOGCONFIG(TAG, "\ttxt = [%s]", txts_to_string().c_str());
 }
 
-std::string Custommnds::txts_to_string(){
+std::string Tubemdns::txts_to_string(){
 
     if(this->txts_.size() ==0){
         return "";
@@ -38,5 +38,5 @@ std::string Custommnds::txts_to_string(){
     return txtstr;
 }
 
-}  // namespace custommnds
+}  // namespace tubemdns
 }  // namespace esphome
