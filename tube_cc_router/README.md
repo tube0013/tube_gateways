@@ -22,7 +22,7 @@ Using the dupont jumper wires, connect them to the serial adaptor using the 3.3v
 With the USB cto serial adaptor plugged into a computer, hold the 4 dupont connectors together in lines up in order. Hold the BSL button down while sliding the 4 connectors over the pins on the board.
 
 
-[![TubesZB Router FW Update Wiring Setup](https://github.com/tube0013/tube_gateways/raw/main/images/youtube--OCORSnwCDtw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/OCORSnwCDtw "TubesZB Router FW Update Wiring Setup")
+[![TubesZB Router FW Update Wiring Setup](https://github.com/tube0013/tube_gateways/raw/main/images/youtube--OCORSnwCDtw-c05b58ac6eb4c4700831b2b3070cd403.jpeg)](https://youtu.be/OCORSnwCDtw "TubesZB Router FW Update Wiring Setup")
 
 
 At this point the cc2652 module should be in bootloader mode, and flashing can be done with the cc2538-bsl tool.
