@@ -11,3 +11,20 @@ Devices shipped in 2021 are flashed with Firmware from the Z-Stack Router FW Rep
 
 In 2022 I made some tweaks to the FW and it can be found here along with the changes described: https://github.com/tube0013/tube_gateways/tree/main/tube_cc_router/firmware
 
+## Flashing the Router
+
+To flash new firmware onto the router you will need a USB to Serial adaptor. Something like this will work well and is similart to the ones I uses: https://www.amazon.com//dp/B07D6LLX19 Note generally you can find adaptors with the cp210x, ch340 for FTDI chips. most are supported fine on Linux or Mac but you may need drivers for Windows.
+
+Just with the coordinator firmware you'll need the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
+
+Using the dupont jumper wires, connect them to the serial adaptor using the 3.3v, GND, RX and TX pins. line up the other end of the wires so that they are in the GND,TX,RX,3.3v order. these will connect to the router's GND,RX,TX, and 3.3v pins.
+
+With the USB cto serial adaptor plugged into a computer, hold the 4 dupont connectors together in lines up in order. Hold the BSL button down while sliding the 4 connectors over the pins on the board.
+
+
+[![TubesZB Router FW Update Wiring Setup](https://github.com/tube0013/tube_gateways/raw/main/images/youtube--OCORSnwCDtw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/OCORSnwCDtw "TubesZB Router FW Update Wiring Setup")
+
+
+At this point the cc2652 module should be in bootloader mode, and flashing can be done with the cc2538-bsl tool.
+
+```cc2538-bsl.py -p /dev/cu.usbserial-00F9450F -evw /PATH_TO/tubeszb_router_20220111.hex```
