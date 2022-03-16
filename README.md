@@ -94,6 +94,7 @@ https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0
 
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
 
+**Ethernet version :**
 1. Prep the Module for firmware update:
 
 Click the button to intiate the bootloader mode for the module:
@@ -123,7 +124,26 @@ Write 104 bytes at 0x00057F980
 Verifying by comparing CRC32 calculations.
     Verified (match: 0xdb4192ef)
 ```
-
+**USB Version**
+1. Connect the module while pushing the BSL button
+2. Run the cc2538-bsl programmer:
+```
+ python3 cc2538-bsl.py -evw -p /dev/ttyUSB0 ./CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
+Opening port /dev/ttyUSB0, baud 500000
+Reading data from ./CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
+Your firmware looks like an Intel Hex file
+Connecting to target...
+CC1350 PG2.0 (7x7mm): 352KB Flash, 20KB SRAM, CCFG.BL_CONFIG at 0x00057FD8
+Primary IEEE Address: 00:12:4B:00:22:98:3A:E0
+    Performing mass erase
+Erasing all main bank flash sectors
+    Erase done
+Writing 360448 bytes starting at address 0x00000000
+Write 104 bytes at 0x00057F988
+    Write done
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0xddfc152d)
+```
 **EFR32 based Gateways**
 
 https://www.youtube.com/watch?v=zKrISuWEzL4tube-
