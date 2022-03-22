@@ -1,0 +1,128 @@
+esphome:
+  name: tubeszb-cc2652p2-poe-v2
+  project:
+    name: tubeszb.cc2642p2_poe_v2
+    version: "2.1"
+  platform: ESP32
+  board: esp-wrover-kit
+
+
+external_components:
+#  - source: github://oxan/esphome-stream-server
+  - source: github://joshuaspence/esphome-stream-server@sensor  #use @joshhuapence's branch until PR is merged upstream
+  - source: github://syssi/esphome-zeroconf@main
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+  
+    # Optional manual IP
+  #manual_ip:
+    #static_ip: 
+    #gateway: 
+    #subnet: 255.255.255.0  
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s #Disable Auto reboot
+
+ota:
+
+dashboard_import:
+  package_import_url: github://tube0013/tube_gateways/esphome/tubeszb-cc2652-poe-v2.yaml
+
+web_server:
+  port: 80
+  local: true
+
+script:
+  - id: fw_update_mode
+    then:
+      - switch.turn_on: zBSL
+      - delay: 1s
+      - switch.turn_on: zRST_gpio
+      - delay: 1s
+      - switch.turn_off: zRST_gpio
+      - logger.log: "Delaying ~10 seconds for cc2652p2 to settle"
+      - delay: 11s
+      - switch.turn_off: zBSL
+      - logger.log: "Please try update with cc-bsl tool now"
+      - logger.log: "cc-bsl usage: cc-bsl.py -p socket://ip-of-gw:6638 -evw firmware.hex"
+      
+switch:
+
+  - platform: gpio
+    pin: 13
+    id: zRST_gpio
+    disabled_by_default: true
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+    
+  - platform: template
+    name: "zRST"
+    id: zRST
+    disabled_by_default: true
+    turn_on_action:
+      - switch.turn_on: zRST_gpio
+      - delay: 15ms
+      - switch.turn_off: zRST_gpio
+      
+  - platform: gpio
+    pin: 4
+    name: "zBSL"
+    id: zBSL
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+
+button:
+  - platform: template
+    name: "Trigger Zigbee Module Bootloader"
+    disabled_by_default: true
+    on_press:
+      - script.execute: fw_update_mode
+
+  - platform: restart
+    name: "Restart the Gateway"
+    disabled_by_default: true
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO5
+  tx_pin: GPIO16
+  baud_rate: 115200
+#  debug:
+#    direction: BOTH
+#    dummy_receiver: false
+#    after:
+#      delimiter: "\n"
+#    sequence:
+#     - lambda: UARTDebug::log_string(direction, bytes);
+
+
+stream_server:
+  uart_id: uart_bus
+  id: ss
+  port: 6638
+
+binary_sensor:
+  - platform: stream_server
+    stream_server: ss
+    name: "Serial Connected"
+    
+zeroconf:
+  - service: tubeszb
+    protocol: tcp
+    port: 6638
+    txt:
+      version: 1.0
+      radio_type: znp
+      baud_rate: 115200
+      data_flow_control: software
+
