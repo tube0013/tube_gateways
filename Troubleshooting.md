@@ -31,6 +31,8 @@ Use the jumper from the 3.3v_Bridge on the board (or another female to female ju
 
 Once all that is connected up, power on by plugging in the micro usb or by using a 4th jumper wire to connect the 3.3 volts on the Serial TTL adaptor to the 3.3v pin on the board.
 
+## Flashing
+
 Fire up the flasher and select the correct port and point it to the downloaded FW bin:
 
   <img src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_flasher_1.jpg" width="400">
