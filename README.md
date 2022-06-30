@@ -59,7 +59,7 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
 
 
 ## Zigbee2MQTT
-    **For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:**
+    *For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:*
 
   
 
