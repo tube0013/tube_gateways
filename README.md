@@ -64,7 +64,7 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
 No need to pass any devices through to Zigbee2MQTT docker container setups.
 The docker containers for Zigbee2MQTT do not seem to work well with mdns, so use the ip address of the coordinator here.
 
-    in the Zigbee2MQTT `configuration.yaml`:
+in the Zigbee2MQTT `configuration.yaml`:
 
     ```
     serial:
