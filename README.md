@@ -9,6 +9,8 @@ This can today be used by home automation applications such as example; [Home As
 The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee module.
 
 ## Getting up and Running
+
+## ZHA
 *For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
 
 *Auto Discovery for EFR32 Gatways is currently broken in HA, Please ignore the discovered device and set up manually*
@@ -56,17 +58,15 @@ The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
 
 
+## Zigbee2MQTT
     **For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:**
 
+  
+
+    No need to pass any devices through to Zigbee2MQTT docker container setups.
+    The docker containers for Zigbee2MQTT do not seem to work well with mdns, so use the ip address of the coordinator here:
+
     in the Zigbee2MQTT `configuration.yaml`
-
-    ```
-    serial:
-      port: 'tcp://tube_zb_gw_cc2652p2.local:6638'
-
-    ```
-
-    No need to pass any devices through to Zigbee2MQTT docker container setups. Also the docker containers for Zigbee2MQTT do not seem to work well with mdns, so best to use the ip address of the coordinator here:
 
     ```
     serial:
