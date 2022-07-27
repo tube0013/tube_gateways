@@ -1,4 +1,4 @@
-##CC2652 Coordinator Firmware is available from the Z-Stack Firmware Repository:
+## CC2652 Coordinator Firmware is available from the Z-Stack Firmware Repository:
 
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
