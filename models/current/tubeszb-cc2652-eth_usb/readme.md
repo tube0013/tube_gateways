@@ -106,7 +106,7 @@ Jumpers in Zigbee to Ethernet mode as shown above
 
 3. Run the cc2538-bsl flasher
 ```
-cc2538-bsl.py -p socket://IP:6638 CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
+cc2538-bsl.py -p socket://IP:6638 path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
 ```
 Note firmware file name will be different depending on version
 Flashing over network serial will take approxiamately 5 minutes.
