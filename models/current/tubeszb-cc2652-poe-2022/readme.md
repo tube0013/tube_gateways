@@ -12,7 +12,7 @@ PoE switch or Injector required to power
 
 IEEE 802.3-compliant, including pre-standard (legacy) PoE support. The PoE powering requires at least 37V DC to operate successfully
 
-🔴**_Do Not connect PoE and USB (internal USB port on Olime module) at the same time - you will burn out the board or computer or both!_**🔴
+🔴 **_Do Not connect PoE and USB (internal USB port on Olime module) at the same time - you will burn out the board or computer or both!_** 🔴
 
 ## ESP32 Flashing
 
