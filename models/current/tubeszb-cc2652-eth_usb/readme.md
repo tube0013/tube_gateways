@@ -104,6 +104,11 @@ Jumpers in Zigbee to Ethernet mode as shown above
 
 2. Click the Prep cc2652 for firmware toggle in the web interface - the console will show a message after ~ 10 seconds
 
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
+
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="500">
+
+
 3. Run the cc2538-bsl flasher
 ```
 cc2538-bsl.py -p socket://IP:6638 path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
