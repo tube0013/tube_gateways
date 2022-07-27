@@ -16,8 +16,6 @@ IEEE 802.3-compliant, including pre-standard (legacy) PoE support. The PoE power
 
 ## ESP32 Flashing
 
-*Note currently ESPHome Releases 2021.10 do not have reliable serial connections to the zigbee module exhibiting in frequent (every few hours) disconnections.*
-
 Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2022/firmware/esphome).
 
 Recommend the ESPHome Flasher tool:
