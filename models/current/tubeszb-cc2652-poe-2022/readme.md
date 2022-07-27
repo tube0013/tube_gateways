@@ -50,25 +50,12 @@ https://github.com/JelmerT/cc2538-bsl
 
 
 ### USB
-Move jumpers to Zigbee to USB mode as shown above.
 
-Windows will require the CH340 Serial driver. I version can be found [downloaded here](https://www.olimex.com/Products/Breadboarding/BB-CH340T/resources/CH341SER.zip)
+USB can be used to flash the cc2652 module if you have an external USB to serial adapter and dupont connector cables.
 
-1. Hold the BSL button while plugging in the usb cable.
-2. Run the cc2538-bsl flasher:
-```
-cc2538-bsl.py -p /dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0 -evw path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
-```
-Note firmware file name will be different depending on version
-
-3. Confirm the successful flash via the out put from the cc2638-bsl.py script:
-```
-Verifying by comparing CRC32 calculations.
-    Verified (match: 0xddfc152d)
-```
+(More details coming)
 
 ### Network
-Jumpers in Zigbee to Ethernet mode as shown above
 
 1. Go to the Coordinators web console in your browser - http://coordinatore_ip_address
 
