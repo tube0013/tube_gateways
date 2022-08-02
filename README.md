@@ -9,7 +9,8 @@ This can today be used by home automation applications such as example; [Home As
 
 
 
-## Current Products (Find latest Firmware and Source files)
+## Current Products 
+**Find latest Firmware and Source files**
 
 | CC2652 Products | | |
 | ----- | ------------ | ----------------- | 
@@ -23,7 +24,8 @@ This can today be used by home automation applications such as example; [Home As
 
 
 
-## Retired Products - Previous hardware versions (Find the latest Firmware and Source files)
+## Retired Products - Previous hardware versions 
+**Find the latest Firmware and Source files**
 
 | CC2652 Products | | |
 | ----- | ------------ | ----------------- | 
