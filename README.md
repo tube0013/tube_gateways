@@ -6,7 +6,25 @@ Tube's Zigbee Gateways are serial over Ethernet zigbee gateways for use with any
 
 This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
 
-The gateway hardware itself is made up of a WT32-ETH01 module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee module.
+The gateway hardware itself is made up of a WT32-ETH01 or Olimex ESP32-PoE module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or 
+a Silicon Labs EFR32 based Zigbee module.
+
+
+## Current Products
+
+| Product Name | Short Description |
+| tubeszb-cc2652-poe-2022 <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="100"> | CC2652P2 Radio module + Olimex ESP32-PoE module |
+
+
+
+
+
+
+
+
+
+
+
 
 ## Getting up and Running
 
