@@ -1,0 +1,108 @@
+esphome:
+  name: tube-zb-gw-cc2652p2-poe-2021-09
+  platform: ESP32
+  board: esp-wrover-kit
+
+external_components:
+  - source: my_components
+
+#  includes:
+#    - stream_server.h
+#    - stream_server.cpp
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+    # Optional manual IP
+# manual_ip:
+#    static_ip: 10.129.0.240
+#    gateway: 10.129.0.1
+#    subnet: 255.255.255.0
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+
+ota:
+
+web_server:
+  port: 80
+
+
+script:
+  - id: fw_update_mode
+    then:
+      - switch.turn_on: zBSL
+      - delay: 1s
+      - switch.turn_on: zRST_gpio
+      - delay: 1s
+      - switch.turn_off: zRST_gpio
+      - logger.log: "Delaying ~10 seconds for cc2652p2 to settle"
+      - delay: 11s
+      - switch.turn_off: zBSL
+      - logger.log: "Please try update with cc-bsl tool now"
+      - logger.log: "cc-bsl usage: cc-bsl.py -p socket://ip-of-gw:6638 -evw firmware.hex"
+      
+switch:
+  - platform: restart
+    name: "Restart the Gateway"
+
+  - platform: gpio
+    pin: 13
+    id: zRST_gpio
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: "zRST"
+    id: zRST
+    turn_on_action:
+      - switch.turn_on: zRST_gpio
+      - delay: 15ms
+      - switch.turn_off: zRST_gpio
+      
+  - platform: gpio
+    pin: 4
+    name: "zBSL"
+    id: zBSL
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+    
+  - platform: template
+    name: "Prep the cc2652p2 for firmware update"
+    turn_on_action:
+      - script.execute: fw_update_mode
+    turn_off_action:
+      - switch.toggle: zRST
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO5
+  tx_pin: GPIO16
+  baud_rate: 115200
+
+serial_server:
+  port: 6638
+  multi_client: false 
+  
+binary_sensor:
+  - platform: serial_server
+    name: Serial Connected
+    
+zeroconf:
+  - service: tubeszb
+    protocol: tcp
+    port: 6638
+    txt:
+      version: 1.0
+      port: 6638
+      radio_type: znp
+      baud_rate: 115200
+      data_flow_control: software
