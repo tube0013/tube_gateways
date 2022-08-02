@@ -19,7 +19,7 @@ a Silicon Labs EFR32 based Zigbee module.
 | pic | [tubeszb-router](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-router) | CC2652P2 Based Zigbee Router |
 
 | EFR32 Products | | |
-| -------------- | _ | _ |
+| -------------- | - | - |
 | pic | [tubeszb-efr32-MGM12P-eth_usb](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-efr32-MGM12P-eth_usb) | MGM12P Radio Module + WirelessTag WT32-ETH01 ESP32 Module |
 
 
