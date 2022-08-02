@@ -1,16 +1,15 @@
-# Tube's Zigbee Gateways
+# TubesZB Coordinators and Routers
 
-Information and documentation on Tube's Zigbee Gateways. Pre-assembed hardware devices can be purchased from https://www.tubeszb.com
+Information and documentation on TubeZB coordinators and routers. Pre-assembed hardware devices can be purchased from https://www.tubeszb.com
 
-Tube's Zigbee Gateways are serial over Ethernet zigbee gateways for use with any project that can access and interface with a remote Serial to IP bridge/proxy server device. 
+TubeZB Coordinators work via serial over Ethernet for use with any zigbee controller project that can access and interface with a remote Serial to IP bridge/proxy server device. 
 
 This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
 
-The gateway hardware itself is made up of a WT32-ETH01 or Olimex ESP32-PoE module which is an ESP32 with Ethernet in combination with either a Texas Instruments CC2652P or 
-a Silicon Labs EFR32 based Zigbee module.
 
 
-## Current Products
+
+## Current Products (Find latest Firmware and Source files)
 
 | CC2652 Products | | |
 | ----- | ------------ | ----------------- | 
@@ -24,11 +23,14 @@ a Silicon Labs EFR32 based Zigbee module.
 
 
 
+## Retired Products - Previous hardware versions (Find the latest Firmware and Source files)
+
+| CC2652 Products | | |
+| ----- | ------------ | ----------------- | 
 
 
-
-
-
+| EFR32 Products | | |
+| -------------- | - | - |
 
 
 
