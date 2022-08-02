@@ -12,9 +12,9 @@ a Silicon Labs EFR32 based Zigbee module.
 
 ## Current Products
 
-| Product Name | Short Description |
-| ------------ | ----------------- | 
-| tubeszb-cc2652-poe-2022 <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="100"> | CC2652P2 Radio module + Olimex ESP32-PoE module |
+| Photo | Product Name | Short Description |
+| ----- | ------------ | ----------------- | 
+|  <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="100"> | tubeszb-cc2652-poe-2022 | CC2652P2 Radio module + Olimex ESP32-PoE module |
 
 
 
