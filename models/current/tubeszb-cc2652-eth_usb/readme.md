@@ -18,7 +18,7 @@
 
 Jumpers positioned on the 2 header pins closes to the Female headers for the WT032-E01 ESP32 module:
 
-<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ZB_2_ETH.JPG" width="300">
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-eth_usb/images/V2_ZB_2_ETH.JPG" width="300">
 
 ---
 
@@ -26,7 +26,7 @@ Jumpers positioned on the 2 header pins closes to the Female headers for the WT0
 
 Jumpers positions on the middle 2 header pins:
 
-<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ZB_2_USB.JPG" width="300">
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-eth_usb/images/V2_ZB_2_USB.JPG" width="300">
 
 ---
 
@@ -34,7 +34,7 @@ Jumpers positions on the middle 2 header pins:
 
 Jumpers positons on the 2 headers pins furthest from the female headers:
 
-<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ESP32_2_USB.JPG" width="300">
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-eth_usb/images/V2_ESP32_2_USB.JPG" width="300">
 
 ---
 
@@ -42,7 +42,7 @@ Jumpers positons on the 2 headers pins furthest from the female headers:
 
 2 pairs of jumpers side by side:
 
-<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/V2_tube_zb_gw_cc2652p2/V2_ZB_2_ETH_and_ESP32_2_USB.JPG" width="300">
+<img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-eth_usb/images/V2_ZB_2_ETH_and_ESP32_2_USB.JPG" width="300">
 
 
 ## ESP32 Flashing
