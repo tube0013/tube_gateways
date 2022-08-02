@@ -15,6 +15,7 @@ a Silicon Labs EFR32 based Zigbee module.
 |  | Product Name | Short Description |
 | ----- | ------------ | ----------------- | 
 |  <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="100"> | [tubeszb-cc2652-poe-2022](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2022) | CC2652P2 Radio module + Olimex ESP32-PoE module |
+|  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-eth_usb/images/tubeszb-cc2652-eth_usb_closed.jpg" width="100"> | tubeszb-cc2652-eth_usb | CC2652P2 Radio Moduled + WirelessTag ET32-ETH01 ESP32 Module |
 
 
 
