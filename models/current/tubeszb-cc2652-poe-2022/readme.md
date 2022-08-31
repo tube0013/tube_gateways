@@ -21,12 +21,12 @@ Firmware is available in the [firmware directory for this model](https://github.
 Recommend the ESPHome Flasher tool:
 https://github.com/esphome/esphome-flasher/releases
 
-Windows will require the CH340 Serial driver. I version can be found [downloaded here](https://www.olimex.com/Products/Breadboarding/BB-CH340T/resources/CH341SER.zip)
+Windows will require the CH340 Serial driver. A version can be found [downloaded here](https://www.olimex.com/Products/Breadboarding/BB-CH340T/resources/CH341SER.zip)
 
 Partially removed the board from the case to access the microUSB port on the Olimex ESP32-PoE module. Use a USB cable (not power only) to connect the the board to the computer doing the flashing. Reminder do not connect USB and Powered ethernet concurrently.
 
 
-After the flashing completes you can tap the ERST button to do a first boot of the new FW while showing the console in the flashing tool window to confirm it was flashed okay.
+After the flashing completes the esp32 will automatically reset and boot the new FW while showing the console in the flashing tool window to confirm it was flashed okay.
 
 
 ## CC2652 Firmware Flashing
