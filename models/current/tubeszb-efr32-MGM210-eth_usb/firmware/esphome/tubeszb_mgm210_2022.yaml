@@ -1,0 +1,115 @@
+esphome:
+  name: tubeszb-mgm210-2022
+  project:
+    name: tubeszb.mgm210_2022
+    version: "3.0"
+#  on_boot:
+#    priority: 600
+#    then:
+#      - switch.turn_on: zRST_gpio  
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: arduino
+
+
+external_components:
+  - source: github://syssi/esphome-zeroconf@main
+  - source: github://joshuaspence/esphome-stream-server@sensor
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO0_IN
+  phy_addr: 1
+  power_pin: GPIO16
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+
+ota:
+
+#dashboard_import:
+#  package_import_url: github://tube0013/tube_gateways/esphome/tubeszb-cc2652-poe-v2.yaml
+
+web_server:
+  port: 80
+
+
+      
+switch:
+  - platform: gpio
+    pin: 33
+    id: zRST_gpio
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+    
+  - platform: template
+    name: "EFR32 Reset"
+    id: zRST
+    disabled_by_default: true  
+    turn_on_action:
+      - switch.turn_on: zRST_gpio
+      - delay: 15ms
+      - switch.turn_off: zRST_gpio
+      
+  - platform: gpio
+    pin: 32
+    name: "Pull Bootloader pin (PA0) to Low"
+    id: zBSL
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+    disabled_by_default: true  
+    
+button:
+      
+  - platform: restart
+    name: "Restart the Gateway"
+    disabled_by_default: true
+
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO17
+  tx_pin: GPIO5
+  baud_rate: 115200
+#  debug:
+#    direction: BOTH
+#    dummy_receiver: false
+#    after:
+#      delimiter: "\n"
+#    sequence:
+#      - lambda: UARTDebug::log_string(direction, bytes);
+#      - lambda UARTDebug::log_hex(direction, bytes, char separator)
+
+
+stream_server:
+  uart_id: uart_bus
+  id: ss
+  port: 6638 # optional, default is 86638888
+ # multi_client: false # optional, default is false. Set to true to allow multiple simultaneous connections
+
+# optional binary sensor to monitor serial connection:
+binary_sensor:
+  - platform: stream_server
+    stream_server: ss
+    name: "Serial Connected"
+
+zeroconf:
+  - service: tubes_zb_gw
+    protocol: tcp
+    port: 6638
+    txt:
+      version: 1.0
+      radio_type: ezsp
+      baud_rate: 115200
+      data_flow_control: software
+
+
