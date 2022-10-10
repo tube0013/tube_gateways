@@ -1,0 +1,101 @@
+esphome:
+  name: tubeszb-efr32-mgm210-poe-2022
+  project:
+    name: tubeszb.efr32_mgm210_poe_2022
+    version: "3.0"
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: arduino
+
+external_components:
+  - source: github://tube0013/esphome-stream-server-v2
+  - source: github://syssi/esphome-zeroconf@main
+  
+dashboard_import:
+  package_import_url: github://tube0013/tube_gateways/models/current/tubeszb-efr32-MGM210-poe/firmware/esphome/tubeszb-efr32-mgm210-poe-2022.yaml
+
+#Olimex ESP32-PoE Ethernet
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+  
+    # Optional manual IP
+  #manual_ip:
+    #static_ip: 
+    #gateway: 
+    #subnet: 255.255.255.0  
+
+# Enable logging
+logger:
+  level: DEBUG
+  
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+
+ota:
+
+web_server:
+  port: 80
+   
+switch:
+  - platform: gpio
+    pin: 13
+    id: zRST_gpio
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+       
+  - platform: gpio
+    pin: 4
+    name: "Pull Bootloader pin (PA0) to Low"
+    id: zBSL
+    inverted: yes
+    restore_mode: ALWAYS_OFF
+    disabled_by_default: true  
+    
+button:    
+  - platform: restart
+    name: "Restart the Gateway"
+    disabled_by_default: true
+
+  - platform: template
+    name: "EFR32 Reset"
+    id: zRST
+    disabled_by_default: true  
+    on_press:
+      - switch.turn_on: zRST_gpio
+      - delay: 15ms
+      - switch.turn_off: zRST_gpio
+
+uart:
+  id: uart_bus
+  rx_pin: GPIO5
+  tx_pin: GPIO16
+  baud_rate: 115200
+
+stream_server:
+  uart_id: uart_bus
+  id: ss
+  port: 6638 # optional, default is 6638
+
+binary_sensor:
+  - platform: stream_server
+    stream_server: ss
+    name: "TubesZB Serial Connected"
+
+zeroconf:
+  - service: tubeszb
+    protocol: tcp
+    port: 6638
+    txt:
+      version: 1.0
+      name: TubesZB
+      radio_type: ezsp
+      baud_rate: 115200
+      data_flow_control: software

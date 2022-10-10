@@ -22,7 +22,7 @@ This can today be used by home automation applications such as example; [Home As
 
 | EFR32 Products | | |
 | -------------- | - | - |
-| <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-efr32-MGM12P-eth_usb/images/tubeszb-efr32-MGM12P-eth_usb.webp" width="100"> | [tubeszb-efr32-MGM12P-eth_usb](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-efr32-MGM12P-eth_usb) | MGM12P Radio Module + WirelessTag WT32-ETH01 ESP32 Module |
+| <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-efr32-MGM12-eth_usb/images/tubeszb-efr32-MGM12P-eth_usb.webp" width="100"> | [tubeszb-efr32-MGM12-eth_usb](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-efr32-MGM12-eth_usb) | MGM12P Radio Module + WirelessTag WT32-ETH01 ESP32 Module |
 
 
 
