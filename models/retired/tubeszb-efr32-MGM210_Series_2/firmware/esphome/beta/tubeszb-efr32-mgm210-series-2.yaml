@@ -1,43 +1,36 @@
 esphome:
-  name: tubeszb-cc2652-poe
-  project: 
-    name: tubezb.cc2652-poe
+  name: tubeszb-efr32-mgm210-series-2
+  project:
+    name: tubeszb.efr32_mgm210_series_2
     version: "3.0"
-  on_boot:
-    priority: 600
-    then:
-      - switch.turn_on: zRST_gpio
-      - delay: 15ms
-      - switch.turn_off: zRST_gpio
 
 esp32:
   board: esp-wrover-kit
   framework:
     type: arduino
 
-
 external_components:
   - source: github://tube0013/esphome-stream-server-v2
   - source: github://syssi/esphome-zeroconf@main
-
+  
 dashboard_import:
-  package_import_url: github://tube0013/tube_gateways/models/retired/tubeszb-cc2652-poe/firmware/esphome/beta/tubeszb-cc2652-poe.yaml
+  package_import_url: github://tube0013/tube_gateways/models/retired/tubeszb-efr32-MGM210_Series_2/firmware/esphome/beta/tubeszb-efr32-mgm210-series-2.yaml
 
-#Olimex ESP32-PoE Ethernet
+#WT32_ETH01 Ethernet
 ethernet:
   type: LAN8720
   mdc_pin: GPIO23
   mdio_pin: GPIO18
-  clk_mode: GPIO17_OUT
-  phy_addr: 0
-  power_pin: GPIO12
-  
+  clk_mode: GPIO0_IN
+  phy_addr: 1
+  power_pin: GPIO16
+
     # Optional manual IP
   #manual_ip:
     #static_ip: 
     #gateway: 
     #subnet: 255.255.255.0  
-
+    
 # Enable logging
 logger:
   level: DEBUG
@@ -50,60 +43,40 @@ ota:
 
 web_server:
   port: 80
-
-
-script:
-  - id: fw_update_mode
-    then:
-      - switch.turn_on: zBSL
-      - delay: 1s
-      - switch.turn_on: zRST_gpio
-      - delay: 1s
-      - switch.turn_off: zRST_gpio
-      - logger.log: "Delaying ~10 seconds for cc2652p2 to settle"
-      - delay: 11s
-      - switch.turn_off: zBSL
-      - logger.log: "Please try update with cc2538-bsl tool now"
-      - logger.log: "cc-bsl usage: cc2538-bsl.py -p socket://ip-of-gw:6638 -evw firmware.hex"
-      
+   
 switch:
   - platform: gpio
     pin: 33
     id: zRST_gpio
     inverted: yes
     restore_mode: ALWAYS_OFF
-      
+       
   - platform: gpio
     pin: 32
-    name: "Zigbee Module Bootloader Pin"
+    name: "Pull Bootloader pin (PA2) to Low"
     id: zBSL
     inverted: yes
     restore_mode: ALWAYS_OFF
-    disabled_by_default: true
-
-button:
+    disabled_by_default: true  
+    
+button:    
   - platform: restart
-    name: "Restart the Device"
+    name: "Restart the Gateway"
+    disabled_by_default: true
 
   - platform: template
-    name: "Zigbee Module Reset"
-    disabled_by_default: true
+    name: "EFR32 Reset"
     id: zRST
+    disabled_by_default: true  
     on_press:
       - switch.turn_on: zRST_gpio
       - delay: 15ms
       - switch.turn_off: zRST_gpio
 
-  - platform: template
-    name: "Trigger Zigbee Module Bootloader"
-    disabled_by_default: true
-    on_press:
-      - script.execute: fw_update_mode
-
 uart:
   id: uart_bus
-  rx_pin: GPIO5
-  tx_pin: GPIO16
+  rx_pin: GPIO17
+  tx_pin: GPIO5
   baud_rate: 115200
 
 stream_server:
@@ -123,7 +96,6 @@ zeroconf:
     txt:
       version: 1.0
       name: TubesZB
-      radio_type: znp
+      radio_type: ezsp
       baud_rate: 115200
       data_flow_control: software
-

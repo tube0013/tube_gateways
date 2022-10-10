@@ -7,6 +7,8 @@ esphome:
     priority: 600
     then:
       - switch.turn_on: zRST_gpio
+      - delay: 15ms
+      - switch.turn_off: zRST_gpio
 
 esp32:
   board: esp-wrover-kit
