@@ -55,7 +55,7 @@ This can today be used by home automation applications such as example; [Home As
 1. Connect the gateway to a ethernet cable which has access you your local network.
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 
-If the Device is AutoDiscoverer, just click through the Config flow to add it to HA. If not move on to the below steps.
+If the Device is AutoDiscovered, click through the Config flow to add it to HA. If not move on to the below steps.
 
 3. Determine the device's ip address
 
