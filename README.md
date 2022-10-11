@@ -26,6 +26,7 @@ This can today be used by home automation applications such as example; [Home As
 
 
 
+
 ## Retired Products - Previous hardware versions 
 **Find the latest Firmware and Source files**
 
@@ -45,9 +46,25 @@ This can today be used by home automation applications such as example; [Home As
 *For EFR32 Gateways see specific insturctions for config file* visit product page
 
 1. Connect the gateway to a ethernet cable which has access you your local network.
-2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
+2. Power on the gateway with a micro usb cable and 5v 1.5 - 2 amp power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
 
-If the Device is AutoDiscovered, click through the Config flow to add it to HA. If not move on to the below steps.
+If the Device is AutoDiscovered, click through the Config flow to add it to HA. 
+
+
+ <img src="https://github.com/tube0013/tube_gateways/raw/main/images/discover0.png" width="300">
+
+ <img src="https://github.com/tube0013/tube_gateways/raw/main/images/discover1.png" width="300">
+
+
+
+
+
+
+
+
+
+
+If not move on to the below steps.
 
 3. Determine the device's ip address
 
