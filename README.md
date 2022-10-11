@@ -94,7 +94,7 @@ If the Device is AutoDiscoverer, just click through the Config flow to add it to
 ## Zigbee2MQTT
 *For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time, EFR32 may work but is not recommended*
 
-# Network Coordinators 
+### Network Coordinators 
 No need to pass any devices through to Zigbee2MQTT docker container setups.
 The docker containers for Zigbee2MQTT do not wrk well with mdns, so for coordinators WITH Ethernet use the ip address of the coordinator here.
 
@@ -108,7 +108,7 @@ in the Zigbee2MQTT `configuration.yaml`:
       port: 'tcp://IPADDRESS:6638'
 
  
-# USB Connected Coordinantors - NO Ethernet 
+### USB Connected Coordinantors - NO Ethernet 
 
 If not using HAOS be sure to pass the device through to the docker container. Donig that is outside the scope of this documentation.
 
