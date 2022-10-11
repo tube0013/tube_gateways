@@ -8,7 +8,11 @@
  Available to purchase at the [TubesZB Store](https://www.tubeszb.com/product/cc2652_coordinator/39) 
 
 
- This is the second version of the TubesZB CC2652 Ethernet Coordinator. It takes the place of both the Original CC2652 Ethernet Coordninator and the Original TubesZB USB Coordinator as it can be bought/made with or without ethernet. For the USB only variation ethernet can be added at a later time. Adding it is shown in this short YouTube video: https://youtu.be/qbWw0O2dzP0
+ This is the second version of the TubesZB CC2652 Ethernet Coordinator. It takes the place of both the Original CC2652 Ethernet Coordninator and the Original TubesZB USB Coordinator as it can be bought/made with or without ethernet. 
+ 
+ For the USB only variation ethernet can be added at a later time and attachs to the female headers shown in the image above. Adding it is shown in this short YouTube video: https://youtu.be/qbWw0O2dzP0
+ 
+ With regard to flashing the device note that they come pre-flashed. Should an update be required then be aware the adapters WITH Ethernet have two different firmwares and the USB version has one. Both have the zigbee module firmware and how to update that is in the [CC2652 Firmware Flashing section](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-eth_usb#cc2652-firmware-flashing). For the adapters WITH Ethernet the flashing of that module is described in the [ESP32 Flashing section](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-eth_usb#esp32-flashing)  
 
 ***
 
@@ -47,6 +51,8 @@ Jumpers positons on the 2 headers pins furthest from the female headers:
 
 ## ESP32 Flashing
 
+This section is only relevant for adapters with an ESP32 Ethernet module.
+
 Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-eth_usb/firmware/esphome).
 
 Recommend the ESPHome Flasher tool:
@@ -62,6 +68,7 @@ After the flashing completes you can tap the ERST button to do a first boot of t
 
 
 ## CC2652 Firmware Flashing
+This section is relevant to all adapters and relates to the updating of the firmware on the zigbee module.
 
 Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
