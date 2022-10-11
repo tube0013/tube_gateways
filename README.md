@@ -42,7 +42,9 @@ This can today be used by home automation applications such as example; [Home As
 
 ## Getting up and Running
 
-## ZHA
+## ZHA 
+
+### Netowrk Coordinators
 *For EFR32 Gateways see specific insturctions for config file* visit product page
 
 1. Connect the gateway to a ethernet cable which has access you your local network.
@@ -76,7 +78,7 @@ If not move on to the below steps.
     Select the Radio type:
 
     *For CC2652p based gateways select ZNP*
-    
+
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radiotypeznp.png" width="300">
 
     *For EFR32 based gateways select EZSP*
@@ -87,10 +89,18 @@ If not move on to the below steps.
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/serialportsettings.png" width="300">
 
+### USB Coordinators
+
+Coordinator should be auto disovered 
 
 
 ## Zigbee2MQTT
 *For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time, EFR32 may work but is not recommended*
+
+**If Autodiscovered for ZHA, select to ignore the device**
+
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/ignore.png" width="200">
+
 
 ### Network Coordinators 
 No need to pass any devices through to Zigbee2MQTT docker container setups.
