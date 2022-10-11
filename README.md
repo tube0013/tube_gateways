@@ -69,7 +69,7 @@ If not move on to the below steps.
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/manual1.png" width="300">
 
-    In the next window use the dropdown to select Set up another instance of Zigbee Home Automation:
+    In the next dialog select **Set up another instance of Zigbee Home Automation**:
 
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/manual2.png" width="300">
 
