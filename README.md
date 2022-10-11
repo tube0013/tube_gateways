@@ -55,15 +55,6 @@ If the Device is AutoDiscovered, click through the Config flow to add it to HA.
 
  <img src="https://github.com/tube0013/tube_gateways/raw/main/images/discover1.png" width="300">
 
-
-
-
-
-
-
-
-
-
 If not move on to the below steps.
 
 3. Determine the device's ip address
@@ -76,28 +67,24 @@ If not move on to the below steps.
 
     Add the ZHA Integration via the Add Integrations option:
 
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/add_integration.png" width="300">
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/manual1.png" width="300">
 
-    In the next window use the dropdown to select Manual:
+    In the next window use the dropdown to select Set up another instance of Zigbee Home Automation:
 
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/manual.png" width="350">
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/manual2.png" width="300">
 
     Select the Radio type:
 
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radio_type.png" width="400">
-
     *For CC2652p based gateways select ZNP*  
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radiotypeznp.png" width="300">
+
     *For EFR32 based gateways select EZSP*
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radiotypeeznp.png" width="300">
 
     For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638 and Port Speed of 115200 and Software Flow Control.
 
-    CC2652p Based example:
+    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/serialportsettings.png" width="300">
 
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_connection.png" width="300">
-
-    EFR32 Based example:
-
-    <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
 
 
 ## Zigbee2MQTT
