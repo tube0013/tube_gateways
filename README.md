@@ -52,20 +52,14 @@ This can today be used by home automation applications such as example; [Home As
 ## ZHA
 *For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
 
-*Auto Discovery for EFR32 Gatways is currently broken in HA, Please ignore the discovered device and set up manually*
-
 1. Connect the gateway to a ethernet cable which has access you your local network.
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
+
+If the Device is AutoDiscoverer, just click through the Config flow to add it to HA. If not move on to the below steps.
+
 3. Determine the device's ip address
-    If your local network supports .local mdns addresses, the devices can be reached that way: 
 
-    -for CC2652p based microUSB powered coordinators: tube_zb_gw_cc2652p2.local 
-
-    -for CC2652p based PoE coordinators: tube_zb_gw_cc2652p2_poe.local
-
-    -for EFR32 based coordinators: tube_zb_gw_efr32.local
-
-    **Using a Reserved or static IP Address is strongly advised. Reserve the address in the router or use a static [ESPHome](https://github.com/tube0013/tube_gateways/tree/main/esphome#to-add-a-static-ip) build with static ip**
+    **Using a Reserved or static IP Address is strongly advised. Reserve the address in the router **
 
 4. Configure your software to access the device.
 
@@ -97,11 +91,15 @@ This can today be used by home automation applications such as example; [Home As
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
 
 
-## Zigbee2MQTT
-*For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:*
+## Zigbee2MQTT ##
+*For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time, EFR32 may work but is not recommended*
 
+# Network Coordinators #
 No need to pass any devices through to Zigbee2MQTT docker container setups.
-The docker containers for Zigbee2MQTT do not seem to work well with mdns, so for coordinators WITH Ethernet use the ip address of the coordinator here.
+The docker containers for Zigbee2MQTT do not wrk well with mdns, so for coordinators WITH Ethernet use the ip address of the coordinator here.
+
+Following the Zigbee2MQTT docs, you can skip to step 3. 
+https://www.zigbee2mqtt.io/advanced/remote-adapter/connect_to_a_remote_adapter.html#_3-configure
 
 in the Zigbee2MQTT `configuration.yaml`:
 
@@ -109,8 +107,30 @@ in the Zigbee2MQTT `configuration.yaml`:
     serial:
       port: 'tcp://IPADDRESS:6638'
 
-    ```
-For coordinators WITHOUT Ethernet you need to specify the device port. Go to the HA command line (for exmaple using this https://community.home-assistant.io/t/home-assistant-community-add-on-ssh-web-terminal/33820) and type `ha hardware info` and find the adapter and look for the line `by_id`and enter that value in the Zigbee2MQTT `configuration.yaml`:
+ 
+# USB Connected Coordinantors - NO Ethernet #
+
+Find the Devices port:
+
+if using HAOS:
+Settings > System > Hardware > 3 Dot menu > All Hardware
+
+OR
+
+Go to the HA command line (for exmaple using this https://community.home-assistant.io/t/home-assistant-community-add-on-ssh-web-terminal/33820) type `ha hardware info` and find the adapter and look for the line `by_id`.
+
+It should look something like 
+
+```
+/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0
+
+```
+
+But may not match exactly depending on the OS/System
+
+
+
+nd enter that value in the Zigbee2MQTT `configuration.yaml`:
 
     ```
     serial:
