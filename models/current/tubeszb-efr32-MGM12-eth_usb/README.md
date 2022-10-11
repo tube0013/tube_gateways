@@ -31,3 +31,6 @@ zha:
 ```
 
 
+**EFR32 Firmware Updates:**
+
+https://www.youtube.com/watch?v=zKrISuWEzL4tube-

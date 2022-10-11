@@ -71,3 +71,8 @@ Move the jumpers to the middle two pins and the zigbee serial goes through the e
 Finaly by connecting ground to IO0, you and powering up the gw, the ESP32 will be in flash mode and flashable over serial if needed.
 
 <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_espflash.png" width="300">
+
+
+**EFR32 Firmware Updates:**
+
+https://www.youtube.com/watch?v=zKrISuWEzL4tube-
