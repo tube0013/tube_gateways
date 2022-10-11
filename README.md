@@ -76,9 +76,11 @@ If not move on to the below steps.
     Select the Radio type:
 
     *For CC2652p based gateways select ZNP*
+    
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radiotypeznp.png" width="300">
 
     *For EFR32 based gateways select EZSP*
+    
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/radiotypeezsp.png" width="300">
 
     For the Specifying the Port Specific Settings: Enter socket://ip_or_localdns_name:6638 and Port Speed of 115200 and Software Flow Control.
