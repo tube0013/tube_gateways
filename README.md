@@ -19,13 +19,11 @@ This can today be used by home automation applications such as example; [Home As
 |  <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="100"> | [tubeszb-cc2652-poe-2022](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2022) | CC2652P2 Radio Module + Olimex ESP32-PoE Module |
 |  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-eth_usb/images/tubeszb-cc2652-eth_usb_closed.jpg" width="100"> | [tubeszb-cc2652-eth_usb](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-eth_usb) | CC2652P2 Radio Module + WirelessTag WT32-ETH01 ESP32 Module |
 | pic | [tubeszb-router](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-router) | CC2652P2 Based Zigbee Router |
-
-
-| EFR32   Products | | |
+| | | |
+| EFR32 Products | | |
 | -------------- | - | - |
 | <img src="https://raw.githubusercontent.com/tube0013/tube_gateways/main/models/current/tubeszb-efr32-MGM12-eth_usb/images/tubeszb-efr32-MGM12P-eth_usb.webp" width="100"> | [tubeszb-efr32-MGM12-eth_usb](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-efr32-MGM12-eth_usb) | MGM12P Radio Module + WirelessTag WT32-ETH01 ESP32 Module |
-
-
+| | | |
 | BT Proxy | | |
 | -------------- | - | - |
 | <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-wt32-eth01-bt-kit/images/Subject.png" width="100"> | [tubeszb-wt32-eth01-bt-kit](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-wt32-eth01-bt-kit) | WirelessTag WT32-ETH01 ESP32 Module with USB-C for Power/Flashing |
