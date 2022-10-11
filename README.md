@@ -91,10 +91,10 @@ If the Device is AutoDiscoverer, just click through the Config flow to add it to
     <img src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_connection.png" width="300">
 
 
-## Zigbee2MQTT ##
+## Zigbee2MQTT
 *For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time, EFR32 may work but is not recommended*
 
-# Network Coordinators #
+# Network Coordinators 
 No need to pass any devices through to Zigbee2MQTT docker container setups.
 The docker containers for Zigbee2MQTT do not wrk well with mdns, so for coordinators WITH Ethernet use the ip address of the coordinator here.
 
@@ -108,11 +108,13 @@ in the Zigbee2MQTT `configuration.yaml`:
       port: 'tcp://IPADDRESS:6638'
 
  
-# USB Connected Coordinantors - NO Ethernet #
+# USB Connected Coordinantors - NO Ethernet 
+
+If not using HAOS be sure to pass the device through to the docker container. Donig that is outside the scope of this documentation.
 
 Find the Devices port:
 
-if using HAOS:
+For using HAOS:
 Settings > System > Hardware > 3 Dot menu > All Hardware
 
 OR
@@ -130,21 +132,20 @@ But may not match exactly depending on the OS/System
 
 
 
-nd enter that value in the Zigbee2MQTT `configuration.yaml`:
+Enter that value in the Zigbee2MQTT Addon confi or  `configuration.yaml`:
 
     ```
     serial:
       port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
 
     ```
+
 ## ESPHome
 
 The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant as accidential toggling could reset the zigbee modules.**
 
-To access the ESPHome Web Interface on the gateway connect to it in your Browser via it's IP address or via these URLs:
+To access the ESPHome Web Interface on the gateway connect to it in your Browser via it's IP address.
 
-CC2652p based gateways: `http://tube_zb_gw_cc2652p2.local`
-EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 
 
 ## Zigbee Module Firmware Updates:
@@ -154,7 +155,11 @@ This section relates to updating the firmware of the zigbee module. If you have 
 Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
-**Be Sure to backup your device before updgrading as the update will erase the zigbee module completely** https://github.com/zigpy/zigpy-znp/blob/dev/TOOLS.md#backup-and-restore
+**Both Zigbee2MQTT and ZHA have automatic backups. It is still advised to confirm/save ahead of a FW update **
+For ZHA, go to Settings > Devices & Services > ZHA - Cnnfigure and Click Download Backup
+
+For Z2M check he Z2M Config folder for a backup.json or similar named file, and check the date stamp. If not recent shutdown and restart Z2M to generate a more current version.
+
 
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
 
