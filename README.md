@@ -50,7 +50,7 @@ This can today be used by home automation applications such as example; [Home As
 ## Getting up and Running
 
 ## ZHA
-*For EFR32 Gateways see specific insturctions for config file* https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32
+*For EFR32 Gateways see specific insturctions for config file* visit product page
 
 1. Connect the gateway to a ethernet cable which has access you your local network.
 2. Power on the gateway with a micro usb cable and power supply. The link lights on the ethernet port will start blinking as it tries to negotiate a connection with your home network router.
