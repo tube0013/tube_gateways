@@ -95,7 +95,7 @@ This can today be used by home automation applications such as example; [Home As
 *For Zigbee2mqtt - Only the CC2652p based gateway is supported at this time:*
 
 No need to pass any devices through to Zigbee2MQTT docker container setups.
-The docker containers for Zigbee2MQTT do not seem to work well with mdns, so use the ip address of the coordinator here.
+The docker containers for Zigbee2MQTT do not seem to work well with mdns, so for coordinators WITH Ethernet use the ip address of the coordinator here.
 
 in the Zigbee2MQTT `configuration.yaml`:
 
@@ -104,18 +104,25 @@ in the Zigbee2MQTT `configuration.yaml`:
       port: 'tcp://IPADDRESS:6638'
 
     ```
+For coordinators WITHOUT Ethernet you need to specify the device port. Go to the HA command line (for exmaple using this https://community.home-assistant.io/t/home-assistant-community-add-on-ssh-web-terminal/33820) and type `ha hardware info` and find the adapter and look for the line `by_id`and enter that value in the Zigbee2MQTT `configuration.yaml`:
 
+    ```
+    serial:
+      port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
+
+    ```
 ## ESPHome
 
-The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant as accidential toggling could rest the zigbee modules.**
+The ESP32 in the gateway runs ESPHome. Configured in ESPHome are switches in order to prep the zigbee modules for firmware updates if needed. **It is Highly Advised to Ignore these entities in HomeAssistant as accidential toggling could reset the zigbee modules.**
 
-To access the ESPHome Web Interface on the gateway connect to it in your Browser:
+To access the ESPHome Web Interface on the gateway connect to it in your Browser via it's IP address or via these URLs:
 
 CC2652p based gateways: `http://tube_zb_gw_cc2652p2.local`
 EFR32 based gateways: `http://tube_zb_gw_efr32.local`
 
 
 ## Zigbee Module Firmware Updates:
+This section relates to updating the firmware of the zigbee module. If you have an adapter WITH Ethernet and want to update the firmware of the ESP32 Ethernet module then go back to the top of this page and select the links to the firmware for the product you have. These links also have further information for how to flash the zigbee module and should be read in conjunction with the below https://github.com/tube0013/tube_gateways#current-products
 
 **CC2652p based Gateways:**  
 Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
