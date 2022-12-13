@@ -1,9 +1,9 @@
 # Specific Configuration for the Tube EFR32 Gateways
-Because the EFR32 gateways uses some firrmware settings different than the bellows defaults it is recommended set them in the configuration.yaml so bellows will utilize them.
+Because the EFR32 gateways uses some firmware settings different than the bellows defaults it is recommended set them in the configuration.yaml so bellows will utilize them.
 
 
 ## For 2022 EFR32 Pro V2 Coordinators:
-**Add these lines to your confiuration.yaml file**
+**Add these lines to your configuration.yaml file**
 
 ```
 zha:
