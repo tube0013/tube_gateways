@@ -15,7 +15,7 @@ external_components:
   - source: github://syssi/esphome-zeroconf@main
 
 dashboard_import:
-  package_import_url: github://tube0013/tube_gateways/models/current/tubeszb-cc2652-eth_usb/firmware/esphome/source/beta/tubezb-cc2652p2-ethusb-2022.yaml
+  package_import_url: github://tube0013/tube_gateways/models/current/tubeszb-cc2652-eth_usb/firmware/esphome/tubezb-cc2652p2-ethusb-2022.yaml
 
 #WT32-ETH01 Ethernet
 ethernet:

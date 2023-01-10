@@ -21,7 +21,7 @@ external_components:
   - source: github://syssi/esphome-zeroconf@main
 
 dashboard_import:
-  package_import_url: github://tube0013/tube_gateways/models/retired/tubeszb-cc2652-poe/firmware/esphome/beta/tubeszb-cc2652-poe.yaml
+  package_import_url: github://tube0013/tube_gateways/models/retired/tubeszb-cc2652-poe/firmware/esphome/tubeszb-cc2652-poe.yaml
 
 #Olimex ESP32-PoE Ethernet
 ethernet:
