@@ -44,7 +44,7 @@ This can today be used by home automation applications such as example; [Home As
 
 ## ZHA 
 
-### Netowrk Coordinators
+### Network Coordinators
 *For EFR32 Gateways see specific insturctions for config file* visit product page
 
 1. Connect the gateway to a ethernet cable which has access you your local network.
