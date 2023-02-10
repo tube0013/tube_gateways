@@ -57,7 +57,7 @@ USB can be used to flash the cc2652 module if you have an external USB to serial
 
 1. Go to the Coordinators web console in your browser - http://coordinatore_ip_address
 
-2. Click the Prep cc2652 for firmware toggle in the web interface - the console will show a message after ~ 10 seconds
+2. Click the `Trigger Zigbee Module Bootloader` toggle in the web interface - the console will show a message after ~ 10 seconds
 
 <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
 
