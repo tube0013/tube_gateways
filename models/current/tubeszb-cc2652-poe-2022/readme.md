@@ -59,7 +59,7 @@ USB can be used to flash the cc2652 module if you have an external USB to serial
 
 2. Click the `Trigger Zigbee Module Bootloader` toggle in the web interface - the console will show a message after ~ 10 seconds
 
-<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web1.png" width="300">
+<img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_web2.png" width="300">
 
 <img src="https://github.com/tube0013/tube_gateways/raw/main/images/cc2652_fw_debuglog.png" width="500">
 
