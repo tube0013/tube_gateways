@@ -5,7 +5,7 @@
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-eth_usb/images/tubeszb-cc2652-eth_usb_open.jpg" width="300" height="300">
  </p>
 
- Available to purchase at the [TubesZB Store](https://www.tubeszb.com/product/cc2652_coordinator/39) 
+ Available to purchase at the [TubesZB Store](https://tubeszb.com/product/cc2652p2-based-zigbee-to-ethernet-usb-serial-coordinator/) 
 
 
  This is the second version of the TubesZB CC2652 Ethernet Coordinator. It takes the place of both the Original CC2652 Ethernet Coordninator and the Original TubesZB USB Coordinator as it can be bought/made with or without ethernet. 
