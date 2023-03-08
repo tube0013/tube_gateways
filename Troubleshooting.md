@@ -1,6 +1,6 @@
-**Troubleshooting**
+##Troubleshooting##
 
-## Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
+# Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
 
 If you see this message in your z2m Logs with a network connected coordiator: 
 ```
