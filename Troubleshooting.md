@@ -1,17 +1,24 @@
 **Troubleshooting**
 
+## Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
 
-Instructions of reflashing the ESP32 when it is not connecting to ethernet and the leds on the esp32 ethernet jack will be solid green and not blinking:
+If you see this message in your z2m Logs with a network connected coordiator: 
+```
+Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)
+```
 
-You will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
+Please reflash the esphome firmware to the esp32 via serial. For current devices, see the Devices page in the repo, for the original rectangular coordinator see below.
 
-Grab the current esp fw bin file: 
+Unfortunately I do not know the casue for this error. It occurs on a small number of devices, and sometimes after doing an OTA ESP32 FW update. It seems specifict to Zigbee2mqtt as the zigpy based tools continue to work fine with the devices. The most reliable fix has been a full serial flash of esphome which does a full esp32 erase before writing the firmware.
 
-CC2652P2 based Coordinator:
-https://github.com/tube0013/tube_gateways/raw/main/tube_zb_gw_cc2652p2/tube_zb_gw_cc2652p2_(2021_04_08).bin
 
-EFR32 based Coordinator:
-https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_efr32/Firmware/ESP32
+
+#What you need:
+
+For the original rectangular cc2652 coordinator you will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
+
+
+Grab the current esp fw bin file from your device's firmware/esphome folder on this repo either under models/current or retired. The readme on the devices folder will also have serial flashing instructions.
 
 I use the esphome flasher tool which works well for me:
 https://github.com/esphome/esphome-flasher/releases
@@ -31,7 +38,7 @@ Use the jumper from the 3.3v_Bridge on the board (or another female to female ju
 
 Once all that is connected up, power on by plugging in the micro usb or by using a 4th jumper wire to connect the 3.3 volts on the Serial TTL adaptor to the 3.3v pin on the board.
 
-## Flashing
+# Flashing
 
 Fire up the flasher and select the correct port and point it to the downloaded FW bin:
 
