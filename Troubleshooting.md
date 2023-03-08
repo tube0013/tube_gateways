@@ -1,4 +1,4 @@
-##Troubleshooting
+## Troubleshooting
 
 # Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
 
