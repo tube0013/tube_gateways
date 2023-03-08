@@ -1,6 +1,6 @@
-## Troubleshooting
+# Troubleshooting
 
-# Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
+## Zigbee2MQTT startup - Error: SRSP - SYS - ping after 6000ms
 
 If you see this message in your z2m Logs with a network connected coordiator: 
 ```
@@ -13,7 +13,7 @@ Unfortunately I do not know the casue for this error. It occurs on a small numbe
 
 
 
-#What you need:
+## What you need:
 
 For the original rectangular cc2652 coordinator you will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
 
@@ -38,7 +38,7 @@ Use the jumper from the 3.3v_Bridge on the board (or another female to female ju
 
 Once all that is connected up, power on by plugging in the micro usb or by using a 4th jumper wire to connect the 3.3 volts on the Serial TTL adaptor to the 3.3v pin on the board.
 
-# Flashing
+## Flashing
 
 Fire up the flasher and select the correct port and point it to the downloaded FW bin:
 
