@@ -15,7 +15,7 @@ Unfortunately I do not know the casue for this error. It occurs on a small numbe
 
 ## What you need:
 
-For the original rectangular cc2652 coordinator you will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
+For the original rectangular cc2652 coordinator you will need a Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
 
 
 Grab the current esp fw bin file from your device's firmware/esphome folder on this repo either under models/current or retired. The readme on the devices folder will also have serial flashing instructions.

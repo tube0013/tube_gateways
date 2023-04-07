@@ -38,7 +38,7 @@ https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0
 
 Zigbee2MQTT should automatically create a backup on Startup, so start and stop Z2M one time to be sure it is current. Check your z2m config folder for the backup json before flashing.
 
-ZHA will be getting built in Backups in Home Assistant in the very near future (as of late July 2022 - https://github.com/home-assistant/core/pull/75791 ), until then:
+ZHA Also takes periodic auto backups and will restore the last one automatically when the zha is restarted after an update. you can also download a backup from the ZHA configuration page.
 
 https://github.com/zigpy/zigpy-znp/blob/dev/TOOLS.md#backup-and-restore
 
