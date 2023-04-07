@@ -77,13 +77,12 @@ https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0
 
 Zigbee2MQTT should automatically create a backup on Startup, so start and stop Z2M one time to be sure it is current. Check your z2m config folder for the backup json before flashing.
 
-ZHA will be getting built in Backups in Home Assistant in the very near future (as of late July 2022 - https://github.com/home-assistant/core/pull/75791 ), until then:
+ZHA Also takes auto
 
-https://github.com/zigpy/zigpy-znp/blob/dev/TOOLS.md#backup-and-restore
-
-
-The cc2538-bsl programmer available here: 
+The cc2538-bsl programmer available here:  
 https://github.com/JelmerT/cc2538-bsl
+
+(Please note the Dependecies called out on the cc2538-bsl main page: https://github.com/JelmerT/cc2538-bsl#dependencies )
 
 
 ### USB
@@ -118,7 +117,7 @@ Jumpers in Zigbee to Ethernet mode as shown above
 
 3. Run the cc2538-bsl flasher
 ```
-cc2538-bsl.py -p socket://IP:6638 path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
+cc2538-bsl.py -p socket://IP:6638 -evw path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
 ```
 Note firmware file name will be different depending on version
 Flashing over network serial will take approxiamately 5 minutes.

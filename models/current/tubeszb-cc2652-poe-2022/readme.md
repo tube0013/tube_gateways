@@ -46,6 +46,8 @@ https://github.com/zigpy/zigpy-znp/blob/dev/TOOLS.md#backup-and-restore
 The cc2538-bsl programmer available here: 
 https://github.com/JelmerT/cc2538-bsl
 
+(Please note the Dependecies called out on the cc2538-bsl main page: https://github.com/JelmerT/cc2538-bsl#dependencies )
+
 
 ### USB
 
