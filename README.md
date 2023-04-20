@@ -4,7 +4,7 @@ Information and documentation on Tube's Zigbee Gateways. Pre-assembed hardware d
 
 The gateway hardware itself is made up of a WT32-ETH01 or Olimex ESP32-POE-ISO (which are ESP32 based boards with Ethernet) in combination with either a Texas Instruments CC2652P or a Silicon Labs EFR32 based Zigbee serial module.
 
-Tube's Zigbee Gateways are primarly design to work as Zigbee serial module to Ethernet server as that make them compatible any application/project that can access and interface with a remote Serial to IP bridge/proxy server device as long as they support the Zigbee stack flashed on the Zigbee serial module firmware.
+Tube's Zigbee Gateways are primarly design to work as Zigbee serial module to Ethernet server and that makes them compatible with any application/project that can access and interface with a remote Serial to IP bridge/proxy server device as long as they support the Zigbee stack flashed on the Zigbee serial module firmware.
 
 These Zigbee gateways/coordinators can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/), [Jeedom (Zigbee Plugin)](https://doc.jeedom.com/en_US/plugins/automation%20protocol/zigbee/), [openHAB (Zigbee Binding)](https://www.openhab.org/addons/bindings/zigbee/), and [Zigbee2MQTT](https://www.zigbee2mqtt.io/). 
 
