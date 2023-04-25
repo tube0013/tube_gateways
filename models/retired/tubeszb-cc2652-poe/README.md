@@ -12,6 +12,8 @@ For Z2M check he Z2M Config folder for a backup.json or similar named file, and 
 
 
 Use the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
+(Please note the Dependecies called out on the cc2538-bsl main page: https://github.com/JelmerT/cc2538-bsl#dependencies )
+
 
 **Ethernet version :**
 1. Prep the Module for firmware update:
