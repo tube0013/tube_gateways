@@ -114,6 +114,7 @@ in the Zigbee2MQTT `configuration.yaml`:
     ```
     serial:
       port: 'tcp://IPADDRESS:6638'
+    ```
 
  
 ### USB Connected Coordinantors - NO Ethernet 
@@ -142,11 +143,11 @@ But may not match exactly depending on the OS/System
 
 Enter that value in the Zigbee2MQTT Addon confi or  `configuration.yaml`:
 
-    ```
+```
     serial:
       port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
 
-    ```
+```
 
 ## ESPHome
 
