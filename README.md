@@ -111,10 +111,10 @@ https://www.zigbee2mqtt.io/advanced/remote-adapter/connect_to_a_remote_adapter.h
 
 in the Zigbee2MQTT `configuration.yaml`:
 
-    ```
+```
     serial:
       port: 'tcp://IPADDRESS:6638'
-    ```
+```
 
  
 ### USB Connected Coordinantors - NO Ethernet 
