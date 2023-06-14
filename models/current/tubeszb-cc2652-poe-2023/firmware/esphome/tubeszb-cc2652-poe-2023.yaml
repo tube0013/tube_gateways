@@ -50,16 +50,17 @@ ota:
 web_server:
   port: 80
 
+#Exposes this data to Home Assistant, and displayed on the website
 text_sensor:
-  # Expose ESPHome version as sensor on the website
+  # Expose ESPHome version as sensor
   - platform: version
     name: ${name} ESPHome Version
-  # Expose the friendly uptime as a sensor on the website
+  # Expose the friendly uptime as a sensor
   - platform: template
     name: ${name} Uptime
     id: uptime_human
     icon: mdi:clock-start
-  # Expose the IP Address as a sensor on the website
+  # Expose the IP Address as a sensor
   - platform: ethernet_info
     ip_address:
       name: ${name} IP Address
