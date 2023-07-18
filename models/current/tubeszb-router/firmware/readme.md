@@ -8,7 +8,7 @@ All fw are based on stock Z-Stack FW (https://github.com/Koenkk/Z-Stack-firmware
 
 Sync with upstream z-stack
 
-changes: enable led on boot of fw, add product_label and product_url attributes in basic cluster.
+changes: enable led on boot of fw, add product_label and product_url attributes in basic cluster - device works with main z2m ti.router converter and ZHA ti.router quirk.
 
 
 
