@@ -1,5 +1,22 @@
 Changes made from stock Z-Stack FW (https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0):
 
+
+
+*tubeszb_CC1352P2_CC2652P_launchpad_router_20221102*
+
+Sync with upstream z-stack
+
+changes: enable led on boot of fw, add product_label and product_url attributes in basic cluster.
+
+
+
+*Earlier versions *
+
+20220223:
+sycnc with z-stack, adding led and updateing model/manufacturer attributes.
+
+20220111:
+
 Model Id and Manufacturer:
 
 Application/zcl_genericapp.c:
