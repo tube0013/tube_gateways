@@ -48,7 +48,7 @@ Verifying by comparing CRC32 calculations.
 
 ## ESP32 Serial Flash
 
-You will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: https://www.amazon.com/HiLetgo-FT232RL-Converter-Adapter-Breakout/dp/B00IJXZQ7C
+You will need an Serial to USB TTL adaptor - I use one similar to this one and it works well: [HiLetgo CP2102 USB to TTL UART](https://amzn.to/44PcsrF)
 
 
 Grab the current esp fw bin file: https://github.com/tube0013/tube_gateways/tree/main/models/retired/tubeszb-cc2652-eth/firmware/esphome
