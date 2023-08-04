@@ -5,7 +5,7 @@
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022_open.webp" width="300" height="300">
  </p>
 
- Available to purchase at the [TubesZB Store](https://tubeszb.com/product/cc2652p2-based-zigbee-to-poe-coordinator-2022/) 
+ Available to purchase at the [TubesZB Store](https://tubeszb.com/product/cc2652p2-based-zigbee-to-poe-coordinator-2023/) 
 
 ## Power Rquirement
 PoE switch or Injector required to power
@@ -16,7 +16,7 @@ IEEE 802.3-compliant, including pre-standard (legacy) PoE support. The PoE power
 
 ## ESP32 Flashing
 
-Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2022/firmware/esphome).
+Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2023/firmware/esphome).
 
 Recommend the ESPHome Flasher tool:
 https://github.com/esphome/esphome-flasher/releases
