@@ -20,7 +20,7 @@ external_components:
   - source: github://tube0013/esphome-stream-server-v2
 
 dashboard_import:
-  package_import_url: github://tube0013/tube_gateways/models/current/tubeszb-cc2652-poe-2023/firmware/esphome/source/beta/tubeszb-cc2652-poe-2023.yaml
+  package_import_url: github://tube0013/tube_gateways/models/current/tubeszb-cc2652-poe-2023/firmware/esphome/tubeszb-cc2652-poe-2023.yaml
 
 #Olimex ESP32-PoE Ethernet
 ethernet:
