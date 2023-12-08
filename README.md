@@ -2,7 +2,7 @@
 
 ⚠️ **Site Re-Organization in progress** ⚠️
 
-Information and documentation on TubeZB coordinators and routers. Pre-assembed hardware devices can be purchased from https://tubeszb.com
+Information and documentation on TubeZB coordinators and routers. Pre-assembled hardware devices can be purchased from https://tubeszb.com
 
 TubeZB Coordinators work via serial over Ethernet for use with any zigbee controller project that can access and interface with a remote Serial to IP bridge/proxy server device. 
 
@@ -111,9 +111,9 @@ https://www.zigbee2mqtt.io/advanced/remote-adapter/connect_to_a_remote_adapter.h
 
 in the Zigbee2MQTT `configuration.yaml`:
 
-```
-    serial:
-      port: 'tcp://IPADDRESS:6638'
+```yaml
+serial:
+  port: 'tcp://IPADDRESS:6638'
 ```
 
  
@@ -134,19 +134,17 @@ It should look something like
 
 ```
 /dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0
-
 ```
 
 But may not match exactly depending on the OS/System
 
 
 
-Enter that value in the Zigbee2MQTT Addon confi or  `configuration.yaml`:
+Enter that value in the Zigbee2MQTT Addon config or  `configuration.yaml`:
 
-```
-    serial:
-      port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
-
+```yaml
+serial:
+  port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
 ```
 
 ## ESPHome
