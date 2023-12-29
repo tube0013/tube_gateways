@@ -14,7 +14,7 @@ Partially removed the board from the case to access the microUSB port on the Oli
 After the flashing completes the esp32 will automatically reset and boot the new FW while showing the console in the flashing tool window to confirm it was flashed okay.
 
 
-## ESPHomeflasher 
+## ESPHome-flasher 
 
 Fire up the flasher and select the correct port and point it to the downloaded FW bin:
 
