@@ -8,7 +8,9 @@ TubeZB Coordinators work via serial over Ethernet for use with any zigbee contro
 
 This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
 
-Check out my Addon Repository for FW updates for HASSOS/Supervised users: https://github.com/tube0013/tubeszb_addons
+## Check out my Addon Repository with Firmware flashing and other tools for HASSOS/Supervised users: https://github.com/tube0013/tubeszb_addons
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftube0013%2Ftubeszb_addons)
 
 
 ## Current Products 
