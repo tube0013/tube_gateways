@@ -13,7 +13,7 @@ In 2022 I made some tweaks to the FW and it can be found here along with the cha
 
 ## Flashing the Router
 
-To flash new firmware onto the router you will need a USB to Serial adaptor. Something like this will work well and is similar to the ones I uses: https://www.amazon.com//dp/B07D6LLX19 Note generally you can find adaptors with the cp210x, ch340 for FTDI chips. most are supported fine on Linux or Mac but you may need drivers for Windows.
+To flash new firmware onto the router you will need a USB to Serial adaptor. Something like this will work well and is similar to the ones I uses: [CP2102 USB to TTL modules](https://amzn.to/3HjQ7bx) Note generally you can find adaptors with the cp210x, ch340 for FTDI chips. most are supported fine on Linux or Mac but you may need drivers for Windows.
 
 Just with the coordinator firmware you'll need the cc2538-bsl programmer available here: https://github.com/JelmerT/cc2538-bsl
 
