@@ -7,7 +7,7 @@ If you see this message in your z2m Logs with a network connected coordiator:
 Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)
 ```
 
-Please reflash the esphome firmware to the esp32 via serial. For current devices, see the Devices page in the repo, for the original rectangular coordinator see below.
+Please reflash the esphome firmware to the esp32 via serial. **For current devices**, see the Devices page in the repo, for the original rectangular coordinator see below.
 
 Unfortunately I do not know the casue for this error. It occurs on a small number of devices, and sometimes after doing an OTA ESP32 FW update. It seems specifict to Zigbee2mqtt as the zigpy based tools continue to work fine with the devices. The most reliable fix has been a full serial flash of esphome which does a full esp32 erase before writing the firmware.
 
