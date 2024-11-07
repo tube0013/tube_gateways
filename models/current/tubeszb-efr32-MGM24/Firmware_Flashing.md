@@ -30,10 +30,10 @@ If you use HAOS and can install addons I recommend you use the [TubesZB Silicon 
 3. **Activate the Virtual Environment**  
    - On **Linux/macOS**:  
    ######
-      source env/bin/activate
+       source env/bin/activate
    - On **Windows**:  
    ######
-      .\env\Scripts\activate
+       .\env\Scripts\activate
 
    You should now see `(env)` at the beginning of your command line, indicating that the virtual environment is active.
 
