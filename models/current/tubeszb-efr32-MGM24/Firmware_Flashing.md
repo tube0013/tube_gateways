@@ -18,8 +18,9 @@ If you use HAOS and can install addons I recommend you use the [TubesZB Silicon 
 ### Step 1: Set Up a Python Virtual Environment
 
 1. **Install Python 3.7+**  
-   Make sure Python 3.7 or higher is installed. You can check your version by running:  
-   ```python3 --version```
+   Make sure Python 3.7 or higher is installed. You can check your version by running:
+   ######  
+       python3 --version
 
 2. **Create a Virtual Environment**  
    In the directory where you want to set up the project, create a virtual environment:  
