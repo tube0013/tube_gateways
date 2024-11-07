@@ -24,20 +24,24 @@ If you use HAOS and can install addons I recommend you use the [TubesZB Silicon 
 
 2. **Create a Virtual Environment**  
    In the directory where you want to set up the project, create a virtual environment:  
-   ```python3 -m venv env```
+   ######  
+       python3 -m venv env
 
 3. **Activate the Virtual Environment**  
    - On **Linux/macOS**:  
-     ```source env/bin/activate```
+     #####
+        source env/bin/activate
    - On **Windows**:  
-     ```.\env\Scripts\activate```
+     #####
+        .\env\Scripts\activate
 
    You should now see `(env)` at the beginning of your command line, indicating that the virtual environment is active.
 
 ### Step 2: Install Universal Silabs Flasher
 
 Install `universal-silabs-flasher` directly from PyPI:  
-```pip install universal-silabs-flasher```
+   #####
+      pip install universal-silabs-flasher
 
 For more details, you can visit the [universal-silabs-flasher GitHub repository](https://github.com/NabuCasa/universal-silabs-flasher).
 
@@ -51,19 +55,22 @@ For more details, you can visit the [universal-silabs-flasher GitHub repository]
 
 3. **Flash the NCP `.gbl` File**  
    Use `universal-silabs-flasher` to flash the `.gbl` file to the MGM24 Coordinator over the TCP socket by specifying the address in `socket://IP_ADDRESS:PORT` format:  
-   ```universal-silabs-flasher --device socket://<IP_ADDRESS>:<PORT> --bootloader-baudrate 115200 --ezsp-baudrate 115200 flash --firmware--firmware your_firmware.gbl```
+   #####
+      universal-silabs-flasher --device socket://<IP_ADDRESS>:<PORT> --bootloader-baudrate 115200 --ezsp-baudrate 115200 flash --firmware--firmware your_firmware.gbl
 
    Replace `<IP_ADDRESS>` and `<PORT>` with the actual IP address and port of your coordinator, and `your_firmware.gbl` with the path to your `.gbl` file.
 
    **Example Command:**  
-   ```universal-silabs-flasher --device socket://192.168.1.100:6638 --bootloader-baudrate 115200 --ezsp-baudrate 115200 flash --firmware--firmware your_firmware.gbl```
+   #####
+      universal-silabs-flasher --device socket://192.168.1.100:6638 --bootloader-baudrate 115200 --ezsp-baudrate 115200 flash --firmware--firmware your_firmware.gbl
 
 4. **Wait for Flashing to Complete**  
    The flashing process will take a minute or 2 to complete. Once finished, you should see the progress bar showing 100% indicating that the firmware has been flashed successfully.
 
 5. **Deactivate the Virtual Environment**  
    After you're done, you can deactivate the virtual environment by running:  
-   ```deactivate```
+   #####
+      deactivate
 
 6. **Restart ZHA/Zigbee2MQTT**
    Check logs for any errors.
