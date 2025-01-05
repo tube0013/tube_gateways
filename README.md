@@ -114,11 +114,20 @@ https://www.zigbee2mqtt.io/advanced/remote-adapter/connect_to_a_remote_adapter.h
 
 in the Zigbee2MQTT `configuration.yaml`:
 
+For CC2652 based Radios:
+
 ```yaml
 serial:
   port: 'tcp://IPADDRESS:6638'
+  adapter: zstack
 ```
 
+For EFR32 based radios with 7.4.x or later firmware:
+```yaml
+serial:
+  port: 'tcp://IPADDRESS:6638'
+  adapter: ember
+```
  
 ### USB Connected Coordinantors - NO Ethernet 
 
@@ -148,6 +157,7 @@ Enter that value in the Zigbee2MQTT Addon config or  `configuration.yaml`:
 ```yaml
 serial:
   port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
+  adapter: zstack
 ```
 
 ## ESPHome
