@@ -96,7 +96,7 @@ uart:
   # - CTS = enable TX hardware flow control (cts)
   # - CTS_RTS = enable hardware flow control
   # - MAX = ?
-  hw_flowctrl: CTS_RTS  
+  hw_flow_control: CTS_RTS  
   baud_rate: 115200
 
 
