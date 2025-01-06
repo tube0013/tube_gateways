@@ -1,6 +1,6 @@
-## CC2652 Coordinator Firmware 
+## CC2652 P7 Coordinator Firmware 
 
-Firmware for the CC2652 is available from the Z-Stack Firmware Repository:
+Firmware for the CC2652 P7 (CC1352P7_coordinator_*.zip) is available from the Z-Stack Firmware Repository:
 
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
