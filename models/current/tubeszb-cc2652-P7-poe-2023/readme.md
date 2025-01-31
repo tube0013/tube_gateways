@@ -1,11 +1,11 @@
-# TubesZB CC2652 PoE Coordinator
+# TubesZB CC2652 P7 PoE Coordinator
 
 <p float="left">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="300" height = "300">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022_open.webp" width="300" height="300">
  </p>
 
- Available to purchase at the [TubesZB Store](https://tubeszb.com/product/cc2652p2-based-zigbee-to-poe-coordinator-2023/) 
+ Available to purchase at the [TubesZB Store](https://tubeszb.com/product/cc2652p7-zigbee-to-poe-coordinator-2023/) 
 
 ## Power Requirement
 PoE switch or Injector required to power
@@ -16,7 +16,7 @@ IEEE 802.3-compliant, including pre-standard (legacy) PoE support. The PoE power
 
 ## ESP32 Flashing
 
-Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-poe-2023/firmware/esphome).
+Firmware is available in the [firmware directory for this model](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-cc2652-P7-poe-2023/firmware/esphome).
 
 Recommend the ESPHome Flasher tool:
 https://github.com/esphome/esphome-flasher/releases
@@ -31,7 +31,7 @@ After the flashing completes the esp32 will automatically reset and boot the new
 
 ## CC2652 Firmware Flashing
 
-Firmware - use the **CC1352P2_CC2652P_launchpad_*.zip** based firmware available here:  
+Firmware - use the **CC1352P7_coordinator_*.zip** based firmware available here:  
 https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin
 
 **Be sure you have a current backup of your coordinator before flashing as the update will erase the zigbee module completely** 
@@ -68,7 +68,7 @@ USB can be used to flash the cc2652 module if you have an external USB to serial
 
 3. Run the cc2538-bsl flasher
 ```
-cc2538-bsl.py -p socket://IP:6638 -evw path_to_firmware_file/CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
+cc2538-bsl.py -p socket://IP:6638 -evw path_to_firmware_file/CC1352P7_coordinator_20240710.hex
 ```
 Note firmware file name will be different depending on version
 Flashing over network serial will take approxiamately 5 minutes.
@@ -86,6 +86,3 @@ ERROR: Timeout waiting for ACK/NACK after 'Synch (0x55 0x55)'
 ```
 
 Another option is to trigger the bootloader manually, to do this, pop the top with the device unpowered, hold down the BSL button while plugging in power, it's important to hold it for several seconds as the ESP32 will trigger a reset of the zigbee module after it boots. Then try the update script again
-
-
-
