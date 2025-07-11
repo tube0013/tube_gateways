@@ -1,0 +1,1290 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="tube">
+      
+      
+        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/getting-started/zigbee/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../z-wave/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Zigbee - TubesZB Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started-with-zigbee-coordinators" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TubesZB Documentation" class="md-header__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TubesZB Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zigbee
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zigbee-coordinators/cc2652-based/" class="md-tabs__link">
+          
+  
+  
+  Zigbee Coordinators
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zigbee-routers/cc2652-based-routers/" class="md-tabs__link">
+          
+  
+  
+  Zigbee Routers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../zwave-kits/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Z-Wave Kits
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dual-radio-kits/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dual Radio Kits
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../bluetooth-proxy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Bluetooth Proxy
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TubesZB Documentation" class="md-nav__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    TubesZB Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Zigbee
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zigbee
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps-physical-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Steps: Physical Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-assistant-zha-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Assistant (ZHA) Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Home Assistant (ZHA) Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-auto-discovery-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Auto-Discovery (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-manual-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Manual Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zigbee2mqtt-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zigbee2MQTT Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zigbee2MQTT Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-serial-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the serial section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the serial section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-coordinator-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Coordinator (Ethernet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Coordinator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esphome-web-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESPHome Web Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware Updates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../z-wave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Z-Wave
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bluetooth-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Zigbee Coordinators
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zigbee Coordinators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zigbee-coordinators/cc2652-based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CC2652 Based
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zigbee-coordinators/efr32-based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EFR32 Based
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Zigbee Routers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Zigbee Routers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zigbee-routers/cc2652-based-routers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CC2652 Based Routers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zigbee-routers/efr32-based-routers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EFR32 Based Routers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zwave-kits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Z-Wave Kits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dual-radio-kits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dual Radio Kits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bluetooth-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps-physical-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Steps: Physical Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-assistant-zha-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Assistant (ZHA) Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Home Assistant (ZHA) Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-auto-discovery-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Auto-Discovery (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-manual-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Manual Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zigbee2mqtt-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zigbee2MQTT Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zigbee2MQTT Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-serial-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the serial section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the serial section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-coordinator-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Coordinator (Ethernet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-coordinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Coordinator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esphome-web-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESPHome Web Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware Updates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="getting-started-with-zigbee-coordinators">Getting Started with Zigbee Coordinators</h1>
+<p>This guide will walk you through setting up your new TubesZB Zigbee Coordinator with Home Assistant.</p>
+<h2 id="first-steps-physical-setup">First Steps: Physical Setup</h2>
+<p>For <strong>Network (Ethernet) Coordinators</strong>:</p>
+<ol>
+<li>Connect the gateway to your local network using an ethernet cable.</li>
+<li>For non-PoE models power the gateway using a 5v 1.5-2A power supply with the included USB-C cable (MicroUSB on older models). The ethernet port's link lights will begin to blink as it connects to your network.</li>
+<li>Determine the device's IP address from your router's client list.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Use a DHCP Reservation (Recommended)</p>
+<p>To ensure the device's IP address doesn't change, it is strongly advised to configure a <strong>DHCP Reservation</strong> for it in your router's settings. This links the device's unique MAC address to a specific IP, so it gets the same one every time it connects.</p>
+<div class="admonition info">
+<p class="admonition-title">Advanced: Static IP Firmware</p>
+<p>Setting a true static IP requires custom firmware. For advanced users who need this, you can build a custom firmware binary using the <strong><a href="https://github.com/tube0013/TubesZB-ESPHome-Builder">TubesZB ESPHome Firmware Builder</a></strong>.</p>
+</div>
+</div>
+<p>For <strong>USB Coordinators</strong>:</p>
+<ol>
+<li>Simply plug the coordinator's USB Cable into an available USB port on your Home Assistant machine. It should be auto-discovered.</li>
+</ol>
+<hr />
+<h2 id="home-assistant-zha-setup">Home Assistant (ZHA) Setup</h2>
+<p>Follow these instructions to configure your coordinator with the built-in ZHA integration.</p>
+<h3 id="method-1-auto-discovery-recommended">Method 1: Auto-Discovery (Recommended)</h3>
+<p>If Home Assistant discovers the device automatically, you will see a notification. Simply click through the configuration flow to add it to Home Assistant.</p>
+<figure>
+<p><img alt="ZHA Discovery Notification" src="https://github.com/tube0013/tube_gateways/raw/main/images/discover0.png" width="400" />
+  </p>
+<figcaption>ZHA Discovery Notification</figcaption>
+</figure>
+<figure>
+<p><img alt="ZHA Discovery Configuration" src="https://github.com/tube0013/tube_gateways/raw/main/images/discover1.png" width="400" />
+  </p>
+<figcaption>ZHA Discovery Configuration</figcaption>
+</figure>
+<h3 id="method-2-manual-setup">Method 2: Manual Setup</h3>
+<p>If your coordinator is not discovered automatically, follow these steps:</p>
+<ol>
+<li>Navigate to <strong>Settings &gt; Devices &amp; Services</strong> and click <strong>Add Integration</strong>.</li>
+<li>Search for and select <strong>Zigbee Home Automation</strong>.
+    <img alt="Add ZHA Integration" src="https://github.com/tube0013/tube_gateways/raw/main/images/manual1.png" width="400" /></li>
+<li>When asked, choose to <strong>Set up another instance of Zigbee Home Automation</strong>.
+    <img alt="Set up another instance" src="https://github.com/tube0013/tube_gateways/raw/main/images/manual2.png" width="400" /></li>
+<li>Select the <strong>Radio Type</strong> based on your coordinator model:<ul>
+<li>For <strong>CC2652p</strong> based gateways, select <strong>ZNP</strong>.</li>
+<li>For <strong>EFR32</strong> based gateways, select <strong>EZSP</strong>.</li>
+</ul>
+</li>
+<li>
+<p>In the Port Specific Settings dialog:</p>
+<ul>
+<li>Enter <code>socket://IP_ADDRESS:6638</code> (replace <code>IP_ADDRESS</code> with your device's actual IP).</li>
+<li>Set Port Speed to <code>115200</code>.</li>
+<li>Select <strong>Software</strong> Flow Control.</li>
+</ul>
+<p><img alt="ZHA Serial Port Settings" src="https://github.com/tube0013/tube_gateways/raw/main/images/serialportsettings.png" width="400" /></p>
+</li>
+</ol>
+<hr />
+<h2 id="zigbee2mqtt-setup">Zigbee2MQTT Setup</h2>
+<div class="admonition warning">
+<p class="admonition-title">ZHA vs. Zigbee2MQTT</p>
+<p>A coordinator can only be controlled by <strong>one</strong> service at a time. If Home Assistant auto-discovers the device for ZHA, you <strong>must</strong> choose to <strong>Ignore</strong> it before setting up Zigbee2MQTT.
+<img alt="Ignore ZHA Discovery" src="https://github.com/tube0013/tube_gateways/raw/main/images/ignore.png" width="300" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">EFR32 Support</p>
+<p>Zigbee2MQTT supports EFR32 coordinators, but the must be on a 7.4.x or greater firmware</p>
+</div>
+<h3 id="configuring-the-serial-section">Configuring the <code>serial</code> section</h3>
+<p>Whether you are using the Zigbee2MQTT addon or a standalone <code>configuration.yaml</code> file, you will need to edit the <code>serial</code> section.</p>
+<ol>
+<li>Navigate to the Zigbee2MQTT addon <strong>Configuration</strong> tab or open your <code>configuration.yaml</code> file.</li>
+<li>Find the <code>serial:</code> block. If it doesn't exist, add it.</li>
+<li>Use the tabs below to copy the correct configuration for your device.</li>
+</ol>
+<figure>
+<p><img alt="Zigbee2MQTT Addon Configuration" src="https://github.com/tube0013/tube_gateways/raw/main/images/z2m_addon_config.png" width="800" />
+  </p>
+<figcaption>Editing the serial settings in the addon configuration tab.</figcaption>
+</figure>
+<h4 id="network-coordinator-ethernet">Network Coordinator (Ethernet)</h4>
+<pre><code>For coordinators connected via Ethernet, use the `tcp://` port format. Replace `IP_ADDRESS` with your device's actual IP.
+
+```yaml
+serial:
+  port: 'tcp://IP_ADDRESS:6638'
+  # adapter: zstack  # For CC2652 based radios
+  # adapter: ember   # For EFR32 based radios
+```
+</code></pre>
+<h4 id="usb-coordinator">USB Coordinator</h4>
+<pre><code>For coordinators connected via USB, find the device path under **Settings &gt; System &gt; Hardware &gt; All Hardware**. It will start with `/dev/serial/by-id/...`.
+
+```yaml
+serial:
+  port: '/dev/serial/by-id/usb-1a86_TubesZB_971229NY-if00-port0'
+  # adapter: zstack  # For CC2652 based radios
+  # adapter: ember   # For EFR32 based radios
+```
+</code></pre>
+<hr />
+<h2 id="esphome-web-interface">ESPHome Web Interface</h2>
+<p>The ESP32 microcontroller inside the gateway runs ESPHome. You can access its web interface by navigating to the device's IP address in a browser.</p>
+<p>If you add the ESPHome device to you Home Assistant instance it will create some diagnostic entities for showing if the serial connection connected or not. as well as the connection count. </p>
+<p><img alt="ESPHome Entities" src="https://github.com/tube0013/tube_gateways/raw/main/images/esphome_entities.png" width="800" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Ignore ESPHome Entities in Home Assistant</p>
+<p>There are several other enties that are created but set as disabled by default. It is <strong>highly advised</strong> to leave these as disabled. Accidentally toggling them can reset the Zigbee module and disrupt your network.</p>
+</div>
+<h2 id="firmware-updates">Firmware Updates</h2>
+<p>Firmware update instructions can be found on the individual product pages.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
