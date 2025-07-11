@@ -1,0 +1,62 @@
+# ==> SITE INFORMATION
+site_name: "TubesZB Documentation"
+site_author: "tube"
+site_url: "https://tube0013.github.io/tube_gateways/"
+
+
+# ==> THEME CONFIGURATION
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    # Palette toggle for light/dark mode
+    - scheme: default
+      primary: blue-grey
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      logo: assets/logo-dark.png
+      primary: blue-grey
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+# ==> NAVIGATION MENU
+nav:
+  - 'Home': 'index.md'
+  - 'Getting Started':
+      - 'Zigbee': 'getting-started/zigbee.md'
+      - 'Z-Wave': 'getting-started/z-wave.md'
+      - 'Bluetooth Proxy': 'getting-started/bluetooth-proxy.md'
+  - 'Zigbee Coordinators':
+      - 'CC2652 Based': 'zigbee-coordinators/cc2652-based/index.md'
+      - 'EFR32 Based': 'zigbee-coordinators/efr32-based/index.md'
+  - 'Zigbee Routers':
+      - 'CC2652 Based Routers': 'zigbee-routers/cc2652-based-routers/index.md'
+      - 'EFR32 Based Routers': 'zigbee-routers/efr32-based-routers/index.md'
+  - 'Z-Wave Kits': 'zwave-kits/index.md'
+  - 'Dual Radio Kits': 'dual-radio-kits/index.md'
+  - 'Bluetooth Proxy': 'bluetooth-proxy/index.md'
+  - 'Troubleshooting': 'troubleshooting.md'
+
+# ==> MARKDOWN EXTENSIONS
+markdown_extensions:
+  - admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
