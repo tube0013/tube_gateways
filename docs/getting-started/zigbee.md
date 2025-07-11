@@ -1,13 +1,13 @@
 # Getting Started with Zigbee Coordinators
 
-This guide will walk you through setting up your new TubeZB Zigbee Coordinator with Home Assistant.
+This guide will walk you through setting up your new TubesZB Zigbee Coordinator with Home Assistant.
 
 ## First Steps: Physical Setup
 
 For **Network (Ethernet) Coordinators**:
 
 1.  Connect the gateway to your local network using an ethernet cable.
-2.  Power on the gateway using a 5v 1.5-2A power supply with a micro USB cable. The ethernet port's link lights will begin to blink as it connects to your network.
+2.  For non-PoE models power the gateway using a 5v 1.5-2A power supply with the included USB-C cable (MicroUSB on older models). The ethernet port's link lights will begin to blink as it connects to your network.
 3.  Determine the device's IP address from your router's client list.
 
 !!! tip "Use a DHCP Reservation (Recommended)"
@@ -18,7 +18,7 @@ For **Network (Ethernet) Coordinators**:
 
 For **USB Coordinators**:
 
-1.  Simply plug the coordinator into an available USB port on your Home Assistant machine. It should be auto-discovered.
+1.  Simply plug the coordinator's USB Cable into an available USB port on your Home Assistant machine. It should be auto-discovered.
 
 ---
 
@@ -56,6 +56,7 @@ If your coordinator is not discovered automatically, follow these steps:
     * Enter `socket://IP_ADDRESS:6638` (replace `IP_ADDRESS` with your device's actual IP).
     * Set Port Speed to `115200`.
     * Select **Software** Flow Control.
+
     ![ZHA Serial Port Settings](https://github.com/tube0013/tube_gateways/raw/main/images/serialportsettings.png){ width="400" }
 
 ---
@@ -67,7 +68,7 @@ If your coordinator is not discovered automatically, follow these steps:
     ![Ignore ZHA Discovery](https://github.com/tube0013/tube_gateways/raw/main/images/ignore.png){ width="300" }
 
 !!! note "EFR32 Support"
-    At this time, only CC2652p based gateways are officially supported by Zigbee2MQTT. EFR32 gateways may work but are not recommended.
+    Zigbee2MQTT supports EFR32 coordinators, but the must be on a 7.4.x or greater firmware
 
 ### Configuring the `serial` section
 
@@ -78,7 +79,7 @@ Whether you are using the Zigbee2MQTT addon or a standalone `configuration.yaml`
 3.  Use the tabs below to copy the correct configuration for your device.
 
 <figure markdown>
-  ![Zigbee2MQTT Addon Configuration](https://community-assets.home-assistant.io/original/3X/8/8/882560527d35352c87513069752533277c2509c3.png){ width="600" }
+  ![Zigbee2MQTT Addon Configuration](https://github.com/tube0013/tube_gateways/raw/main/images/z2m_addon_config.png){ width="600" }
   <figcaption>Editing the serial settings in the addon configuration tab.</figcaption>
 </figure>
 

@@ -2,13 +2,13 @@
 
 ⚠️ **Site Re-Organization in progress** ⚠️
 
-This site contains all the information and documentation for TubeZB Zigbee coordinators and routers. You can purchase pre-assembled hardware from the official store:
+This site contains all the information and documentation for TubesZB Zigbee coordinators and routers. You can purchase pre-assembled hardware from the official store:
 
 [**Shop at tubeszb.com**](https://tubeszb.com)
 
 ## How They Work
 
-TubeZB Coordinators work via serial over Ethernet, allowing them to be used with any Zigbee controller project that can interface with a remote Serial-to-IP bridge.
+TubesZB Coordinators work via serial over Ethernet, allowing them to be used with any Zigbee controller project that can interface with a remote Serial-to-IP bridge.
 
 This makes them compatible with popular home automation applications like:
 * Home Assistant (ZHA integration)
