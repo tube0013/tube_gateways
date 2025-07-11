@@ -79,7 +79,7 @@ Whether you are using the Zigbee2MQTT addon or a standalone `configuration.yaml`
 3.  Use the tabs below to copy the correct configuration for your device.
 
 <figure markdown>
-  ![Zigbee2MQTT Addon Configuration](https://github.com/tube0013/tube_gateways/raw/main/images/z2m_addon_config.png){ width="600" }
+  ![Zigbee2MQTT Addon Configuration](https://github.com/tube0013/tube_gateways/raw/main/images/z2m_addon_config.png){ width="800" }
   <figcaption>Editing the serial settings in the addon configuration tab.</figcaption>
 </figure>
 
