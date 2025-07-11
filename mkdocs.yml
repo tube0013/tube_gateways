@@ -22,7 +22,7 @@ theme:
       accent: purple
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Switch to light mode
     - scheme: slate
       logo: assets/logo-dark.png
       primary: blue-grey
@@ -51,12 +51,13 @@ nav:
   - 'Troubleshooting': 'troubleshooting.md'
 
 # ==> MARKDOWN EXTENSIONS
+# This whole block must be in your mkdocs.yml
 markdown_extensions:
   - admonition
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - pymdownx.details
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
