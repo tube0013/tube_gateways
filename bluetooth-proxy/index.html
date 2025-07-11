@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#wt32-eth01-bluetooth-proxy-kit" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -814,6 +819,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Proxy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -826,6 +846,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flashing-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing Instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-users-source-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Users &amp; Source YAML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -892,6 +982,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flashing-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing Instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-users-source-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Users &amp; Source YAML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -907,9 +1058,32 @@
 
 
 
-  <h1>Bluetooth Proxy</h1>
-
-
+<h1 id="wt32-eth01-bluetooth-proxy-kit">WT32-ETH01 Bluetooth Proxy Kit</h1>
+<figure>
+<p><img alt="Bluetooth Proxy Kit" src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-wt32-eth01-bt-kit/images/Subject.png" width="300" /></p>
+</figure>
+<p>The TubeZB Bluetooth Proxy Kit is a simple and effective way to extend the Bluetooth coverage of your Home Assistant instance. It uses a wired ethernet connection for maximum reliability.</p>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<p>For initial setup and integration with Home Assistant, please follow the main Bluetooth Proxy getting started guide.</p>
+<p><a href="../getting-started/bluetooth-proxy/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Bluetooth Proxy Getting Started Guide</a></p>
+<hr />
+<h2 id="how-it-works">How It Works</h2>
+<p>This kit acts as a remote "ear" for Home Assistant. You can place it anywhere in your home where you have an ethernet connection. It will listen for Bluetooth Low Energy (BLE) advertisements from devices like temperature sensors, smart locks, and more. It then relays these messages back to Home Assistant over your wired network.</p>
+<p>This allows you to integrate Bluetooth devices that are far away from your main Home Assistant server.</p>
+<hr />
+<h2 id="firmware">Firmware</h2>
+<p>The device comes pre-flashed with a standard ESPHome Bluetooth proxy firmware. If you ever need to re-flash or update the device, you can do so easily.</p>
+<h3 id="flashing-instructions">Flashing Instructions</h3>
+<ol>
+<li>Connect the Bluetooth Proxy Kit to your computer using a <strong>USB-C data cable</strong>.</li>
+<li>Navigate to the <strong><a href="https://tube0013.github.io/TubesZB-ESPHome-Builder/">TubesZB Web Flasher</a></strong>.</li>
+<li>Select "Bluetooth Proxy" from the device dropdown menu.</li>
+<li>Follow the on-screen instructions to connect to the device and flash the latest firmware.</li>
+</ol>
+<h3 id="advanced-users-source-yaml">Advanced Users &amp; Source YAML</h3>
+<p>This kit is based on the official ESPHome Wireless Tag WT32-ETH01 project. Advanced users who wish to compile their own custom firmware can find the base YAML configuration files in the <strong><a href="https://github.com/esphome/bluetooth-proxies/tree/main/wt32">ESPHome GitHub repository</a></strong>.</p>
+<p>For more in-depth details on how the proxy functionality works within ESPHome, please refer to the official <strong><a href="https://esphome.io/components/bluetooth_proxy.html">ESPHome Bluetooth Proxy Documentation</a></strong>.</p>
 
 
 
