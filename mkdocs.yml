@@ -34,10 +34,11 @@ theme:
 
 # ==> NAVIGATION MENU
 nav:
-  - 'Home': 'index.md'
+  - 'Home': 'index.md'  
   - 'Getting Started':
-      - 'Zigbee': 'getting-started/zigbee.md'
-      - 'Z-Wave': 'getting-started/z-wave.md'
+      - 'Zigbee Coordinators': 'getting-started/zigbee.md'
+      - 'Z-Wave Kits': 'getting-started/z-wave.md'
+      - 'Zigbee Routers': 'getting-started/router.md'
       - 'Bluetooth Proxy': 'getting-started/bluetooth-proxy.md'
   - 'Zigbee Coordinators':
       - 'CC2652 Based': 'zigbee-coordinators/cc2652-based/index.md'
@@ -48,6 +49,7 @@ nav:
   - 'Z-Wave Kits': 'zwave-kits/index.md'
   - 'Dual Radio Kits': 'dual-radio-kits/index.md'
   - 'Bluetooth Proxy': 'bluetooth-proxy/index.md'
+  - 'Model Glossary': 'model-glossary.md'
   - 'Troubleshooting': 'troubleshooting.md'
 
 # ==> MARKDOWN EXTENSIONS

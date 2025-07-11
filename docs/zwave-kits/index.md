@@ -24,6 +24,12 @@ The Z-Wave PoE Kit consists of two main printed circuit boards (PCBs):
 
 2.  **Raspberry Pi GPIO to Olimex UEXT Converter:** This is a custom adapter board designed specifically to connect Z-Wave modules with a Raspberry Pi GPIO-style header to the Olimex board's UEXT connector. You can find more details on the [converter's product page](https://tubeszb.com/product/raspberry-pi-gpio-to-olimex-uext-for-z-wave-adaptors/).
 
+### 3D Printed Enclosure
+
+For those who wish to print their own case, the STL files are available on GitHub.
+
+[:octicons-file-zip-16: Download Case STL Files](https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-zw-kit/Case)
+
 ---
 
 ## Firmware Updates
@@ -32,13 +38,15 @@ There are two separate firmwares on this device that can be updated: the **ESPHo
 
 ### ESPHome Firmware (ESP32)
 
-The ESPHome firmware handles the network connectivity. You can update it using the web-based flashing tool.
+The ESPHome firmware handles the network connectivity. You can update it using the web-based flashing tool. For advanced users, the base ESPHome YAML configuration is also available.
+
+- **[View the current ESPHome YAML Configuration](https://raw.githubusercontent.com/tube0013/TubesZB-ESPHome-Builder/refs/heads/main/manifests/tubeszb-zw.yaml)**
 
 #### Flashing Instructions
 
 1.  **Disconnect PoE Power:**
     !!! danger "CRITICAL SAFETY WARNING"
-        You **MUST** unplug the ethernet cable providing PoE before connecting the device to your computer via USB. Failure to do so can permanently damage  the ESP32 board and potentially the USB controller on your computer.
+        You **MUST** unplug the ethernet cable providing PoE before connecting the device to your computer via USB. Failure to do so can permanently damage the USB port on the ESP32 board and potentially the USB controller on your computer.
 
 2.  **Access the USB Port:**
     * Remove the lid from the 3D-printed enclosure.

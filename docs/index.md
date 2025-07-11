@@ -1,7 +1,6 @@
 # Welcome to the TubesZB Documentation
 
-
-This site contains all the information and documentation for TubesZB hardware. Find the right guide to get your new device up and running with Home Assistant.
+This site contains all the information and documentation for Tube's ZB hardware. Find the right guide to get your new device up and running with Home Assistant.
 
 You can purchase pre-assembled hardware from the official store:
 
@@ -29,6 +28,14 @@ Click on the guide that matches your product to begin the setup process.
 
     [:octicons-arrow-right-24: View Z-Wave Guide](getting-started/z-wave.md)
 
+-   __Zigbee Routers__
+
+    ---
+
+    How to pair your TubeZB Zigbee Router to extend the range of your network.
+
+    [:octicons-arrow-right-24: View Router Guide](getting-started/router.md)
+
 -   __Bluetooth Proxy__
 
     ---
@@ -49,7 +56,7 @@ Click on the guide that matches your product to begin the setup process.
         * **Z-Wave** uses port `6639`.
 
     [:octicons-arrow-right-24: View Zigbee Guide](getting-started/zigbee.md)
-
+    
     [:octicons-arrow-right-24: View Z-Wave Guide](getting-started/z-wave.md)
 
 </div>
