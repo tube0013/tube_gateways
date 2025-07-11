@@ -83,7 +83,7 @@ Whether you are using the Zigbee2MQTT addon or a standalone `configuration.yaml`
   <figcaption>Editing the serial settings in the addon configuration tab.</figcaption>
 </figure>
 
-=== "Network Coordinator (Ethernet)"
+#### Network Coordinator (Ethernet)
 
     For coordinators connected via Ethernet, use the `tcp://` port format. Replace `IP_ADDRESS` with your device's actual IP.
 
@@ -94,13 +94,13 @@ Whether you are using the Zigbee2MQTT addon or a standalone `configuration.yaml`
       # adapter: ember   # For EFR32 based radios
     ```
 
-=== "USB Coordinator"
+#### USB Coordinator
 
     For coordinators connected via USB, find the device path under **Settings > System > Hardware > All Hardware**. It will start with `/dev/serial/by-id/...`.
 
     ```yaml
     serial:
-      port: '/dev/serial/by-id/usb-1a86_TubesZB_971207DO-if00-port0'
+      port: '/dev/serial/by-id/usb-1a86_TubesZB_971229NY-if00-port0'
       # adapter: zstack  # For CC2652 based radios
       # adapter: ember   # For EFR32 based radios
     ```
@@ -111,8 +111,12 @@ Whether you are using the Zigbee2MQTT addon or a standalone `configuration.yaml`
 
 The ESP32 microcontroller inside the gateway runs ESPHome. You can access its web interface by navigating to the device's IP address in a browser.
 
+If you add the ESPHome device to you Home Assistant instance it will create some diagnostic entities for showing if the serial connection connected or not. as well as the connection count. 
+
+![ESPHome Entities](https://github.com/tube0013/tube_gateways/raw/main/images/esphome_entities.png){ width="800" }
+
 !!! danger "Ignore ESPHome Entities in Home Assistant"
-    ESPHome creates switch entities in Home Assistant that are used to prep the Zigbee module for firmware updates. It is **highly advised** to ignore or disable these entities. Accidentally toggling them can reset the Zigbee module and disrupt your network.
+    There are several other enties that are created but set as disabled by default. It is **highly advised** to leave these as disabled. Accidentally toggling them can reset the Zigbee module and disrupt your network.
 
 ## Firmware Updates
 Firmware update instructions can be found on the individual product pages.
