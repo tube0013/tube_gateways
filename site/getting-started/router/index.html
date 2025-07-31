@@ -10,28 +10,28 @@
         <meta name="author" content="tube">
       
       
-        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/zwave-kits/">
+        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/getting-started/router/">
       
       
-        <link rel="prev" href="../zigbee-routers/efr32-based-routers/">
+        <link rel="prev" href="../z-wave/">
       
       
-        <link rel="next" href="../dual-radio-kits/">
+        <link rel="next" href="../bluetooth-proxy/">
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Z-Wave Kits - TubesZB Documentation</title>
+        <title>Zigbee Routers - TubesZB Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#z-wave-poe-kit" class="md-skip">
+        <a href="#getting-started-with-zigbee-routers" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="TubesZB Documentation" class="md-header__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+    <a href="../.." title="TubesZB Documentation" class="md-header__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Z-Wave Kits
+              Zigbee Routers
             
           </span>
         </div>
@@ -210,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -227,11 +227,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../getting-started/zigbee/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../zigbee/" class="md-tabs__link">
           
   
   
@@ -251,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../zigbee-coordinators/cc2652-based/" class="md-tabs__link">
+        <a href="../../zigbee-coordinators/cc2652-based/" class="md-tabs__link">
           
   
   
@@ -271,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../zigbee-routers/cc2652-based-routers/" class="md-tabs__link">
+        <a href="../../zigbee-routers/cc2652-based-routers/" class="md-tabs__link">
           
   
   
@@ -287,11 +289,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../zwave-kits/" class="md-tabs__link">
         
   
   
@@ -310,7 +310,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../dual-radio-kits/" class="md-tabs__link">
+      <a href="../../dual-radio-kits/" class="md-tabs__link">
         
   
   
@@ -329,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../bluetooth-proxy/" class="md-tabs__link">
+      <a href="../../bluetooth-proxy/" class="md-tabs__link">
         
   
   
@@ -348,7 +348,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../model-glossary/" class="md-tabs__link">
+      <a href="../../model-glossary/" class="md-tabs__link">
         
   
   
@@ -367,7 +367,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../troubleshooting/" class="md-tabs__link">
+      <a href="../../troubleshooting/" class="md-tabs__link">
         
   
   
@@ -402,9 +402,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="TubesZB Documentation" class="md-nav__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+    <a href="../.." title="TubesZB Documentation" class="md-nav__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     TubesZB Documentation
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -438,24 +438,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -468,7 +473,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -482,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/zigbee/" class="md-nav__link">
+      <a href="../zigbee/" class="md-nav__link">
         
   
   
@@ -505,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/z-wave/" class="md-nav__link">
+      <a href="../z-wave/" class="md-nav__link">
         
   
   
@@ -525,10 +530,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/router/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Zigbee Routers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -539,6 +566,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pairing-your-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pairing Your Router
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/bluetooth-proxy/" class="md-nav__link">
+      <a href="../bluetooth-proxy/" class="md-nav__link">
         
   
   
@@ -622,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zigbee-coordinators/cc2652-based/" class="md-nav__link">
+      <a href="../../zigbee-coordinators/cc2652-based/" class="md-nav__link">
         
   
   
@@ -645,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zigbee-coordinators/efr32-based/" class="md-nav__link">
+      <a href="../../zigbee-coordinators/efr32-based/" class="md-nav__link">
         
   
   
@@ -716,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zigbee-routers/cc2652-based-routers/" class="md-nav__link">
+      <a href="../../zigbee-routers/cc2652-based-routers/" class="md-nav__link">
         
   
   
@@ -739,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zigbee-routers/efr32-based-routers/" class="md-nav__link">
+      <a href="../../zigbee-routers/efr32-based-routers/" class="md-nav__link">
         
   
   
@@ -766,32 +822,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Z-Wave Kits
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../zwave-kits/" class="md-nav__link">
         
   
   
@@ -802,131 +836,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hardware Components
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hardware Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#3d-printed-enclosure" class="md-nav__link">
-    <span class="md-ellipsis">
-      3D Printed Enclosure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firmware-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Firmware Updates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Firmware Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#esphome-firmware-esp32" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESPHome Firmware (ESP32)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ESPHome Firmware (ESP32)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flashing-instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flashing Instructions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-wave-radio-firmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Z-Wave Radio Firmware
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Z-Wave Radio Firmware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zooz-zac93-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zooz ZAC93 Module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-waveme-razberry-7-pro-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Z-Wave.me RaZberry 7 Pro Module
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -938,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dual-radio-kits/" class="md-nav__link">
+      <a href="../../dual-radio-kits/" class="md-nav__link">
         
   
   
@@ -960,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bluetooth-proxy/" class="md-nav__link">
+      <a href="../../bluetooth-proxy/" class="md-nav__link">
         
   
   
@@ -982,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../model-glossary/" class="md-nav__link">
+      <a href="../../model-glossary/" class="md-nav__link">
         
   
   
@@ -1004,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1046,107 +955,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#pairing-your-router" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started
+      Pairing Your Router
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hardware Components
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hardware Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#3d-printed-enclosure" class="md-nav__link">
-    <span class="md-ellipsis">
-      3D Printed Enclosure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firmware-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Firmware Updates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Firmware Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#esphome-firmware-esp32" class="md-nav__link">
-    <span class="md-ellipsis">
-      ESPHome Firmware (ESP32)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ESPHome Firmware (ESP32)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flashing-instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flashing Instructions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-wave-radio-firmware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Z-Wave Radio Firmware
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Z-Wave Radio Firmware">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zooz-zac93-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zooz ZAC93 Module
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-waveme-razberry-7-pro-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Z-Wave.me RaZberry 7 Pro Module
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1166,85 +979,26 @@
 
 
 
-<h1 id="z-wave-poe-kit">Z-Wave PoE Kit</h1>
-<figure>
-<p><img alt="Z-Wave PoE Kit" src="https://tubeszb.com/wp-content/uploads/2024/01/img_3540-768x1024.jpeg" width="400" /></p>
-</figure>
-<p>The TubeZB Z-Wave PoE Kit provides a reliable, network-connected Z-Wave radio for Home Assistant. It is powered by Power over Ethernet (PoE) and uses an ESP32 microcontroller to bridge the Z-Wave serial module to your network.</p>
-<hr />
-<h2 id="getting-started">Getting Started</h2>
-<p>For initial setup and integration with Home Assistant, please follow the main Z-Wave getting started guide.</p>
-<p><a href="../getting-started/z-wave/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Z-Wave Getting Started Guide</a></p>
-<hr />
-<h2 id="hardware-components">Hardware Components</h2>
-<p>The Z-Wave PoE Kit consists of two main printed circuit boards (PCBs):</p>
+<h1 id="getting-started-with-zigbee-routers">Getting Started with Zigbee Routers</h1>
+<p>This guide covers the initial setup and pairing for all TubesZB Zigbee Routers.</p>
+<h2 id="pairing-your-router">Pairing Your Router</h2>
+<p>The process is designed to be as simple as possible. Your router will automatically try to join a Zigbee network when it's first powered on.</p>
 <ol>
 <li>
-<p><strong>Olimex ESP32-PoE Board:</strong> This is the brains of the device. It's an ESP32 development board that includes a built-in PoE module, allowing it to be powered directly from a compatible network switch or injector. It runs a custom ESPHome firmware to manage the network connection and communication with the Z-Wave radio.</p>
+<p><strong>Enable Pairing:</strong> In your Zigbee platform (like ZHA or Zigbee2MQTT), enable "permit join" mode to allow new devices to connect.</p>
 </li>
 <li>
-<p><strong>Raspberry Pi GPIO to Olimex UEXT Converter:</strong> This is a custom adapter board designed specifically to connect Z-Wave modules with a Raspberry Pi GPIO-style header to the Olimex board's UEXT connector. You can find more details on the <a href="https://tubeszb.com/product/raspberry-pi-gpio-to-olimex-uext-for-z-wave-adaptors/">converter's product page</a>.</p>
-</li>
-</ol>
-<h3 id="3d-printed-enclosure">3D Printed Enclosure</h3>
-<p>For those who wish to print their own case, the STL files are available on GitHub.</p>
-<p><a href="https://github.com/tube0013/tube_gateways/tree/main/models/current/tubeszb-zw-kit/Case"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.5 1.75v11.5c0 .09.048.173.126.217a.75.75 0 0 1-.752 1.298A1.75 1.75 0 0 1 2 13.25V1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.185 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 12.25 15h-.5a.75.75 0 0 1 0-1.5h.5a.25.25 0 0 0 .25-.25V4.664a.25.25 0 0 0-.073-.177L9.513 1.573a.25.25 0 0 0-.177-.073H7.25a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5h-3a.25.25 0 0 0-.25.25m3.75 8.75h.5c.966 0 1.75.784 1.75 1.75v3a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75v-3c0-.966.784-1.75 1.75-1.75M6 5.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 5.25m.75 2.25h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 6.75A.75.75 0 0 1 8.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 6.75M8.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 9.75A.75.75 0 0 1 8.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 9.75m-1 2.5v2.25h1v-2.25a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25"/></svg></span> Download Case STL Files</a></p>
-<hr />
-<h2 id="firmware-updates">Firmware Updates</h2>
-<p>There are two separate firmwares on this device that can be updated: the <strong>ESPHome firmware</strong> on the ESP32, and the <strong>firmware on the Z-Wave radio module</strong> itself.</p>
-<h3 id="esphome-firmware-esp32">ESPHome Firmware (ESP32)</h3>
-<p>The ESPHome firmware handles the network connectivity. You can update it using the web-based flashing tool. For advanced users, the base ESPHome YAML configuration is also available.</p>
+<p><strong>Power On the Router:</strong> Plug the router into a suitable USB power source.</p>
 <ul>
-<li><strong><a href="https://raw.githubusercontent.com/tube0013/TubesZB-ESPHome-Builder/refs/heads/main/manifests/tubeszb-zw.yaml">View the current ESPHome YAML Configuration</a></strong></li>
-</ul>
-<h4 id="flashing-instructions">Flashing Instructions</h4>
-<ol>
-<li>
-<p><strong>Disconnect PoE Power:</strong>
-    !!! danger "CRITICAL SAFETY WARNING"
-        You <strong>MUST</strong> unplug the ethernet cable providing PoE before connecting the device to your computer via USB. Failure to do so can permanently damage the USB port on the ESP32 board and potentially the USB controller on your computer.</p>
-</li>
-<li>
-<p><strong>Access the USB Port:</strong></p>
-<ul>
-<li>Remove the lid from the 3D-printed enclosure.</li>
-<li>Gently lift the end of the boards near the ethernet port to pivot the assembly upwards. This will expose the micro-USB port on the Olimex ESP32-PoE board.</li>
+<li><strong>Current Models:</strong> Use a 5V 1-2A power supply with a <strong>USB-C</strong> cable.</li>
+<li><strong>Older Models:</strong> Use a 5V 1-2A power supply with a <strong>Micro-USB</strong> cable.</li>
 </ul>
 </li>
 <li>
-<p><strong>Connect to Computer:</strong></p>
-<ul>
-<li>Connect a micro-USB data cable from the ESP32 board to your computer.</li>
-</ul>
-</li>
-<li>
-<p><strong>Flash the Firmware:</strong></p>
-<ul>
-<li><strong>For standard DHCP firmware:</strong> Use the <strong><a href="https://tube0013.github.io/TubesZB-ESPHome-Builder/">TubesZB Web Flasher</a></strong>. Select "TubesZB ZWave Kit" from the dropdown and follow the on-screen instructions to connect and flash.</li>
-<li><strong>For a static IP:</strong> You must first build a custom firmware binary. Go to the <strong><a href="https://github.com/tube0013/TubesZB-ESPHome-Builder">TubesZB ESPHome Builder repository</a></strong> and create a new issue using the "ESPHome Static IP Configuration" template. Fill out your network details, and a GitHub Action will automatically compile a firmware for you to download and flash.</li>
-</ul>
+<p><strong>Wait for Pairing:</strong> The router should now be discovered and join your Zigbee network automatically. You will see it appear in your Zigbee integration's device list.</p>
 </li>
 </ol>
-<h3 id="z-wave-radio-firmware">Z-Wave Radio Firmware</h3>
-<p>Updating the firmware on the Z-Wave radio module itself depends on the model you are using.</p>
-<h4 id="zooz-zac93-module">Zooz ZAC93 Module</h4>
-<p>The firmware on the Zooz ZAC93 module can be updated directly through the Z-Wave JS UI in Home Assistant.</p>
-<ol>
-<li>Obtain the correct firmware file from the <strong><a href="https://www.support.getzooz.com/kb/article/1158-zooz-ota-firmware-files/">Zooz OTA Firmware Files page</a></strong>.</li>
-<li>In the Z-Wave JS UI, navigate to the <strong>Control Panel</strong>.</li>
-<li>Expand the <strong>Advanced</strong> actions.</li>
-<li>Under <strong>Firmware update</strong>, upload the file and begin the process.</li>
-</ol>
-<h4 id="z-waveme-razberry-7-pro-module">Z-Wave.me RaZberry 7 Pro Module</h4>
-<p>Updating the RaZberry module is a more advanced process that currently requires a Raspberry Pi.</p>
-<ol>
-<li>Safely shut down your Z-Wave PoE Kit and remove the RaZberry module.</li>
-<li>Install the RaZberry module onto the GPIO header of a Raspberry Pi.</li>
-<li>Download and install the <strong><a href="https://z-wave.me/z-way/download-z-way/">Z-Way software</a></strong> from Z-Wave.me on the Raspberry Pi.</li>
-<li>Access the Z-Way Expert UI in your browser.</li>
-<li>Use the built-in firmware update tool within the Expert UI to flash the new firmware onto the module.</li>
-<li>Once complete, remove the module from the Raspberry Pi and reinstall it in your Z-Wave PoE Kit.</li>
-</ol>
+<p>If the router does not pair, try power cycling it once while your network is still in pairing mode. For more advanced operations, please see the specific documentation for your router model.</p>
 
 
 
@@ -1299,10 +1053,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
