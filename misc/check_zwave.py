@@ -31,8 +31,6 @@ def main():
     print(f"Attempting to connect to Z-Wave radio on {args.port}...")
 
     try:
-        # --- THIS IS THE CORRECTED LINE ---
-        # Use serial_for_url which is more robust for socket:// schemes.
         # Baudrate is ignored for sockets but is needed for real serial ports.
         ser = serial.serial_for_url(args.port, timeout=args.timeout)
         
