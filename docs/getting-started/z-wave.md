@@ -68,16 +68,56 @@ The recommended method for using this Z-Wave kit is with the **Z-Wave JS UI** ad
       ```
       tcp://IP_ADDRESS:6638
       ```
+    <figure markdown>
+      ![Z-Wave JS UI Serial Port Configuration](../assets/zwave-js-serial-config.png){ width="600" }
+      <figcaption>Entering the TCP address in the Serial Port field.</figcaption>
+    </figure>
+
+        !!! info "Important Note for Dual Radio Kits"
+            If setting up Z-Wave on a **Dual Radio kit** it uses port `6639`.
+
     * **Generate and Save Security Keys:**
         !!! danger "Critical Step for New Networks"
             If you are setting up a **new** network, you **must** generate new security keys. These keys are essential for securely including devices and for backing up your network.
-            1. Scroll down to the **Security Keys** section.
-            2. Click the refresh icon next to **each** of the four keys (`S2_AccessControl`, `S2_Authenticated`, `S2_Unauthenticated`, and `S0_Legacy`) to generate new random values.
-            3. **Copy and save these keys somewhere safe**, like a password manager. You will need them if you ever have to restore your network.
+
+         1.  Scroll down to the **Security Keys** section.
+         2.  Click the refresh icon next to **each** of the four keys (`S2_AccessControl`, `S2_Authenticated`, `S2_Unauthenticated`, and `S0_Legacy`) to generate new random values.
+         3.  **Copy and save these keys somewhere safe**, like a password manager. You will need them if you ever have to restore your network.
+
+    <figure markdown>
+      ![Z-Wave JS UI Security Keys](../assets/zwave-js-keys.png){ width="600" }
+      <figcaption>Generating new security keys by clicking the refresh icon for each key.</figcaption>
+    </figure>
 
     * Click **Save** at the bottom of the page. The addon will restart and connect to your Z-Wave PoE Kit. You can check the **Control Panel** to see your Z-Wave stick appear as the controller.
 
 3.  **Install the Z-Wave JS Integration:**
     * Navigate back to Home Assistant and go to **Settings > Devices & Services**.
-    * Home Assistant should now auto-discover the Z-Wave JS integration. Click **Configure** and follow the prompts to add it.
-    * If it is not discovered, click **Add Integration**, search for **Z-Wave**, and follow the prompts. It will automatically connect to the running Z-Wave JS UI addon.
+    * Home Assistant should now auto-discover the Z-Wave JS integration. Click **Configure** and follow the prompts.
+    * If it is not discovered, click **Add Integration** and search for **Z-Wave**.
+    * You will be prompted to either use the recommended installation or a custom one. Since we are using the Z-Wave JS UI addon, you can proceed with the **Recommended installation**.
+    <figure markdown>
+      ![Set up Z-Wave Dialog](../assets/zwave-setup-1.png){ width="400" }
+      <figcaption>Choose the recommended installation.</figcaption>
+    </figure>
+    * In the next dialog, **uncheck** the box that says "Use the Z-Wave Supervisor add-on" and click **Submit**.
+    <figure markdown>
+      ![Select Connection Method](../assets/zwave-setup-2.png){ width="400" }
+      <figcaption>Uncheck the box to provide the URL manually.</figcaption>
+    </figure>
+    * You will now be asked for a URL. For the official Home Assistant addon, you can find the correct hostname on the addon's page.
+    <figure markdown>
+      ![Z-Wave JS UI Hostname](../assets/zwave-js-hostname.png){ width="600" }
+      <figcaption>The addon hostname can be found on the Addon Info page.</figcaption>
+    </figure>
+    * Enter the following value, which tells the integration how to connect to your Z-Wave JS UI addon:
+      ```
+      ws://a0d7b954-zwavejsui:3000
+      ```
+    <figure markdown>
+      ![Enter WebSocket URL](../assets/zwave-setup-3.png){ width="400" }
+      <figcaption>Enter the addon's WebSocket URL.</figcaption>
+    </figure>
+    !!! tip "Connecting to a Remote Z-Wave JS UI"
+        If you are running Z-Wave JS UI on a different computer (not as a Home Assistant addon), you must replace `a0d7b954-zwavejsui` with the hostname or IP address of that computer. For example: `ws://192.168.1.100:3000`.
+    * Click **Submit** to complete the setup. The integration will connect, and your Z-Wave devices will appear in Home Assistant.
