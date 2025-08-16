@@ -1159,30 +1159,73 @@
 <ul>
 <li>After the addon has started, click <strong>Open Web UI</strong>.</li>
 <li>In the Z-Wave JS UI interface, navigate to <strong>Settings</strong> (the gear icon) and then select <strong>Z-Wave</strong>.</li>
-<li>In the <strong>Serial Port</strong> field, enter the network path for your Z-Wave kit, replacing <code>IP_ADDRESS</code> with the IP you found earlier:
+<li>
+<p>In the <strong>Serial Port</strong> field, enter the network path for your Z-Wave kit, replacing <code>IP_ADDRESS</code> with the IP you found earlier:
   <div class="highlight"><pre><span></span><code>tcp://IP_ADDRESS:6638
-</code></pre></div></li>
-<p><img alt="Z-Wave JS UI Serial Config" src="../../assets/zwave-js-serial-config.png" width="600" /></p>
+</code></pre></div>
+<figure markdown>
+  <img alt="Z-Wave JS UI Serial Port Configuration" src="../../assets/zwave-js-serial-config.png" width="600" />
+  <figcaption>Entering the TCP address in the Serial Port field.</figcaption>
+</figure></p>
+<div class="admonition info">
+<p class="admonition-title">Important Note for Dual Radio Kits</p>
+<p>If setting up Z-Wave on a <strong>Dual Radio kit</strong> it uses port <code>6639</code>.</p>
+</div>
+</li>
 <li>
 <p><strong>Generate and Save Security Keys:</strong>
     !!! danger "Critical Step for New Networks"
-        If you are setting up a <strong>new</strong> network, you <strong>must</strong> generate new security keys. These keys are essential for securely including devices and for backing up your network.
-        1. Scroll down to the <strong>Security Keys</strong> section.
-        2. Click the refresh icon next to <strong>each</strong> of the four keys (<code>S2_AccessControl</code>, <code>S2_Authenticated</code>, <code>S2_Unauthenticated</code>, and <code>S0_Legacy</code>) to generate new random values.
-        3. <strong>Copy and save these keys somewhere safe</strong>, like a password manager. You will need them if you ever have to restore your network.</p>
+        If you are setting up a <strong>new</strong> network, you <strong>must</strong> generate new security keys. These keys are essential for securely including devices and for backing up your network.</p>
+<ol>
+<li>Scroll down to the <strong>Security Keys</strong> section.</li>
+<li>Click the refresh icon next to <strong>each</strong> of the four keys (<code>S2_AccessControl</code>, <code>S2_Authenticated</code>, <code>S2_Unauthenticated</code>, and <code>S0_Legacy</code>) to generate new random values.</li>
+<li><strong>Copy and save these keys somewhere safe</strong>, like a password manager. You will need them if you ever have to restore your network.</li>
+</ol>
 </li>
-<li>
-<p>Click <strong>Save</strong> at the bottom of the page. The addon will restart and connect to your Z-Wave PoE Kit. You can check the <strong>Control Panel</strong> to see your Z-Wave stick appear as the controller.</p>
-</li>
+</ul>
+<p><figure markdown>
+  <img alt="Z-Wave JS UI Security Keys" src="../../assets/zwave-js-keys.png" width="600" />
+  <figcaption>Generating new security keys by clicking the refresh icon for each key.</figcaption>
+</figure></p>
+<ul>
+<li>Click <strong>Save</strong> at the bottom of the page. The addon will restart and connect to your Z-Wave PoE Kit. You can check the <strong>Control Panel</strong> to see your Z-Wave stick appear as the controller.</li>
 </ul>
 </li>
 <li>
 <p><strong>Install the Z-Wave JS Integration:</strong></p>
 <ul>
 <li>Navigate back to Home Assistant and go to <strong>Settings &gt; Devices &amp; Services</strong>.</li>
-<li>Home Assistant should now auto-discover the Z-Wave JS integration. Click <strong>Configure</strong> and follow the prompts to add it.</li>
-<li>If it is not discovered, click <strong>Add Integration</strong>, search for <strong>Z-Wave</strong>, and follow the prompts. It will automatically connect to the running Z-Wave JS UI addon.</li>
-<li></li>
+<li>Home Assistant should now auto-discover the Z-Wave JS integration. Click <strong>Configure</strong> and follow the prompts.</li>
+<li>If it is not discovered, click <strong>Add Integration</strong> and search for <strong>Z-Wave</strong>.</li>
+<li>You will be prompted to either use the recommended installation or a custom one. Since we are using the Z-Wave JS UI addon, you can proceed with the <strong>Recommended installation</strong>.
+<figure markdown>
+  <img alt="Set up Z-Wave Dialog" src="../../assets/zwave-setup-1.png" width="400" />
+  <figcaption>Choose the recommended installation.</figcaption>
+</figure></li>
+<li>In the next dialog, <strong>uncheck</strong> the box that says "Use the Z-Wave Supervisor add-on" and click <strong>Submit</strong>.
+<figure markdown>
+  <img alt="Select Connection Method" src="../../assets/zwave-setup-2.png" width="400" />
+  <figcaption>Uncheck the box to provide the URL manually.</figcaption>
+</figure></li>
+<li>You will now be asked for a URL. For the official Home Assistant addon, you can find the correct hostname on the addon's page.
+<figure markdown>
+  <img alt="Z-Wave JS UI Hostname" src="../../assets/zwave-js-hostname.png" width="600" />
+  <figcaption>The addon hostname can be found on the Addon Info page.</figcaption>
+</figure></li>
+<li>Enter the following value, which tells the integration how to connect to your Z-Wave JS UI addon:
+  <div class="highlight"><pre><span></span><code>ws://a0d7b954-zwavejsui:3000
+</code></pre></div>
+<figure markdown>
+  <img alt="Enter WebSocket URL" src="../../assets/zwave-setup-3.png" width="400" />
+  <figcaption>Enter the addon's WebSocket URL.</figcaption>
+</figure></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Connecting to a Remote Z-Wave JS UI</p>
+<p>If you are running Z-Wave JS UI on a different computer (not as a Home Assistant addon), you must replace <code>a0d7b954-zwavejsui</code> with the hostname or IP address of that computer. For example: <code>ws://192.168.1.100:3000</code>.</p>
+</div>
+<ul>
+<li>Click <strong>Submit</strong> to complete the setup. The integration will connect, and your Z-Wave devices will appear in Home Assistant.</li>
 </ul>
 </li>
 </ol>
