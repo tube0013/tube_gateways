@@ -1,6 +1,6 @@
 {
-    "version": "20240710",
-    "firmware_url": "https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/znp_LP_CC1352P7_4_tirtos7_ticlang.hex",
-    "md5": "e6feb095987b75d82f09f72a543252c7",
-    "size": 507438
+    "version": "20250321",
+    "firmware_url": "https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/CC1352P7_coordinator_20250321.hex",
+    "md5": "c5ddf807da26583853245d9778b1f813",
+    "size": 507877
   }
