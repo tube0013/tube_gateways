@@ -1,8 +1,8 @@
 {
     "variants":{
-        "BM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-BM24-zigbee_ncp_8.0.2.0_460800_hw_flow.gbl","md5":"c0ed28738c0ad61548cede512264d1a9","size":"253428"},
-        "MGM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-mgm24-7.5.0.gbl","md5":"d9b7f04bff150d0b6b03808ec2e388bb","size":"254508"}
+        "BM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-BM-MG24B2-7.4.4.gbl.gbl","md5":"c0ed28738c0ad61548cede512264d1a9","size":"253428"},
+        "MGM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-mgm24-7.4.4.gbl","md5":"d9b7f04bff150d0b6b03808ec2e388bb","size":"254508"}
 
     },
-    "version":"8.0.2"
+    "version":"7.4.4"
   }
