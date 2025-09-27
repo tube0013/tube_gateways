@@ -10,13 +10,13 @@
         <meta name="author" content="tube">
       
       
-        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/getting-started/bluetooth-proxy/">
+        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/getting-started/z-wave-migration/">
       
       
-        <link rel="prev" href="../router/">
+        <link rel="prev" href="../z-wave/">
       
       
-        <link rel="next" href="../../zigbee-coordinators/cc2652-based/">
+        <link rel="next" href="../router/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Bluetooth Proxy - TubesZB Documentation</title>
+        <title>Z-Wave Migration (Advanced) - TubesZB Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started-with-bluetooth-proxies" class="md-skip">
+        <a href="#advanced-migrating-an-existing-z-wave-network" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bluetooth Proxy
+              Z-Wave Migration (Advanced)
             
           </span>
         </div>
@@ -530,10 +530,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../z-wave-migration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Z-Wave Migration (Advanced)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -544,6 +566,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use This Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-back-up-the-existing-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 – Back Up the Existing Controller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1 – Back Up the Existing Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-the-backup-from-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the backup from Home Assistant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-the-tubeszb-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 – Prepare the TubesZB Controller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-restore-the-nvm-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 – Restore the NVM Backup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-home-assistant-and-rebuild-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 – Verify Home Assistant and Rebuild Routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-clean-up-and-update-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5 – Clean Up and Update Backups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -576,32 +714,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Bluetooth Proxy
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bluetooth-proxy/" class="md-nav__link">
         
   
   
@@ -612,53 +728,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-bluetooth-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is a Bluetooth Proxy?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#physical-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physical Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#home-assistant-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Home Assistant Setup
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -996,27 +1065,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-bluetooth-proxy" class="md-nav__link">
+  <a href="#when-to-use-this-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Bluetooth Proxy?
+      When to Use This Guide
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#physical-setup" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Physical Setup
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#home-assistant-setup" class="md-nav__link">
+  <a href="#step-1-back-up-the-existing-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Assistant Setup
+      Step 1 – Back Up the Existing Controller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1 – Back Up the Existing Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-the-backup-from-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the backup from Home Assistant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-prepare-the-tubeszb-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 – Prepare the TubesZB Controller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-restore-the-nvm-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 – Restore the NVM Backup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-home-assistant-and-rebuild-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 – Verify Home Assistant and Rebuild Routes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-clean-up-and-update-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5 – Clean Up and Update Backups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
     </span>
   </a>
   
@@ -1038,33 +1176,121 @@
 
 
 
-<h1 id="getting-started-with-bluetooth-proxies">Getting Started with Bluetooth Proxies</h1>
-<p>This guide will walk you through setting up your new TubeZB Bluetooth Proxy.</p>
-<h2 id="what-is-a-bluetooth-proxy">What is a Bluetooth Proxy?</h2>
-<p>A Bluetooth Proxy extends the range of Bluetooth reception for your Home Assistant instance. If you have Bluetooth devices (like temperature sensors, smart locks, etc.) that are too far away from your main Home Assistant machine to connect reliably, you can place a proxy closer to them. The proxy will listen for Bluetooth signals and relay them back to Home Assistant over your network (WiFi or Ethernet).</p>
-<h2 id="physical-setup">Physical Setup</h2>
+<h1 id="advanced-migrating-an-existing-z-wave-network">Advanced: Migrating an Existing Z-Wave Network</h1>
+<p>Migrating your Z-Wave mesh to a TubesZB network controller lets you retire a USB stick without re-including every device. This guide focuses on migrations performed entirely inside <strong>Z-Wave JS UI</strong> while connecting to the TubesZB controller over TCP (<code>tcp://</code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Read this first</p>
+<p>Migrations copy the controller's Non-Volatile Memory (NVM). If anything goes wrong you may lose access to your devices until the original controller is restored. </p>
+</div>
+<h2 id="when-to-use-this-guide">When to Use This Guide</h2>
+<p>Use these instructions when you already run Home Assistant with the <strong>Z-Wave JS</strong> or <strong>Z-Wave JS UI</strong> add-on (or a separate Z-Wave JS UI instance) and want to move the existing network to one of the following TubesZB controllers:</p>
+<ul>
+<li>Z-Wave PoE kit (single radio) – TCP port <code>6638</code></li>
+<li>Dual radio PoE kit – Z-Wave available on TCP port <code>6639</code></li>
+</ul>
+<p>If you are starting from scratch, follow the standard <a href="../z-wave/">Z-Wave Getting Started guide</a> instead.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you touch any hardware, confirm the following:</p>
+<ul>
+<li><strong>Z-Wave JS UI access</strong>: You can open the web UI for the instance that manages your current Z-Wave network.</li>
+<li><strong>Security keys recorded</strong>: Copy the existing <code>S2 Access Control</code>, <code>S2 Authenticated</code>, <code>S2 Unauthenticated</code>, and <code>S0 Legacy</code> keys from the current controller. Reusing the exact values is mandatory for secure devices to function after the migration.</li>
+<li><strong>Old controller firmware</strong>: Update the firmware on the controller you are migrating <em>from</em> to the latest vendor release (SDK 7.19.x+ for 800-series radios is strongly recommended). Updated firmware fixes NVM compatibility bugs that can block migration.</li>
+<li><strong>Home Assistant 2023.9 or newer</strong>: Required for the most recent <code>zwave_js</code> integration features referenced here.</li>
+<li><strong>TubesZB controller on your network</strong>: The device is powered on, reachable over the LAN, and you know its IP address (or hostname). Assign a DHCP reservation so the address does not change mid-migration.</li>
+</ul>
+<h2 id="step-1-back-up-the-existing-controller">Step 1 – Back Up the Existing Controller</h2>
 <ol>
-<li>
-<p>Connect the Bluetooth Proxy to your local network using an ethernet cable (recommended for best reliability).</p>
-</li>
-<li>
-<p>Power on the device using a 5V USB-C power supply.</p>
-</li>
+<li>Open <strong>Z-Wave JS UI</strong> for your current controller.</li>
+<li>Go to <strong>Settings → Z-Wave → Security Keys</strong> and copy the four key values to a safe location (password manager or encrypted notes).</li>
+<li>Scroll to the bottom of the page and select <strong>Advanced Actions</strong>.</li>
+<li>Under <strong>NVM Management</strong>, click <strong>Backup</strong>.</li>
+<li>Wait for the <code>.bin</code> (or <code>.nvm</code>) file to download. Verify the file size is larger than 100 kB; small files usually indicate a failed backup.</li>
 </ol>
-<h2 id="home-assistant-setup">Home Assistant Setup</h2>
-<p>Tube's Bluetooth Proxies run ESPHome. When you connect it to your network, Home Assistant should automatically discover it.</p>
+<figure>
+<p><img alt="Z-Wave JS UI NVM Management dialog" src="../../assets/zwavejsui-nvm-management.png" width="600" />
+  </p>
+<figcaption>Use the NVM Management panel in Z-Wave JS UI to create the backup you will restore onto the TubesZB controller.</figcaption>
+</figure>
+<h3 id="download-the-backup-from-home-assistant">Download the backup from Home Assistant</h3>
+<p>Backing up from the Home Assistant UI is useful when you do not have direct access to Z-Wave JS UI or want a second copy of the data.</p>
+<p><strong>Why create a backup?</strong>
+:   It is recommended to create a backup before making major changes to your Z-Wave network, such as migrating between adapters or resetting hardware. The backup captures the adapter's Non-Volatile Memory (NVM), including your node and security information, in a binary file that you can download.</p>
+<p><strong>Prerequisites</strong>
+:   Administrator rights in Home Assistant.</p>
+<p><strong>To download the backup</strong>
+1. In Home Assistant, go to <strong>Settings → Devices &amp; services</strong>.
+2. Select the <strong>Z-Wave</strong> integration.
+3. Choose the <strong>cogwheel</strong> icon to open the integration options.
+4. Under <strong>Backup and restore</strong>, select <strong>Download backup</strong>.
+5. Confirm the browser downloads the file on the device you are using to access Home Assistant.</p>
+<div class="admonition tip">
+<p class="admonition-title">Using the Z-Wave JS add-on (no UI)</p>
+<p>If you still run the legacy <strong>Z-Wave JS</strong> add-on without the UI, install the <strong>Z-Wave JS UI</strong> add-on alongside it, stop the <strong>Z-Wave JS</strong> add-on, start the UI version, and point it to your existing USB stick. Once the UI sees your nodes, you can take the NVM backup from the UI and continue the migration.</p>
+<p>Alternatively, download the backup from within Home Assistant:</p>
 <ol>
-<li>
-<p>Ensure your Bluetooth Proxy is powered on and connected to the same network as your Home Assistant instance.</p>
-</li>
-<li>
-<p>A notification should appear in <strong>Settings &gt; Devices &amp; Services</strong> for a new ESPHome device.</p>
-</li>
-<li>
-<p>Click <strong>Configure</strong> and then <strong>Submit</strong> to add the proxy to your system.</p>
-</li>
+<li>In Home Assistant, go to <strong>Settings → Devices &amp; services</strong>.</li>
+<li>Select the <strong>Z-Wave</strong> integration and choose the <strong>cogwheel</strong> icon.</li>
+<li>Under <strong>Backup and restore</strong>, select <strong>Download backup</strong>. The file saves to the device you are using.</li>
+<li>Stop the <strong>Z-Wave JS</strong> add-on and disable auto-start.</li>
+<li>Remove your old controller.</li>
 </ol>
-<p>That's it! The proxy will now automatically start listening for Bluetooth devices and forwarding the data. You don't need to do anything else. You can confirm it's working by seeing new Bluetooth devices appear in Home Assistant that were previously out of range.</p>
+</div>
+<h2 id="step-2-prepare-the-tubeszb-controller">Step 2 – Prepare the TubesZB Controller</h2>
+<ol>
+<li>Make sure the TubesZB hardware is powered and connected to your network.</li>
+<li>In <strong>Z-Wave JS UI</strong>, stay on <strong>Settings → Z-Wave</strong> and populate the <strong>Serial Port</strong> field with the TCP path to the TubesZB kit. Examples:</li>
+<li>Single radio kit: <code>tcp://192.168.1.42:6638</code></li>
+<li>Dual radio kit (Z-Wave side): <code>tcp://192.168.1.42:6639</code></li>
+<li>Paste the security keys you collected in Step 1 into the matching fields. Do <strong>not</strong> generate new keys when migrating an existing mesh.</li>
+<li>Click <strong>Save</strong>. The service will restart and attempt to reach the new controller over TCP.</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Only one controller at a time</p>
+<p>After clicking <strong>Save</strong>, immediately unplug or power down the old USB controller. Running two controllers with the same Home ID at once can corrupt your mesh and create routing chaos.</p>
+</div>
+<h2 id="step-3-restore-the-nvm-backup">Step 3 – Restore the NVM Backup</h2>
+<ol>
+<li>In <strong>Z-Wave JS UI</strong>, open <strong>Advanced Actions → NVM Management</strong> again.</li>
+<li>Choose <strong>Restore</strong> and upload the backup file you created in Step 1.</li>
+<li>Wait for the progress dialog to reach 100%. Do not close the browser or refresh the page.</li>
+<li>When prompted, allow Z-Wave JS UI to restart the controller.</li>
+<li>After the restart completes, the controller should display the same Home ID as the old stick, and your devices will appear in the control panel.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">RF region and power</p>
+<p>Double-check <strong>Settings → Z-Wave → RF Region</strong>. Z-Wave JS should auto select the correct region if not select the region that matches your regulatory requirements before you restore the NVM. Changing the region afterwards requires another restore.</p>
+</div>
+<h2 id="step-4-verify-home-assistant-and-rebuild-routes">Step 4 – Verify Home Assistant and Rebuild Routes</h2>
+<ol>
+<li>Open <strong>Settings → Devices &amp; Services</strong> in Home Assistant and ensure the existing <code>Z-Wave JS</code> integration shows as <strong>Connected</strong>. If it is unavailable, select <strong>Configure</strong> and confirm that the WebSocket URL still points to your Z-Wave JS UI instance (typically <code>ws://a0d7b954-zwavejsui:3000</code>).</li>
+<li>In <strong>Z-Wave JS UI</strong>, review a few nodes to confirm their interview status is <strong>Complete</strong>.</li>
+<li>Launch <strong>Advanced Actions → Rebuild Routes</strong>.</li>
+<li>Enable <strong>Include sleeping nodes</strong> so battery-powered devices refresh their paths.</li>
+<li>Enable <strong>Delete priority return routes</strong> to discard stale manual routes from the old controller.</li>
+<li>Monitor the control panel for failed nodes. Wake sleeping devices manually if needed to finish the rebuild.</li>
+<li>Once the rebuild finishes, verify automations and entities in Home Assistant behave as expected.</li>
+</ol>
+<h2 id="step-5-clean-up-and-update-backups">Step 5 – Clean Up and Update Backups</h2>
+<ul>
+<li>Archive the NVM backup you created in Step 1 along with a fresh backup taken from the TubesZB controller after the restore.</li>
+<li>Label the old USB stick and store it powered off. Do not plug it back in unless you intend to roll back to it.</li>
+<li>Update any documentation or diagrams that list the controller address so they reference the <code>tcp://</code> endpoint.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Controller refuses the TCP connection</strong>
+:   Confirm the TubesZB kit is running the latest ESPHome firmware and that your firewall allows outbound TCP 6638/6639 from Home Assistant.</p>
+<p><strong>Nodes show as failed or missing after restore</strong>
+:   Wake battery devices, then run <strong>Advanced Actions → Heal Node</strong> on problematic nodes. If secure devices still fail, verify the security keys exactly match the originals (no extra whitespace).</p>
+<p><strong>Home Assistant keeps rediscovering a second controller</strong>
+:   You may have left the old USB stick connected. Remove it, reboot Home Assistant, and clear ignored discovery notifications.</p>
+<p><strong>Restoring the NVM fails immediately</strong>
+:   The old controller firmware may pre-date the TubesZB controller's stack version. Update the original controller to a newer SDK, re-connect it temporarily, create a fresh backup, and try again.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/zwave_js/#migrating-a-z-wave-network-to-a-new-adapter">Home Assistant: Migrating a Z-Wave network to a new adapter</a></li>
+<li><a href="https://support.nabucasa.com/hc/en-us/articles/29529265751965">Nabu Casa: Migrating an existing Z-Wave network to Home Assistant Connect ZWA-2</a></li>
+<li><a href="https://zwave-js.github.io/zwave-js-ui/">Z-Wave JS UI Documentation</a></li>
+</ul>
 
 
 

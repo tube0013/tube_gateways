@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tube0013.github.io/tube_gateways/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/getting-started/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/model-glossary/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/troubleshooting/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/bluetooth-proxy/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/dual-radio-kits/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/getting-started/bluetooth-proxy/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/getting-started/router/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tube0013.github.io/tube_gateways/getting-started/z-wave-migration/</loc>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/getting-started/z-wave/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/getting-started/zigbee/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/zigbee-coordinators/cc2652-based/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/zigbee-coordinators/efr32-based/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/zigbee-routers/cc2652-based-routers/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/zigbee-routers/efr32-based-routers/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
     <url>
          <loc>https://tube0013.github.io/tube_gateways/zwave-kits/</loc>
-         <lastmod>2025-08-16</lastmod>
+         <lastmod>2025-09-27</lastmod>
     </url>
 </urlset>
