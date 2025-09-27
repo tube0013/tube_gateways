@@ -6,7 +6,7 @@ Latest Documentation can be found here: https://tube0013.github.io/tube_gateways
 
 Information and documentation on TubeZB coordinators and routers. Pre-assembled hardware devices can be purchased from https://tubeszb.com
 
-TubeZB Coordinators work via serial over Ethernet for use with any zigbee controller project that can access and interface with a remote Serial to IP bridge/proxy server device. 
+TubesZB Coordinators work via serial over Ethernet for use with any zigbee controller project that can access and interface with a remote Serial to IP bridge/proxy server device. 
 
 This can today be used by home automation applications such as example; [Home Assistant (ZHA integration)](https://www.home-assistant.io/integrations/zha/) and [Zigbee2MQTT](https://www.zigbee2mqtt.io/).
 
