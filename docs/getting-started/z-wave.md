@@ -2,8 +2,9 @@
 
 This guide will walk you through setting up your new TubeZB Z-Wave PoE Kit with Home Assistant.
 
-!!! info "For New Z-Wave Networks"
-    This guide covers the process for creating a brand new Z-Wave network. If you need to migrate an existing network from a different Z-Wave stick, please refer to the advanced documentation (coming soon).
+!!! info "Choose the right path"
+    - Setting up your first Z-Wave network? Continue with this guide.
+    - Migrating from another controller? Follow the [Advanced: Migrating an Existing Z-Wave Network](z-wave-migration.md) guide instead.
 
 ## 1. Physical Setup
 

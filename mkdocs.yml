@@ -38,6 +38,7 @@ nav:
   - 'Getting Started':
       - 'Zigbee Coordinators': 'getting-started/zigbee.md'
       - 'Z-Wave Kits': 'getting-started/z-wave.md'
+      - 'Z-Wave Migration (Advanced)': 'getting-started/z-wave-migration.md'
       - 'Zigbee Routers': 'getting-started/router.md'
       - 'Bluetooth Proxy': 'getting-started/bluetooth-proxy.md'
   - 'Zigbee Coordinators':
