@@ -1,5 +1,12 @@
 # TubesZB CC2652 P7 PoE Coordinator
 
+## Notice
+
+The ESPHome configs for this device are superseded by the TubesZB-ESPHome-Builder repository.
+The YAMLs in this repo are kept for historical reference and are not expected to compile with current ESPHome versions.
+Manifest filename: `tubeszb-cc2652p7-poe-2023.yaml`
+- [tubeszb-cc2652p7-poe-2023.yaml](https://github.com/tube0013/TubesZB-ESPHome-Builder/blob/main/manifests/tubeszb-cc2652p7-poe-2023.yaml)
+
 <p float="left">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="300" height = "300">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022_open.webp" width="300" height="300">
