@@ -42,8 +42,12 @@ nav:
       - 'Zigbee Routers': 'getting-started/router.md'
       - 'Bluetooth Proxy': 'getting-started/bluetooth-proxy.md'
   - 'Zigbee Coordinators':
-      - 'CC2652 Based': 'zigbee-coordinators/cc2652-based/index.md'
+      - 'Overview': 'zigbee-coordinators/index.md'
       - 'EFR32 Based': 'zigbee-coordinators/efr32-based/index.md'
+      - 'CC2652 Based': 'zigbee-coordinators/cc2652-based/index.md'
+      - 'Firmware Updates': 'zigbee-coordinators/firmware-updates.md'
+      - 'EFR32 Legacy': 'zigbee-coordinators/efr32-based/legacy.md'
+      - 'CC2652 Legacy': 'zigbee-coordinators/cc2652-based/legacy.md'
   - 'Zigbee Routers':
       - 'CC2652 Based Routers': 'zigbee-routers/cc2652-based-routers/index.md'
       - 'EFR32 Based Routers': 'zigbee-routers/efr32-based-routers/index.md'
