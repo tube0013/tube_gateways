@@ -10,26 +10,28 @@
         <meta name="author" content="tube">
       
       
-        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/">
+        <link rel="canonical" href="https://tube0013.github.io/tube_gateways/zigbee-coordinators/efr32-based/legacy/">
       
       
+        <link rel="prev" href="../../firmware-updates/">
       
-        <link rel="next" href="getting-started/zigbee/">
+      
+        <link rel="next" href="../../cc2652-based/legacy/">
       
       
-      <link rel="icon" href="assets/favicon.png">
+      <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>TubesZB Documentation</title>
+        <title>EFR32 Legacy - TubesZB Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-tubeszb-documentation" class="md-skip">
+        <a href="#efr32-legacy-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="TubesZB Documentation" class="md-header__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+    <a href="../../.." title="TubesZB Documentation" class="md-header__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              EFR32 Legacy
             
           </span>
         </div>
@@ -206,11 +208,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -231,7 +231,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="getting-started/zigbee/" class="md-tabs__link">
+        <a href="../../../getting-started/zigbee/" class="md-tabs__link">
           
   
   
@@ -247,11 +247,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="zigbee-coordinators/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -271,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="zigbee-routers/cc2652-based-routers/" class="md-tabs__link">
+        <a href="../../../zigbee-routers/cc2652-based-routers/" class="md-tabs__link">
           
   
   
@@ -289,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="zwave-kits/" class="md-tabs__link">
+      <a href="../../../zwave-kits/" class="md-tabs__link">
         
   
   
@@ -308,7 +310,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="dual-radio-kits/" class="md-tabs__link">
+      <a href="../../../dual-radio-kits/" class="md-tabs__link">
         
   
   
@@ -327,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="bluetooth-proxy/" class="md-tabs__link">
+      <a href="../../../bluetooth-proxy/" class="md-tabs__link">
         
   
   
@@ -346,7 +348,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="model-glossary/" class="md-tabs__link">
+      <a href="../../../model-glossary/" class="md-tabs__link">
         
   
   
@@ -365,7 +367,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="troubleshooting/" class="md-tabs__link">
+      <a href="../../../troubleshooting/" class="md-tabs__link">
         
   
   
@@ -400,9 +402,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="TubesZB Documentation" class="md-nav__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
+    <a href="../../.." title="TubesZB Documentation" class="md-nav__button md-logo" aria-label="TubesZB Documentation" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     TubesZB Documentation
@@ -414,32 +416,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -450,35 +430,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started Guides
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -531,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/zigbee/" class="md-nav__link">
+      <a href="../../../getting-started/zigbee/" class="md-nav__link">
         
   
   
@@ -554,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/z-wave/" class="md-nav__link">
+      <a href="../../../getting-started/z-wave/" class="md-nav__link">
         
   
   
@@ -577,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/z-wave-migration/" class="md-nav__link">
+      <a href="../../../getting-started/z-wave-migration/" class="md-nav__link">
         
   
   
@@ -600,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/router/" class="md-nav__link">
+      <a href="../../../getting-started/router/" class="md-nav__link">
         
   
   
@@ -623,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/bluetooth-proxy/" class="md-nav__link">
+      <a href="../../../getting-started/bluetooth-proxy/" class="md-nav__link">
         
   
   
@@ -650,24 +601,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -680,7 +636,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Zigbee Coordinators
@@ -694,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-coordinators/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -717,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-coordinators/efr32-based/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -740,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-coordinators/cc2652-based/" class="md-nav__link">
+      <a href="../../cc2652-based/" class="md-nav__link">
         
   
   
@@ -763,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-coordinators/firmware-updates/" class="md-nav__link">
+      <a href="../../firmware-updates/" class="md-nav__link">
         
   
   
@@ -783,10 +739,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="zigbee-coordinators/efr32-based/legacy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EFR32 Legacy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -797,6 +775,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-jumper-reference-efr32-pro-and-series-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy Jumper Reference (EFR32 Pro and Series 2)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-coordinators/cc2652-based/legacy/" class="md-nav__link">
+      <a href="../../cc2652-based/legacy/" class="md-nav__link">
         
   
   
@@ -880,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-routers/cc2652-based-routers/" class="md-nav__link">
+      <a href="../../../zigbee-routers/cc2652-based-routers/" class="md-nav__link">
         
   
   
@@ -903,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zigbee-routers/efr32-based-routers/" class="md-nav__link">
+      <a href="../../../zigbee-routers/efr32-based-routers/" class="md-nav__link">
         
   
   
@@ -933,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zwave-kits/" class="md-nav__link">
+      <a href="../../../zwave-kits/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dual-radio-kits/" class="md-nav__link">
+      <a href="../../../dual-radio-kits/" class="md-nav__link">
         
   
   
@@ -977,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bluetooth-proxy/" class="md-nav__link">
+      <a href="../../../bluetooth-proxy/" class="md-nav__link">
         
   
   
@@ -999,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="model-glossary/" class="md-nav__link">
+      <a href="../../../model-glossary/" class="md-nav__link">
         
   
   
@@ -1021,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/" class="md-nav__link">
+      <a href="../../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1063,9 +1070,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started-guides" class="md-nav__link">
+  <a href="#legacy-jumper-reference-efr32-pro-and-series-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started Guides
+      Legacy Jumper Reference (EFR32 Pro and Series 2)
     </span>
   </a>
   
@@ -1087,53 +1094,31 @@
 
 
 
-<h1 id="welcome-to-the-tubeszb-documentation">Welcome to the TubesZB Documentation</h1>
-<p>This site contains all the information and documentation for Tube's ZB hardware. Find the right guide to get your new device up and running with Home Assistant.</p>
-<p>You can purchase pre-assembled hardware from the official store:</p>
-<p><a href="https://tubeszb.com"><strong>Shop at tubeszb.com</strong></a></p>
-<h2 id="getting-started-guides">Getting Started Guides</h2>
-<p>Click on the guide that matches your product to begin the setup process.</p>
-<div class="grid cards">
-<ul>
-<li>
-<p><strong>Zigbee Coordinators</strong></p>
-<hr />
-<p>Step-by-step instructions for setting up your TubeZB Zigbee Coordinator with ZHA or Zigbee2MQTT.</p>
-<p><a href="getting-started/zigbee/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Zigbee Guide</a></p>
-</li>
-<li>
-<p><strong>Z-Wave PoE Kit</strong></p>
-<hr />
-<p>How to set up your Z-Wave PoE kit using the Z-Wave JS UI addon in Home Assistant.</p>
-<p><a href="getting-started/z-wave/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Z-Wave Guide</a></p>
-</li>
-<li>
-<p><strong>Zigbee Routers</strong></p>
-<hr />
-<p>How to pair your TubeZB Zigbee Router to extend the range of your network.</p>
-<p><a href="getting-started/router/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Router Guide</a></p>
-</li>
-<li>
-<p><strong>Bluetooth Proxy</strong></p>
-<hr />
-<p>Quickly set up and extend the Bluetooth coverage of your Home Assistant instance.</p>
-<p><a href="getting-started/bluetooth-proxy/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Bluetooth Proxy Guide</a></p>
-</li>
-<li>
-<p><strong>Dual Radio Kit</strong></p>
-<hr />
-<p>The Dual Radio Kit combines a Zigbee and a Z-Wave radio on a single device. You will need to set up <strong>both</strong> protocols.</p>
-<div class="admonition info">
-<p class="admonition-title">Important Note for Dual Radio Kits</p>
-<p>The Zigbee and Z-Wave radios share an IP address but use different ports.
-* <strong>Zigbee</strong> uses port <code>6638</code>.
-* <strong>Z-Wave</strong> uses port <code>6639</code>.</p>
+<h1 id="efr32-legacy-reference">EFR32 Legacy Reference</h1>
+<p>This page captures legacy settings and jumper references for retired EFR32-based coordinators.</p>
+<div class="admonition note">
+<p class="admonition-title">Historical reference only</p>
+<p>These settings apply to older 6.9.x firmware and pre-2021 Home Assistant builds. Current models usually do not need them.</p>
 </div>
-<p><a href="getting-started/zigbee/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Zigbee Guide</a></p>
-<p><a href="getting-started/z-wave/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> View Z-Wave Guide</a></p>
-</li>
-</ul>
-</div>
+<h2 id="legacy-jumper-reference-efr32-pro-and-series-2">Legacy Jumper Reference (EFR32 Pro and Series 2)</h2>
+<p>Zigbee serial routed to Ethernet (ESP32):</p>
+<figure>
+<p><img alt="EFR32 Zigbee to Ethernet" src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_ztoeth.png" width="360" />
+  </p>
+<figcaption>Jumpers toward the ESP32 route Zigbee serial to Ethernet.</figcaption>
+</figure>
+<p>Zigbee serial routed to the onboard USB serial adapter:</p>
+<figure>
+<p><img alt="EFR32 Zigbee to Serial" src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_ztos.png" width="360" />
+  </p>
+<figcaption>Middle jumpers route Zigbee serial to the USB adapter.</figcaption>
+</figure>
+<p>ESP32 flashing mode:</p>
+<figure>
+<p><img alt="EFR32 ESP32 flashing" src="https://github.com/tube0013/tube_gateways/raw/main/images/efr32_espflash.png" width="360" />
+  </p>
+<figcaption>Ground IO0 during boot to enter ESP32 flash mode.</figcaption>
+</figure>
 
 
 
@@ -1188,10 +1173,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
