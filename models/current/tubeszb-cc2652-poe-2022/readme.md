@@ -1,5 +1,11 @@
 # TubesZB CC2652 PoE Coordiniator
 
+## Notice
+
+The ESPHome configs for this device are superseded by the TubesZB-ESPHome-Builder repository.
+Manifest filename: `tubeszb-cc2652p2-poe-2022.yaml`
+- [tubeszb-cc2652p2-poe-2022.yaml](https://github.com/tube0013/TubesZB-ESPHome-Builder/blob/main/manifests/tubeszb-cc2652p2-poe-2022.yaml)
+
 <p float="left">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022.webp" width="300" height = "300">
  <img src="https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-cc2652-poe-2022/images/tubeszb-cc2652-poe-2022_open.webp" width="300" height="300">
@@ -86,6 +92,5 @@ ERROR: Timeout waiting for ACK/NACK after 'Synch (0x55 0x55)'
 ```
 
 Another option is to trigger the bootloader manually, to do this, pop the top with the device unpowered, hold down the BSL button while plugging in power, it's important to hold it for several seconds as the ESP32 will trigger a reset of the zigbee module after it boots. Then try the update script again
-
 
 
