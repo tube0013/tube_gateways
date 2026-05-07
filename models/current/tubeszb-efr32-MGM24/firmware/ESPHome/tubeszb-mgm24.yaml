@@ -109,10 +109,6 @@ binary_sensor:
   - platform: stream_server
     connected:
       name: "TubesZB Serial Connected"
-sensor:
-  - platform: stream_server
-    connection_count:
-      name: "Connection Count"
 
 mdns:
   services:
