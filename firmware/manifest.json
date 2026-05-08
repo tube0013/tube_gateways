@@ -1,0 +1,8 @@
+{
+    "variants":{
+        "p2":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/cc_firmware/CC1352P2_CC2652P_launchpad_coordinator_20250321.hex","md5":"1ef150bfd3158854b822569314f09a1d","size":"508798"},
+        "p7":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/cc_firmware/CC1352P7_coordinator_20250321.hex","md5":"c5ddf807da26583853245d9778b1f813","size":"507877"}
+
+    },
+    "version":"20250321"
+  }
