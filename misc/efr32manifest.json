@@ -1,8 +1,8 @@
 {
     "variants":{
-        "BM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-BM-MG24B2-7.4.4.gbl","md5":"c0ed28738c0ad61548cede512264d1a9","size":"253428"},
-        "MGM24":{"fw_url":"https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/misc/tubeszb-mgm24-hw-max_ncp-uart-hw_7.4.4.0.gbl","md5":"f999e56f148448cd42ad7852087d3f3e","size":"253456"}
+        "BM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-bm24-zigbee_ncp_8.2.2.0_460800_hw_flow.gbl","md5":"35508a38fbc6a4f2e28cfd0d2b72f7df","size":"237636"},
+        "MGM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-mgm24-zigbee_ncp_8.2.2.0_460800_hw_flow.gbl","md5":"10f3a88adb75937d77ebeb8e936441ea","size":"229672"}
 
     },
-    "version":"7.4.4"
+    "version":"8.2.2.0_460800"
   }
