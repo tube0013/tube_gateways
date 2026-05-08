@@ -4,5 +4,5 @@
         "MGM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-mgm24-zigbee_ncp_8.2.2.0_460800_hw_flow.gbl","md5":"10f3a88adb75937d77ebeb8e936441ea","size":"229672"}
 
     },
-    "version":"8.2.2.0_460800"
+    "version":"8.2.2.0"
   }
