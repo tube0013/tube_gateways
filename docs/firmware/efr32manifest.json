@@ -1,0 +1,8 @@
+{
+    "variants":{
+        "BM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/stable/tubeszb-BM-MG24B2-7.4.4.gbl","md5":"c0ed28738c0ad61548cede512264d1a9","size":"253428"},
+        "MGM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/stable/tubeszb-mgm24-hw-max_ncp-uart-hw_7.4.4.0.gbl","md5":"f999e56f148448cd42ad7852087d3f3e","size":"253456"}
+
+    },
+    "version":"7.4.4"
+  }
