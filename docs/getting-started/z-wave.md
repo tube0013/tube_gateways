@@ -90,7 +90,7 @@ The recommended method for using this Z-Wave kit is with the **Z-Wave JS UI** ad
       <figcaption>Generating new security keys by clicking the refresh icon for each key.</figcaption>
     </figure>
 
-    * Click **Save** at the bottom of the page. The addon will restart and connect to your Z-Wave PoE Kit. You can check the **Control Panel** to see your Z-Wave stick appear as the controller.
+    * Click **Save** at the bottom of the page. The addon will restart and connect to your Z-Wave PoE Kit. If you installed the standalone or docker version of Z-Wave JS UI, you might need to manually restart it after saving you new settings (click on the **Restart** icon in the top right section of the page). You can check the **Control Panel** to see your Z-Wave stick or module appear as the controller.
 
 3.  **Install the Z-Wave JS Integration:**
     * Navigate back to Home Assistant and go to **Settings > Devices & Services**.
