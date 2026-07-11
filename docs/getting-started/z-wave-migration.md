@@ -1,6 +1,6 @@
 # Advanced: Migrating an Existing Z-Wave Network
 
-Migrating your Z-Wave mesh to a TubesZB network controller lets you retire a USB stick without re-including every device. This guide focuses on migrations performed entirely inside **Z-Wave JS UI** while connecting to the TubesZB controller over TCP (`tcp://`).
+Migrating your Z-Wave mesh to a TubesZB network controller lets you retire a USB stick without re-including every device. This guide focuses on migrations performed entirely inside **Z-Wave JS UI** while connecting to the TubesZB controller over the network (`esphome://`).
 
 !!! warning "Read this first"
     Migrations copy the controller's Non-Volatile Memory (NVM). If anything goes wrong you may lose access to your devices until the original controller is restored. 
@@ -9,8 +9,10 @@ Migrating your Z-Wave mesh to a TubesZB network controller lets you retire a USB
 
 Use these instructions when you already run Home Assistant with the **Z-Wave JS** or **Z-Wave JS UI** add-on (or a separate Z-Wave JS UI instance) and want to move the existing network to one of the following TubesZB controllers:
 
-* Z-Wave PoE kit (single radio) – TCP port `6638`
-* Dual radio PoE kit – Z-Wave available on TCP port `6639`
+* Z-Wave PoE kit (single radio)
+* Dual radio PoE kit
+
+Both connect through the ESPHome Z-Wave proxy on port `6053` (firmware `2026.07.11.0` and newer — see the [Z-Wave Proxy Firmware Update](z-wave-proxy-update.md) guide). On older firmware the Z-Wave radio is instead exposed as a TCP serial stream on port `6638` (single radio) or `6639` (dual radio).
 
 If you are starting from scratch, follow the standard [Z-Wave Getting Started guide](z-wave.md) instead.
 
@@ -69,9 +71,10 @@ Backing up from the Home Assistant UI is useful when you do not have direct acce
 ## Step 2 – Prepare the TubesZB Controller
 
 1. Make sure the TubesZB hardware is powered and connected to your network.
-2. In **Z-Wave JS UI**, stay on **Settings → Z-Wave** and populate the **Serial Port** field with the TCP path to the TubesZB kit. Examples:
-   - Single radio kit: `tcp://192.168.1.42:6638`
-   - Dual radio kit (Z-Wave side): `tcp://192.168.1.42:6639`
+2. In **Z-Wave JS UI**, stay on **Settings → Z-Wave** and populate the **Serial Port** field with the path to the TubesZB kit, for example `esphome://192.168.1.42:6053` (same format for single and dual radio kits).
+
+    !!! info "Older firmware (before 2026.07.11.0)"
+        On firmware older than `2026.07.11.0`, use the TCP serial stream instead: `tcp://192.168.1.42:6638` (single radio) or `tcp://192.168.1.42:6639` (dual radio, Z-Wave side).
 3. Paste the security keys you collected in Step 1 into the matching fields. Do **not** generate new keys when migrating an existing mesh.
 4. Click **Save**. The service will restart and attempt to reach the new controller over TCP.
 
@@ -103,12 +106,12 @@ Backing up from the Home Assistant UI is useful when you do not have direct acce
 
 - Archive the NVM backup you created in Step 1 along with a fresh backup taken from the TubesZB controller after the restore.
 - Label the old USB stick and store it powered off. Do not plug it back in unless you intend to roll back to it.
-- Update any documentation or diagrams that list the controller address so they reference the `tcp://` endpoint.
+- Update any documentation or diagrams that list the controller address so they reference the `esphome://` endpoint.
 
 ## Troubleshooting
 
-**Controller refuses the TCP connection**
-:   Confirm the TubesZB kit is running the latest ESPHome firmware and that your firewall allows outbound TCP 6638/6639 from Home Assistant.
+**Controller refuses the connection**
+:   Confirm the TubesZB kit is running the latest ESPHome firmware and that your firewall allows outbound TCP 6053 from Home Assistant (6638/6639 on pre-`2026.07.11.0` firmware).
 
 **Nodes show as failed or missing after restore**
 :   Wake battery devices, then run **Advanced Actions → Heal Node** on problematic nodes. If secure devices still fail, verify the security keys exactly match the originals (no extra whitespace).

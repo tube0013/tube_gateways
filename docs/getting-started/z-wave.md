@@ -67,15 +67,15 @@ The recommended method for using this Z-Wave kit is with the **Z-Wave JS UI** ad
     * In the Z-Wave JS UI interface, navigate to **Settings** (the gear icon) and then select **Z-Wave**.
     * In the **Serial Port** field, enter the network path for your Z-Wave kit, replacing `IP_ADDRESS` with the IP you found earlier:
       ```
-      tcp://IP_ADDRESS:6638
+      esphome://IP_ADDRESS:6053
       ```
     <figure markdown>
       ![Z-Wave JS UI Serial Port Configuration](../assets/zwave-js-serial-config.png){ width="600" }
-      <figcaption>Entering the TCP address in the Serial Port field.</figcaption>
+      <figcaption>Entering the connection path in the Serial Port field.</figcaption>
     </figure>
 
-        !!! info "Important Note for Dual Radio Kits"
-            If setting up Z-Wave on a **Dual Radio kit** it uses port `6639`.
+        !!! info "Older firmware (before 2026.07.11.0)"
+            Devices running firmware older than `2026.07.11.0` expose a raw TCP serial stream instead of the ESPHome Z-Wave proxy. On those, use `tcp://IP_ADDRESS:6638` (or `tcp://IP_ADDRESS:6639` on a **Dual Radio kit**) — and consider [updating to the Z-Wave Proxy firmware](z-wave-proxy-update.md). The `esphome://` path is the same on all models, single and dual radio.
 
     * **Generate and Save Security Keys:**
         !!! danger "Critical Step for New Networks"

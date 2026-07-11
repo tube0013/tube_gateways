@@ -51,9 +51,9 @@ Click on the guide that matches your product to begin the setup process.
     The Dual Radio Kit combines a Zigbee and a Z-Wave radio on a single device. You will need to set up **both** protocols.
 
     !!! info "Important Note for Dual Radio Kits"
-        The Zigbee and Z-Wave radios share an IP address but use different ports.
-        * **Zigbee** uses port `6638`.
-        * **Z-Wave** uses port `6639`.
+        The Zigbee and Z-Wave radios share an IP address but connect differently.
+        * **Zigbee** uses the serial stream on port `6638`.
+        * **Z-Wave** uses the ESPHome Z-Wave proxy on port `6053` (`esphome://`). On firmware older than `2026.07.11.0` it is a serial stream on port `6639` instead.
 
     [:octicons-arrow-right-24: View Zigbee Guide](getting-started/zigbee.md)
     
