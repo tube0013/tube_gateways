@@ -5,6 +5,11 @@ TubesZB EFR32 coordinators use Silicon Labs EZSP (Ember) radios and expose the Z
 !!! tip "Start here"
     If you are setting up your coordinator for the first time, begin with the [Getting Started guide for Zigbee coordinators](../../getting-started/zigbee.md).
 
+!!! danger "Never connect USB and PoE at the same time"
+    You **MUST** unplug the Ethernet cable providing PoE before connecting the device to your computer via USB (for example, to capture serial console logs). The USB port is **not isolated** — powering the board from PoE and USB simultaneously can permanently damage the board and potentially the USB controller on your computer.
+
+    The micro-USB port is only accessible by at least partially removing the board from its enclosure. If you need network connectivity while connected over USB, use an **unpowered** Ethernet connection (a non-PoE switch port, or a port with PoE disabled).
+
 ## Models
 
 | Model | Connection | Radio | Photo | ESPHome Builder manifest |
