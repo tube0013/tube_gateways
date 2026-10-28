@@ -1,0 +1,7 @@
+{
+    "fw_url": "https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/models/retired/tubeszb-efr32-MGM112-pro1/firmware/efr32_MGM112/ncp/7.4.3/tubeszb-mgm12-2021_7.4.3.gbl",
+    "md5": "a528260908125c8e74f8abc85528f031",
+    "size": 236576,
+    "baudrate": 115200,
+    "version": "7.4.3"
+}
