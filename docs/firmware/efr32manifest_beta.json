@@ -1,8 +1,17 @@
 {
-    "variants":{
-        "BM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-bm24-zigbee_ncp_8.2.2.0_460800_hw_flow.gbl","md5":"35508a38fbc6a4f2e28cfd0d2b72f7df","size":"237636"},
-        "MGM24":{"fw_url":"https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-mgm24-zigbee_ncp_8.2.2.0_460800_hw_flow.gbl","md5":"10f3a88adb75937d77ebeb8e936441ea","size":"229672"}
-
+    "variants": {
+        "BM24": {
+            "fw_url": "https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-bm24-zigbee_ncp_9.1.2.1_460800_hw_flow.gbl",
+            "md5": "781f6f0746688118ee58710f414ec226",
+            "size": "263184",
+            "baudrate": 460800
+        },
+        "MGM24": {
+            "fw_url": "https://tube0013.github.io/tube_gateways/firmware/efr32_firmware/beta/tubeszb-mgm24-zigbee_ncp_9.1.2.1_460800_hw_flow.gbl",
+            "md5": "8a0e8ba93dc610f4ef417c1f2586afa9",
+            "size": "264200",
+            "baudrate": 460800
+        }
     },
-    "version":"8.2.2.0"
-  }
+    "version": "9.1.2.1"
+}
