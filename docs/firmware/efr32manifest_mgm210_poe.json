@@ -1,0 +1,7 @@
+{
+    "fw_url": "https://raw.githubusercontent.com/tube0013/tube_gateways/refs/heads/main/models/current/tubeszb-efr32-MGM210-poe/firmware/efr32_MGM210/ncp/7.4.3/tubeszb-mgm21-2022_7.4.3.gbl",
+    "md5": "0e0c273b5d0e1c6cc7ecee0a1dc7715c",
+    "size": 240444,
+    "baudrate": 115200,
+    "version": "7.4.3"
+}
